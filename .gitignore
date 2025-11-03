@@ -1,0 +1,4 @@
+test/
+.venv/
+archive/
+job_descriptions.csv/
