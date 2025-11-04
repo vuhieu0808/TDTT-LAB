@@ -1,55 +1,212 @@
 import customtkinter as ctk
 from tkinter import messagebox, Listbox, END
 import json
+import os
 
 # ===================================================================
-# PHẦN 1: LOGIC CỐT LÕI (Giữ nguyên)
+# PHẦN 1: LOAD DỮ LIỆU TỪ JSON FILES
 # ===================================================================
 
-CAREER_SKILLS_DB = {
-    "Kỹ thuật phần mềm": {"Python", "Git", "Cấu trúc dữ liệu", "Giải thuật", "SQL"},
-    "Khoa học dữ liệu": {"Python", "SQL", "Thống kê", "Học máy", "Pandas"},
-    "Lập trình Web (Frontend)": {"HTML", "CSS", "JavaScript", "React", "Git"},
-    "Kỹ sư DevOps": {"Linux", "Docker", "Kubernetes", "Git", "Python", "CI/CD"},
-    "Thiết kế UX/UI": {"Figma", "Adobe XD", "User Research", "Prototyping"},
-    "Quản trị Mạng": {"Cisco", "Linux", "Security", "Networking Concepts"},
-    "Lập trình Game": {"C++", "Unity", "Unreal Engine", "Toán học 3D"},
-    "An toàn Thông tin": {"Linux", "Security", "Penetration Testing", "Cryptography"}
-}
+# Đường dẫn tới các file JSON
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SKILLS_DB_PATH = os.path.join(BASE_DIR, 'assets', 'skills_database.json')
+JOBS_DB_PATH = os.path.join(BASE_DIR, 'assets', 'it_jobs_database.json')
+MAPPING_PATH = os.path.join(BASE_DIR, 'assets', 'job_skill_mapping.json')
 
-ALL_SKILLS = sorted(list(set.union(*CAREER_SKILLS_DB.values())))
-ALL_CAREERS = sorted(list(CAREER_SKILLS_DB.keys()))
+# Load dữ liệu
+with open(SKILLS_DB_PATH, 'r', encoding='utf-8') as f:
+    skills_database = json.load(f)
+
+with open(JOBS_DB_PATH, 'r', encoding='utf-8') as f:
+    jobs_database = json.load(f)
+
+with open(MAPPING_PATH, 'r', encoding='utf-8') as f:
+    mapping_database = json.load(f)
+
+# Tạo dictionary mapping từ skill_id sang skill_name
+SKILL_ID_TO_NAME = {}
+SKILL_NAME_TO_ID = {}
+for category in skills_database['skill_categories']:
+    for skill in category['skills']:
+        SKILL_ID_TO_NAME[skill['id']] = skill['name']
+        SKILL_NAME_TO_ID[skill['name']] = skill['id']
+
+# Tạo dictionary mapping từ job_id sang job info
+JOB_ID_TO_INFO = {}
+JOB_TITLE_TO_ID = {}
+for category in jobs_database['job_categories']:
+    for job in category['jobs']:
+        JOB_ID_TO_INFO[job['id']] = job
+        JOB_TITLE_TO_ID[job['title_vi']] = job['id']
+
+# Tạo danh sách tất cả skills và jobs để hiển thị
+ALL_SKILLS = sorted([skill['name'] for cat in skills_database['skill_categories'] for skill in cat['skills']])
+ALL_CAREERS = sorted([job['title_vi'] for cat in jobs_database['job_categories'] for job in cat['jobs']])
+
+# ===================================================================
+# PHẦN 2: CÁC HÀM LOGIC CỐT LÕI
+# ===================================================================
+
+def get_job_skills(job_id):
+    """Lấy danh sách skills theo job_id từ mapping"""
+    for mapping in mapping_database['job_skill_mappings']:
+        if mapping['job_id'] == job_id:
+            required_skills = set()
+            # Thêm required skills
+            for skill_id in mapping.get('required_skills', []):
+                if skill_id in SKILL_ID_TO_NAME:
+                    required_skills.add(SKILL_ID_TO_NAME[skill_id])
+            
+            # Xử lý alternatives - chỉ cần 1 trong số các skills trong nhóm
+            alternatives = mapping.get('skill_alternatives', [])
+            
+            return {
+                'required': required_skills,
+                'alternatives': alternatives,
+                'preferred': [SKILL_ID_TO_NAME[sid] for sid in mapping.get('preferred_skills', []) if sid in SKILL_ID_TO_NAME]
+            }
+    return {'required': set(), 'alternatives': [], 'preferred': []}
+
+def check_alternatives_satisfied(student_skills, alternatives):
+    """Kiểm tra xem student có ít nhất 1 skill trong mỗi nhóm alternatives không
+    
+    Returns:
+        satisfied: List of dicts with alt_group info and matched_skills
+        missing: List of alt_groups that student doesn't have any skill from
+    """
+    satisfied = []
+    missing = []
+    
+    for alt_group in alternatives:
+        skills_in_group = [SKILL_ID_TO_NAME[sid] for sid in alt_group['one_of'] if sid in SKILL_ID_TO_NAME]
+        # Tìm các skill mà student có trong nhóm này
+        matched_skills = [skill for skill in skills_in_group if skill in student_skills]
+        
+        if matched_skills:
+            # Lưu cả alt_group và các skill cụ thể mà student có
+            satisfied.append({
+                'alt_group': alt_group,
+                'matched_skills': matched_skills
+            })
+        else:
+            missing.append(alt_group)
+    
+    return satisfied, missing
 
 def goi_y_nganh_nghe(ky_nang_sinh_vien):
+    """Gợi ý các ngành nghề phù hợp dựa trên kỹ năng của sinh viên"""
     sk_sv = set(ky_nang_sinh_vien)
     goi_y = {}
-    for nganh, ky_nang_yeu_cau in CAREER_SKILLS_DB.items():
-        ky_nang_thieu = ky_nang_yeu_cau - sk_sv
-        ky_nang_khop = ky_nang_yeu_cau.intersection(sk_sv)
-        goi_y[nganh] = {
-            "ky_nang_khop": list(ky_nang_khop),
-            "ky_nang_con_thieu": list(ky_nang_thieu),
-            "so_ky_nang_thieu": len(ky_nang_thieu)
+    
+    # Duyệt qua tất cả jobs
+    for job_id, job_info in JOB_ID_TO_INFO.items():
+        job_skills = get_job_skills(job_id)
+        required = job_skills['required']
+        alternatives = job_skills['alternatives']
+        
+        # Tính số skills required mà student có
+        matched_required = sk_sv & required
+        
+        # Kiểm tra alternatives
+        satisfied_alts, missing_alts = check_alternatives_satisfied(sk_sv, alternatives)
+        
+        # Tính tổng skills cần thiết (required + số nhóm alternatives)
+        total_needed = len(required) + len(alternatives)
+        
+        if total_needed == 0:
+            continue
+            
+        # Lấy danh sách skills khớp từ alternatives
+        matched_alt_skills = []
+        for alt_info in satisfied_alts:
+            matched_alt_skills.extend(alt_info['matched_skills'])
+        
+        # Tính số skills đã thỏa mãn
+        total_matched = len(matched_required) + len(satisfied_alts)
+        total_missing = len(required - sk_sv) + len(missing_alts)
+        
+        # CHỈ thêm vào gợi ý nếu có ít nhất 1 kỹ năng khớp
+        if total_matched == 0:
+            continue
+        
+        nganh_name = job_info['title_vi']
+        goi_y[nganh_name] = {
+            "ky_nang_khop": list(matched_required) + matched_alt_skills,
+            "ky_nang_con_thieu": list(required - sk_sv) + [alt['note'] for alt in missing_alts],
+            "so_ky_nang_thieu": total_missing
         }
+    
+    # Sắp xếp theo số kỹ năng thiếu tăng dần (ít thiếu nhất = phù hợp nhất)
     goi_y_da_sap_xep = dict(sorted(goi_y.items(), key=lambda item: item[1]['so_ky_nang_thieu']))
+    
+    # TODO: Xử lý trường hợp user có kỹ năng nhưng không có ngành nào phù hợp
+    # if not goi_y_da_sap_xep and ky_nang_sinh_vien:
+    #     return {"thong_bao": "Bạn đã có kỹ năng nhưng chưa có ngành nào phù hợp trong hệ thống"}
+    
     return goi_y_da_sap_xep
 
 def kiem_tra_khoang_cach_ky_nang(chon_nganh, ky_nang_sinh_vien):
+    """Kiểm tra khoảng cách kỹ năng giữa sinh viên và ngành nghề đã chọn"""
     sk_sv = set(ky_nang_sinh_vien)
-    if chon_nganh not in CAREER_SKILLS_DB:
+    
+    if chon_nganh not in JOB_TITLE_TO_ID:
         return {"loi": f"Không tìm thấy ngành '{chon_nganh}'."}
-    ky_nang_yeu_cau = CAREER_SKILLS_DB[chon_nganh]
-    ky_nang_thieu = ky_nang_yeu_cau - sk_sv
-    ky_nang_da_co = ky_nang_yeu_cau.intersection(sk_sv)
+    
+    job_id = JOB_TITLE_TO_ID[chon_nganh]
+    job_skills = get_job_skills(job_id)
+    
+    required = job_skills['required']
+    alternatives = job_skills['alternatives']
+    preferred = set(job_skills['preferred'])
+    
+    # Skills đã có (required)
+    ky_nang_da_co = sk_sv & required
+    
+    # Skills còn thiếu (required)
+    ky_nang_thieu = required - sk_sv
+    
+    # Kiểm tra alternatives
+    satisfied_alts, missing_alts = check_alternatives_satisfied(sk_sv, alternatives)
+    
+    # Tạo danh sách kỹ năng yêu cầu (bao gồm alternatives)
+    ky_nang_yeu_cau = list(required)
+    for alt in alternatives:
+        ky_nang_yeu_cau.append(alt['note'])
+    
+    # Lấy matched skills từ alternatives
+    matched_alt_skills = []
+    for alt_info in satisfied_alts:
+        matched_alt_skills.extend(alt_info['matched_skills'])
+    
+    # Thêm alternatives vào danh sách đã có/thiếu
+    ky_nang_da_co_full = list(ky_nang_da_co) + matched_alt_skills
+    ky_nang_thieu_full = list(ky_nang_thieu)
+    
+    # Xử lý missing alternatives - thêm chi tiết các lựa chọn
+    missing_alts_details = []
+    for alt in missing_alts:
+        # Lấy danh sách skill names từ skill IDs trong 'one_of'
+        skill_names = [SKILL_ID_TO_NAME[sid] for sid in alt['one_of'] if sid in SKILL_ID_TO_NAME]
+        # Tạo string với các lựa chọn skill
+        options = " HOẶC ".join(skill_names)
+        missing_alts_details.append(f"{alt['note']}: ({options})")
+    
+    # Preferred skills (không bắt buộc)
+    preferred_co = sk_sv & preferred
+    preferred_thieu = preferred - sk_sv
+    
     return {
         "nganh_da_chon": chon_nganh,
-        "ky_nang_yeu_cau": list(ky_nang_yeu_cau),
-        "ky_nang_da_co": list(ky_nang_da_co),
-        "ky_nang_can_hoc_them": list(ky_nang_thieu)
+        "ky_nang_yeu_cau": ky_nang_yeu_cau,
+        "ky_nang_da_co": ky_nang_da_co_full,
+        "ky_nang_can_hoc_them": ky_nang_thieu_full,
+        "ky_nang_can_hoc_them_chi_tiet": missing_alts_details,  # Thêm chi tiết alternatives
+        "ky_nang_nen_co": list(preferred_co),
+        "ky_nang_nen_hoc": list(preferred_thieu)
     }
 
 # ===================================================================
-# PHẦN 2: GIAO DIỆN NGƯỜI DÙNG (GUI) VỚI CUSTOMTKINTER
+# PHẦN 3: GIAO DIỆN NGƯỜI DÙNG (GUI) VỚI CUSTOMTKINTER
 # ===================================================================
 
 ctk.set_appearance_mode("System")
@@ -246,6 +403,16 @@ class CareerApp(ctk.CTk):
             return
         results = goi_y_nganh_nghe(selected_skills)
         self.result_text_tab1.delete("1.0", "end")
+        
+        # Kiểm tra nếu không có ngành nào phù hợp
+        if not results:
+            self.result_text_tab1.insert("end", "⚠️ KHÔNG TÌM THẤY NGÀNH PHÙ HỢP\n\n")
+            self.result_text_tab1.insert("end", f"Bạn đã chọn {len(selected_skills)} kỹ năng:\n")
+            self.result_text_tab1.insert("end", f"{', '.join(selected_skills)}\n\n")
+            self.result_text_tab1.insert("end", "Nhưng không có ngành nghề nào trong hệ thống yêu cầu các kỹ năng này.\n")
+            self.result_text_tab1.insert("end", "💡 Gợi ý: Thử chọn thêm các kỹ năng khác hoặc kiểm tra lại danh sách kỹ năng.")
+            return
+        
         self.result_text_tab1.insert("end", "--- Gợi ý ngành nghề (xếp theo mức độ phù hợp) ---\n\n")
         for nganh, info in results.items():
             self.result_text_tab1.insert("end", f"NGÀNH: {nganh}\n")
@@ -355,9 +522,43 @@ class CareerApp(ctk.CTk):
             return
 
         self.result_text_tab2.insert("end", f"--- Phân tích cho ngành: {results['nganh_da_chon']} ---\n\n")
-        self.result_text_tab2.insert("end", f"Kỹ năng yêu cầu ({len(results['ky_nang_yeu_cau'])}):\n{', '.join(results['ky_nang_yeu_cau'])}\n\n")
-        self.result_text_tab2.insert("end", f"Kỹ năng bạn đã có ({len(results['ky_nang_da_co'])}):\n{', '.join(results['ky_nang_da_co']) or 'Không có'}\n\n")
-        self.result_text_tab2.insert("end", f"KỸ NĂNG CẦN HỌC THÊM ({len(results['ky_nang_can_hoc_them'])}):\n{', '.join(results['ky_nang_can_hoc_them']) or 'Đã đủ kỹ năng!'}\n")
+        self.result_text_tab2.insert("end", f"✅ KỸ NĂNG YÊU CẦU ({len(results['ky_nang_yeu_cau'])}):\n")
+        self.result_text_tab2.insert("end", f"{', '.join(results['ky_nang_yeu_cau'])}\n\n")
+        
+        self.result_text_tab2.insert("end", f"✔️ Kỹ năng bạn đã có ({len(results['ky_nang_da_co'])}):\n")
+        self.result_text_tab2.insert("end", f"{', '.join(results['ky_nang_da_co']) or 'Chưa có'}\n\n")
+        
+        # Hiển thị kỹ năng cần học thêm
+        total_missing = len(results['ky_nang_can_hoc_them']) + len(results.get('ky_nang_can_hoc_them_chi_tiet', []))
+        self.result_text_tab2.insert("end", f"❌ KỸ NĂNG CẦN HỌC THÊM ({total_missing}):\n")
+        
+        # Hiển thị required skills còn thiếu
+        if results['ky_nang_can_hoc_them']:
+            self.result_text_tab2.insert("end", f"{', '.join(results['ky_nang_can_hoc_them'])}\n")
+        
+        # Hiển thị alternatives còn thiếu với các lựa chọn chi tiết
+        if results.get('ky_nang_can_hoc_them_chi_tiet'):
+            if results['ky_nang_can_hoc_them']:
+                self.result_text_tab2.insert("end", "\n")
+            for alt_detail in results['ky_nang_can_hoc_them_chi_tiet']:
+                self.result_text_tab2.insert("end", f"• {alt_detail}\n")
+        
+        if not results['ky_nang_can_hoc_them'] and not results.get('ky_nang_can_hoc_them_chi_tiet'):
+            self.result_text_tab2.insert("end", "Đã đủ kỹ năng bắt buộc!")
+        
+        self.result_text_tab2.insert("end", "\n")
+        
+        # Hiển thị preferred skills nếu có
+        if results.get('ky_nang_nen_co') or results.get('ky_nang_nen_hoc'):
+            self.result_text_tab2.insert("end", "--- KỸ NĂNG NÊN CÓ (không bắt buộc) ---\n\n")
+            
+            if results['ky_nang_nen_co']:
+                self.result_text_tab2.insert("end", f"⭐ Kỹ năng nên có bạn đã có ({len(results['ky_nang_nen_co'])}):\n")
+                self.result_text_tab2.insert("end", f"{', '.join(results['ky_nang_nen_co'])}\n\n")
+            
+            if results['ky_nang_nen_hoc']:
+                self.result_text_tab2.insert("end", f"💡 Kỹ năng nên học thêm ({len(results['ky_nang_nen_hoc'])}):\n")
+                self.result_text_tab2.insert("end", f"{', '.join(results['ky_nang_nen_hoc'])}\n")
 
 # ===================================================================
 # PHẦN 3: CHẠY ỨNG DỤNG

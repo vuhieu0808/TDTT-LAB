@@ -1,0 +1,583 @@
+{
+  "metadata": {
+    "version": "4.0",
+    "last_updated": "2025-11-04",
+    "total_jobs": 86,
+    "description": "Simplified IT jobs database - core information only"
+  },
+  "job_categories": [
+    {
+      "category_id": "cat_software_dev",
+      "category_name": "Phát triển phần mềm",
+      "category_name_en": "Software Development",
+      "jobs": [
+        {
+          "id": "job_frontend_dev",
+          "title": "Frontend Developer",
+          "title_vi": "Lập trình viên Frontend",
+          "description": "Phát triển giao diện người dùng cho web applications"
+        },
+        {
+          "id": "job_backend_dev",
+          "title": "Backend Developer",
+          "title_vi": "Lập trình viên Backend",
+          "description": "Phát triển server-side logic và database"
+        },
+        {
+          "id": "job_fullstack_dev",
+          "title": "Full Stack Developer",
+          "title_vi": "Lập trình viên Full Stack",
+          "description": "Phát triển cả frontend và backend"
+        },
+        {
+          "id": "job_mobile_dev",
+          "title": "Mobile Developer",
+          "title_vi": "Lập trình viên Mobile",
+          "description": "Phát triển ứng dụng di động iOS/Android"
+        },
+        {
+          "id": "job_software_engineer",
+          "title": "Software Engineer",
+          "title_vi": "Kỹ sư phần mềm",
+          "description": "Thiết kế và phát triển giải pháp phần mềm tổng thể"
+        },
+        {
+          "id": "job_python_dev",
+          "title": "Python Developer",
+          "title_vi": "Lập trình viên Python",
+          "description": "Phát triển ứng dụng và hệ thống bằng Python"
+        },
+        {
+          "id": "job_java_dev",
+          "title": "Java Developer",
+          "title_vi": "Lập trình viên Java",
+          "description": "Phát triển ứng dụng enterprise với Java"
+        },
+        {
+          "id": "job_nodejs_dev",
+          "title": "Node.js Developer",
+          "title_vi": "Lập trình viên Node.js",
+          "description": "Phát triển backend với Node.js và JavaScript"
+        },
+        {
+          "id": "job_golang_dev",
+          "title": "Go Developer",
+          "title_vi": "Lập trình viên Go",
+          "description": "Phát triển microservices và hệ thống hiệu suất cao"
+        },
+        {
+          "id": "job_dotnet_dev",
+          "title": ".NET Developer",
+          "title_vi": "Lập trình viên .NET",
+          "description": "Phát triển ứng dụng với .NET framework"
+        },
+        {
+          "id": "job_php_dev",
+          "title": "PHP Developer",
+          "title_vi": "Lập trình viên PHP",
+          "description": "Phát triển web applications với PHP"
+        },
+        {
+          "id": "job_ruby_dev",
+          "title": "Ruby Developer",
+          "title_vi": "Lập trình viên Ruby",
+          "description": "Phát triển web với Ruby on Rails"
+        },
+        {
+          "id": "job_react_dev",
+          "title": "React Developer",
+          "title_vi": "Lập trình viên React",
+          "description": "Chuyên phát triển UI với React"
+        },
+        {
+          "id": "job_angular_dev",
+          "title": "Angular Developer",
+          "title_vi": "Lập trình viên Angular",
+          "description": "Phát triển SPA với Angular framework"
+        },
+        {
+          "id": "job_vue_dev",
+          "title": "Vue.js Developer",
+          "title_vi": "Lập trình viên Vue.js",
+          "description": "Phát triển frontend với Vue.js"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_data",
+      "category_name": "Dữ liệu",
+      "category_name_en": "Data and Analytics",
+      "jobs": [
+        {
+          "id": "job_data_analyst",
+          "title": "Data Analyst",
+          "title_vi": "Chuyên viên phân tích dữ liệu",
+          "description": "Phân tích và trực quan hóa dữ liệu để hỗ trợ quyết định kinh doanh"
+        },
+        {
+          "id": "job_data_scientist",
+          "title": "Data Scientist",
+          "title_vi": "Nhà khoa học dữ liệu",
+          "description": "Xây dựng models và phân tích dữ liệu phức tạp"
+        },
+        {
+          "id": "job_data_engineer",
+          "title": "Data Engineer",
+          "title_vi": "Kỹ sư dữ liệu",
+          "description": "Xây dựng và quản lý data pipelines và infrastructure"
+        },
+        {
+          "id": "job_ml_engineer",
+          "title": "Machine Learning Engineer",
+          "title_vi": "Kỹ sư Machine Learning",
+          "description": "Phát triển và triển khai ML models vào production"
+        },
+        {
+          "id": "job_bi_developer",
+          "title": "Business Intelligence Developer",
+          "title_vi": "Lập trình viên BI",
+          "description": "Phát triển dashboards và báo cáo phân tích kinh doanh"
+        },
+        {
+          "id": "job_etl_developer",
+          "title": "ETL Developer",
+          "title_vi": "Chuyên viên ETL",
+          "description": "Phát triển data pipelines và ETL processes"
+        },
+        {
+          "id": "job_big_data_engineer",
+          "title": "Big Data Engineer",
+          "title_vi": "Kỹ sư Big Data",
+          "description": "Xử lý và quản lý dữ liệu quy mô lớn"
+        },
+        {
+          "id": "job_ai_engineer",
+          "title": "AI Engineer",
+          "title_vi": "Kỹ sư AI",
+          "description": "Phát triển và triển khai AI solutions"
+        },
+        {
+          "id": "job_nlp_engineer",
+          "title": "NLP Engineer",
+          "title_vi": "Kỹ sư NLP",
+          "description": "Chuyên xử lý ngôn ngữ tự nhiên"
+        },
+        {
+          "id": "job_computer_vision_engineer",
+          "title": "Computer Vision Engineer",
+          "title_vi": "Kỹ sư Computer Vision",
+          "description": "Phát triển hệ thống nhận dạng hình ảnh"
+        },
+        {
+          "id": "job_research_scientist",
+          "title": "Research Scientist (AI/ML)",
+          "title_vi": "Nhà nghiên cứu AI/ML",
+          "description": "Nghiên cứu và phát triển thuật toán ML mới"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_devops_cloud",
+      "category_name": "DevOps & Cloud",
+      "category_name_en": "DevOps and Cloud",
+      "jobs": [
+        {
+          "id": "job_devops_engineer",
+          "title": "DevOps Engineer",
+          "title_vi": "Kỹ sư DevOps",
+          "description": "Tự động hóa deployment và quản lý infrastructure"
+        },
+        {
+          "id": "job_cloud_architect",
+          "title": "Cloud Architect",
+          "title_vi": "Kiến trúc sư Cloud",
+          "description": "Thiết kế và triển khai giải pháp cloud infrastructure"
+        },
+        {
+          "id": "job_sre",
+          "title": "Site Reliability Engineer (SRE)",
+          "title_vi": "Kỹ sư độ tin cậy hệ thống",
+          "description": "Đảm bảo reliability, performance và uptime của hệ thống"
+        },
+        {
+          "id": "job_cloud_engineer",
+          "title": "Cloud Engineer",
+          "title_vi": "Kỹ sư Cloud",
+          "description": "Quản lý và tối ưu cloud infrastructure"
+        },
+        {
+          "id": "job_platform_engineer",
+          "title": "Platform Engineer",
+          "title_vi": "Kỹ sư nền tảng",
+          "description": "Xây dựng và quản lý developer platforms"
+        },
+        {
+          "id": "job_infrastructure_engineer",
+          "title": "Infrastructure Engineer",
+          "title_vi": "Kỹ sư hạ tầng",
+          "description": "Thiết kế và quản lý IT infrastructure"
+        },
+        {
+          "id": "job_aws_engineer",
+          "title": "AWS Solutions Architect",
+          "title_vi": "Kiến trúc sư giải pháp AWS",
+          "description": "Thiết kế solutions trên AWS"
+        },
+        {
+          "id": "job_azure_engineer",
+          "title": "Azure Cloud Engineer",
+          "title_vi": "Kỹ sư Azure Cloud",
+          "description": "Quản lý và triển khai trên Microsoft Azure"
+        },
+        {
+          "id": "job_gcp_engineer",
+          "title": "GCP Engineer",
+          "title_vi": "Kỹ sư Google Cloud",
+          "description": "Phát triển solutions trên Google Cloud"
+        },
+        {
+          "id": "job_kubernetes_admin",
+          "title": "Kubernetes Administrator",
+          "title_vi": "Quản trị viên Kubernetes",
+          "description": "Quản lý K8s clusters và containerized apps"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_security",
+      "category_name": "Bảo mật",
+      "category_name_en": "Security",
+      "jobs": [
+        {
+          "id": "job_security_engineer",
+          "title": "Security Engineer",
+          "title_vi": "Kỹ sư bảo mật",
+          "description": "Bảo vệ hệ thống khỏi các mối đe dọa bảo mật"
+        },
+        {
+          "id": "job_penetration_tester",
+          "title": "Penetration Tester",
+          "title_vi": "Chuyên viên kiểm thử xâm nhập",
+          "description": "Thực hiện ethical hacking để tìm lỗ hổng bảo mật"
+        },
+        {
+          "id": "job_security_analyst",
+          "title": "Security Analyst",
+          "title_vi": "Chuyên viên phân tích bảo mật",
+          "description": "Giám sát và phân tích các mối đe dọa bảo mật"
+        },
+        {
+          "id": "job_application_security",
+          "title": "Application Security Engineer",
+          "title_vi": "Kỹ sư bảo mật ứng dụng",
+          "description": "Đảm bảo security cho applications"
+        },
+        {
+          "id": "job_cloud_security",
+          "title": "Cloud Security Engineer",
+          "title_vi": "Kỹ sư bảo mật Cloud",
+          "description": "Bảo mật cloud infrastructure và services"
+        },
+        {
+          "id": "job_devsecops",
+          "title": "DevSecOps Engineer",
+          "title_vi": "Kỹ sư DevSecOps",
+          "description": "Tích hợp security vào DevOps pipeline"
+        },
+        {
+          "id": "job_soc_analyst",
+          "title": "SOC Analyst",
+          "title_vi": "Chuyên viên SOC",
+          "description": "Giám sát và phản ứng với security incidents"
+        },
+        {
+          "id": "job_threat_intelligence",
+          "title": "Threat Intelligence Analyst",
+          "title_vi": "Chuyên viên phân tích mối đe dọa",
+          "description": "Phân tích và dự đoán các mối đe dọa an ninh"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_qa_testing",
+      "category_name": "QA & Testing",
+      "category_name_en": "Quality Assurance and Testing",
+      "jobs": [
+        {
+          "id": "job_qa_engineer",
+          "title": "QA Engineer",
+          "title_vi": "Kỹ sư QA",
+          "description": "Đảm bảo chất lượng phần mềm thông qua testing"
+        },
+        {
+          "id": "job_test_automation_engineer",
+          "title": "Test Automation Engineer",
+          "title_vi": "Kỹ sư tự động hóa kiểm thử",
+          "description": "Phát triển và duy trì automation testing framework"
+        },
+        {
+          "id": "job_qa_lead",
+          "title": "QA Lead",
+          "title_vi": "Trưởng nhóm QA",
+          "description": "Quản lý team QA và strategy testing"
+        },
+        {
+          "id": "job_sdet",
+          "title": "SDET (Software Development Engineer in Test)",
+          "title_vi": "Kỹ sư phát triển phần mềm kiểm thử",
+          "description": "Phát triển automation testing frameworks"
+        },
+        {
+          "id": "job_performance_tester",
+          "title": "Performance Tester",
+          "title_vi": "Chuyên viên kiểm thử hiệu năng",
+          "description": "Kiểm thử performance và load testing"
+        },
+        {
+          "id": "job_mobile_qa",
+          "title": "Mobile QA Engineer",
+          "title_vi": "Kỹ sư QA Mobile",
+          "description": "Kiểm thử ứng dụng mobile iOS/Android"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_architecture",
+      "category_name": "Kiến trúc & Quản lý",
+      "category_name_en": "Architecture and Management",
+      "jobs": [
+        {
+          "id": "job_software_architect",
+          "title": "Software Architect",
+          "title_vi": "Kiến trúc sư phần mềm",
+          "description": "Thiết kế kiến trúc hệ thống phần mềm tổng thể"
+        },
+        {
+          "id": "job_tech_lead",
+          "title": "Technical Lead",
+          "title_vi": "Trưởng nhóm kỹ thuật",
+          "description": "Dẫn dắt team về mặt kỹ thuật"
+        },
+        {
+          "id": "job_engineering_manager",
+          "title": "Engineering Manager",
+          "title_vi": "Quản lý kỹ thuật",
+          "description": "Quản lý team engineering và planning"
+        },
+        {
+          "id": "job_product_manager",
+          "title": "Product Manager (Technical)",
+          "title_vi": "Quản lý sản phẩm (Kỹ thuật)",
+          "description": "Quản lý lifecycle của sản phẩm công nghệ"
+        },
+        {
+          "id": "job_solution_architect",
+          "title": "Solutions Architect",
+          "title_vi": "Kiến trúc sư giải pháp",
+          "description": "Thiết kế giải pháp công nghệ tổng thể"
+        },
+        {
+          "id": "job_enterprise_architect",
+          "title": "Enterprise Architect",
+          "title_vi": "Kiến trúc sư doanh nghiệp",
+          "description": "Định hướng kiến trúc IT cho tổ chức"
+        },
+        {
+          "id": "job_data_architect",
+          "title": "Data Architect",
+          "title_vi": "Kiến trúc sư dữ liệu",
+          "description": "Thiết kế kiến trúc data systems"
+        },
+        {
+          "id": "job_scrum_master",
+          "title": "Scrum Master",
+          "title_vi": "Scrum Master",
+          "description": "Quản lý Agile/Scrum processes"
+        },
+        {
+          "id": "job_agile_coach",
+          "title": "Agile Coach",
+          "title_vi": "Huấn luyện viên Agile",
+          "description": "Coaching teams về Agile methodologies"
+        },
+        {
+          "id": "job_cto",
+          "title": "Chief Technology Officer (CTO)",
+          "title_vi": "Giám đốc Công nghệ",
+          "description": "Lãnh đạo chiến lược công nghệ"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_specialized",
+      "category_name": "Chuyên môn đặc biệt",
+      "category_name_en": "Specialized Roles",
+      "jobs": [
+        {
+          "id": "job_blockchain_dev",
+          "title": "Blockchain Developer",
+          "title_vi": "Lập trình viên Blockchain",
+          "description": "Phát triển ứng dụng blockchain và smart contracts"
+        },
+        {
+          "id": "job_game_dev",
+          "title": "Game Developer",
+          "title_vi": "Lập trình viên Game",
+          "description": "Phát triển games và game engines"
+        },
+        {
+          "id": "job_embedded_engineer",
+          "title": "Embedded Systems Engineer",
+          "title_vi": "Kỹ sư hệ thống nhúng",
+          "description": "Phát triển phần mềm cho thiết bị nhúng và IoT"
+        },
+        {
+          "id": "job_system_admin",
+          "title": "System Administrator",
+          "title_vi": "Quản trị hệ thống",
+          "description": "Quản lý và bảo trì servers và networks"
+        },
+        {
+          "id": "job_network_engineer",
+          "title": "Network Engineer",
+          "title_vi": "Kỹ sư mạng",
+          "description": "Thiết kế và quản lý network infrastructure"
+        },
+        {
+          "id": "job_iot_engineer",
+          "title": "IoT Engineer",
+          "title_vi": "Kỹ sư IoT",
+          "description": "Phát triển giải pháp Internet of Things"
+        },
+        {
+          "id": "job_ar_vr_dev",
+          "title": "AR/VR Developer",
+          "title_vi": "Lập trình viên AR/VR",
+          "description": "Phát triển ứng dụng thực tế ảo/tăng cường"
+        },
+        {
+          "id": "job_unity_dev",
+          "title": "Unity Developer",
+          "title_vi": "Lập trình viên Unity",
+          "description": "Phát triển games và apps với Unity"
+        },
+        {
+          "id": "job_unreal_dev",
+          "title": "Unreal Engine Developer",
+          "title_vi": "Lập trình viên Unreal Engine",
+          "description": "Phát triển games với Unreal Engine"
+        },
+        {
+          "id": "job_firmware_engineer",
+          "title": "Firmware Engineer",
+          "title_vi": "Kỹ sư Firmware",
+          "description": "Phát triển firmware cho thiết bị nhúng"
+        },
+        {
+          "id": "job_robotics_engineer",
+          "title": "Robotics Engineer",
+          "title_vi": "Kỹ sư Robot",
+          "description": "Phát triển và lập trình robot"
+        },
+        {
+          "id": "job_database_admin",
+          "title": "Database Administrator (DBA)",
+          "title_vi": "Quản trị cơ sở dữ liệu",
+          "description": "Quản lý và tối ưu databases"
+        },
+        {
+          "id": "job_erp_consultant",
+          "title": "ERP Consultant",
+          "title_vi": "Chuyên viên tư vấn ERP",
+          "description": "Triển khai và tư vấn hệ thống ERP"
+        },
+        {
+          "id": "job_sap_consultant",
+          "title": "SAP Consultant",
+          "title_vi": "Chuyên viên SAP",
+          "description": "Tư vấn và triển khai SAP"
+        },
+        {
+          "id": "job_salesforce_dev",
+          "title": "Salesforce Developer",
+          "title_vi": "Lập trình viên Salesforce",
+          "description": "Phát triển solutions trên Salesforce"
+        },
+        {
+          "id": "job_technical_writer",
+          "title": "Technical Writer",
+          "title_vi": "Biên tập viên kỹ thuật",
+          "description": "Viết documentation và technical guides"
+        },
+        {
+          "id": "job_devrel",
+          "title": "Developer Relations Engineer",
+          "title_vi": "Kỹ sư quan hệ developer",
+          "description": "Kết nối và hỗ trợ developer community"
+        },
+        {
+          "id": "job_it_support",
+          "title": "IT Support Specialist",
+          "title_vi": "Chuyên viên hỗ trợ IT",
+          "description": "Hỗ trợ kỹ thuật IT cho người dùng"
+        },
+        {
+          "id": "job_help_desk",
+          "title": "Help Desk Support",
+          "title_vi": "Hỗ trợ Help Desk",
+          "description": "Giải quyết các vấn đề kỹ thuật của người dùng"
+        }
+      ]
+    },
+    {
+      "category_id": "cat_design",
+      "category_name": "Thiết kế & UX/UI",
+      "category_name_en": "Design and UX/UI",
+      "description": "Các vị trí về thiết kế giao diện và trải nghiệm người dùng",
+      "jobs": [
+        {
+          "id": "job_ux_designer",
+          "title": "UX Designer",
+          "title_vi": "Nhà thiết kế trải nghiệm người dùng",
+          "description": "Thiết kế trải nghiệm người dùng cho sản phẩm số"
+        },
+        {
+          "id": "job_ui_designer",
+          "title": "UI Designer",
+          "title_vi": "Nhà thiết kế giao diện",
+          "description": "Thiết kế giao diện người dùng đẹp và dễ sử dụng"
+        },
+        {
+          "id": "job_ux_ui_designer",
+          "title": "UX/UI Designer",
+          "title_vi": "Nhà thiết kế UX/UI",
+          "description": "Thiết kế cả trải nghiệm và giao diện người dùng"
+        },
+        {
+          "id": "job_product_designer",
+          "title": "Product Designer",
+          "title_vi": "Nhà thiết kế sản phẩm",
+          "description": "Thiết kế sản phẩm số từ ý tưởng đến thực thi"
+        },
+        {
+          "id": "job_ux_researcher",
+          "title": "UX Researcher",
+          "title_vi": "Nhà nghiên cứu UX",
+          "description": "Nghiên cứu hành vi và nhu cầu người dùng"
+        },
+        {
+          "id": "job_web_designer",
+          "title": "Web Designer",
+          "title_vi": "Nhà thiết kế Web",
+          "description": "Thiết kế giao diện website"
+        },
+        {
+          "id": "job_graphic_designer",
+          "title": "Graphic Designer",
+          "title_vi": "Nhà thiết kế đồ họa",
+          "description": "Thiết kế đồ họa và visual content"
+        }
+      ]
+    }
+  ]
+}

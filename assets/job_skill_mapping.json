@@ -1,0 +1,3302 @@
+{
+  "metadata": {
+    "version": "4.0",
+    "last_updated": "2024-11-04",
+    "description": "AI-generated job-skill mapping using Google Gemini",
+    "ai_provider": "gemini",
+    "total_mappings": 86
+  },
+  "job_skill_mappings": [
+    {
+      "job_id": "job_frontend_dev",
+      "required_skills": [
+        "skill_html",
+        "skill_css",
+        "skill_javascript",
+        "skill_git",
+        "skill_restful",
+        "skill_responsive_design",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs",
+            "skill_svelte"
+          ],
+          "note": "Mainstream Frontend Framework"
+        },
+        {
+          "one_of": [
+            "skill_sass",
+            "skill_tailwind",
+            "skill_bootstrap"
+          ],
+          "note": "CSS Preprocessor or Framework"
+        }
+      ],
+      "preferred_skills": [
+        "skill_typescript",
+        "skill_nextjs",
+        "skill_vite",
+        "skill_material_ui",
+        "skill_jest"
+      ]
+    },
+    {
+      "job_id": "job_backend_dev",
+      "required_skills": [
+        "skill_git",
+        "skill_sql",
+        "skill_restful",
+        "skill_oop",
+        "skill_design_patterns",
+        "skill_system_design",
+        "skill_problem_solving",
+        "skill_clean_code"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_go",
+            "skill_php"
+          ],
+          "note": "Primary programming language for server-side logic"
+        },
+        {
+          "one_of": [
+            "skill_django",
+            "skill_spring",
+            "skill_express",
+            "skill_laravel",
+            "skill_dotnet"
+          ],
+          "note": "Framework for building web applications and APIs"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_redis"
+          ],
+          "note": "Specific database system for data storage and caching"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_aws",
+        "skill_unit_testing",
+        "skill_microservices",
+        "skill_nginx"
+      ]
+    },
+    {
+      "job_id": "job_fullstack_dev",
+      "required_skills": [
+        "skill_html",
+        "skill_css",
+        "skill_javascript",
+        "skill_git",
+        "skill_restful",
+        "skill_sql",
+        "skill_problem_solving",
+        "skill_teamwork"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Frontend Framework"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_nodejs",
+            "skill_php",
+            "skill_csharp"
+          ],
+          "note": "Backend Programming Language/Runtime"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_sqlserver"
+          ],
+          "note": "Primary Database System"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_aws",
+        "skill_tailwind",
+        "skill_unit_testing",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_mobile_dev",
+      "required_skills": [
+        "skill_android",
+        "skill_ios",
+        "skill_git",
+        "skill_restful",
+        "skill_json",
+        "skill_problem_solving",
+        "skill_oop",
+        "skill_unit_testing"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_swift",
+            "skill_kotlin",
+            "skill_react_native",
+            "skill_flutter"
+          ],
+          "note": "Proficiency in at least one major mobile development language or framework for iOS/Android."
+        },
+        {
+          "one_of": [
+            "skill_android_studio",
+            "skill_xcode"
+          ],
+          "note": "Experience with a primary mobile development IDE."
+        }
+      ],
+      "preferred_skills": [
+        "skill_firebase",
+        "skill_responsive_design",
+        "skill_design_patterns",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_data_analyst",
+      "required_skills": [
+        "skill_data_analysis",
+        "skill_sql",
+        "skill_python",
+        "skill_pandas",
+        "skill_numpy",
+        "skill_matplotlib",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_critical_thinking",
+        "skill_database_design"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_r"
+          ],
+          "note": "Ngôn ngữ lập trình chính cho phân tích dữ liệu và tính toán thống kê."
+        },
+        {
+          "one_of": [
+            "skill_tableau",
+            "skill_powerbi"
+          ],
+          "note": "Công cụ Business Intelligence (BI) để tạo dashboard và báo cáo tương tác."
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_sqlserver",
+            "skill_oracle"
+          ],
+          "note": "Kinh nghiệm với một hệ quản trị cơ sở dữ liệu quan hệ phổ biến."
+        }
+      ],
+      "preferred_skills": [
+        "skill_jupyter",
+        "skill_git",
+        "skill_ml_basics",
+        "skill_apache_spark",
+        "skill_aws"
+      ]
+    },
+    {
+      "job_id": "job_data_scientist",
+      "required_skills": [
+        "skill_python",
+        "skill_sql",
+        "skill_data_analysis",
+        "skill_ml_basics",
+        "skill_pandas",
+        "skill_numpy",
+        "skill_scikit_learn",
+        "skill_jupyter",
+        "skill_matplotlib"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_r"
+          ],
+          "note": "Primary programming language for data analysis and model building."
+        },
+        {
+          "one_of": [
+            "skill_tensorflow",
+            "skill_pytorch"
+          ],
+          "note": "Deep Learning framework for advanced model development."
+        },
+        {
+          "one_of": [
+            "skill_tableau",
+            "skill_powerbi"
+          ],
+          "note": "Business Intelligence and data visualization tool for reporting."
+        }
+      ],
+      "preferred_skills": [
+        "skill_git",
+        "skill_communication",
+        "skill_deep_learning",
+        "skill_apache_spark",
+        "skill_aws"
+      ]
+    },
+    {
+      "job_id": "job_data_engineer",
+      "required_skills": [
+        "skill_python",
+        "skill_sql",
+        "skill_git",
+        "skill_linux",
+        "skill_docker",
+        "skill_apache_spark",
+        "skill_airflow",
+        "skill_database_design",
+        "skill_system_design",
+        "skill_aws"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Nền tảng điện toán đám mây chính (chỉ cần thành thạo một trong số này)"
+        },
+        {
+          "one_of": [
+            "skill_postgresql",
+            "skill_mysql",
+            "skill_oracle",
+            "skill_sqlserver"
+          ],
+          "note": "Hệ quản trị cơ sở dữ liệu quan hệ (chỉ cần thành thạo một trong số này)"
+        },
+        {
+          "one_of": [
+            "skill_apache_spark",
+            "skill_hadoop"
+          ],
+          "note": "Framework xử lý dữ liệu lớn (chỉ cần thành thạo một trong số này)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_terraform",
+        "skill_kubernetes",
+        "skill_mongodb",
+        "skill_message_queues",
+        "skill_data_analysis"
+      ]
+    },
+    {
+      "job_id": "job_ml_engineer",
+      "required_skills": [
+        "skill_python",
+        "skill_ml_basics",
+        "skill_deep_learning",
+        "skill_scikit_learn",
+        "skill_pandas",
+        "skill_numpy",
+        "skill_data_analysis",
+        "skill_git",
+        "skill_docker",
+        "skill_system_design"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tensorflow",
+            "skill_pytorch"
+          ],
+          "note": "Major Deep Learning Framework"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Cloud Platform for MLOps and Deployment"
+        }
+      ],
+      "preferred_skills": [
+        "skill_sql",
+        "skill_kubernetes",
+        "skill_fastapi",
+        "skill_airflow",
+        "skill_jupyter"
+      ]
+    },
+    {
+      "job_id": "job_devops_engineer",
+      "required_skills": [
+        "skill_git",
+        "skill_linux",
+        "skill_bash",
+        "skill_python",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_terraform"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Proficiency in at least one major cloud provider is essential for deploying and managing infrastructure."
+        },
+        {
+          "one_of": [
+            "skill_jenkins",
+            "skill_gitlab_ci",
+            "skill_github_actions"
+          ],
+          "note": "Experience with a leading CI/CD platform to automate software delivery pipelines."
+        }
+      ],
+      "preferred_skills": [
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_ansible",
+        "skill_helm",
+        "skill_nginx"
+      ]
+    },
+    {
+      "job_id": "job_cloud_architect",
+      "required_skills": [
+        "skill_aws",
+        "skill_azure",
+        "skill_gcp",
+        "skill_terraform",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_linux",
+        "skill_git",
+        "skill_system_design",
+        "skill_network_security"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go",
+            "skill_bash"
+          ],
+          "note": "Ngôn ngữ lập trình/scripting để tự động hóa tác vụ và quản lý hạ tầng đám mây."
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_dynamodb"
+          ],
+          "note": "Hiểu biết về các loại cơ sở dữ liệu khác nhau (SQL/NoSQL) và cách triển khai chúng trên đám mây."
+        }
+      ],
+      "preferred_skills": [
+        "skill_ansible",
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_communication",
+        "skill_leadership"
+      ]
+    },
+    {
+      "job_id": "job_security_engineer",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_network_security",
+        "skill_vulnerability_assessment",
+        "skill_incident_response",
+        "skill_linux",
+        "skill_firewall",
+        "skill_encryption",
+        "skill_owasp",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go",
+            "skill_bash"
+          ],
+          "note": "Scripting/Automation Language for security tasks and tool development"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Cloud Security Platform knowledge"
+        },
+        {
+          "one_of": [
+            "skill_nmap",
+            "skill_burp_suite",
+            "skill_metasploit"
+          ],
+          "note": "Security Assessment and Penetration Testing Tools"
+        }
+      ],
+      "preferred_skills": [
+        "skill_penetration_testing",
+        "skill_siem",
+        "skill_docker",
+        "skill_ethical_hacking",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_qa_engineer",
+      "required_skills": [
+        "skill_test_automation",
+        "skill_postman",
+        "skill_git",
+        "skill_problem_solving",
+        "skill_communication",
+        "skill_agile",
+        "skill_sql",
+        "skill_integration_testing"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_selenium",
+            "skill_cypress",
+            "skill_playwright"
+          ],
+          "note": "UI/E2E Test Automation Tools"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript"
+          ],
+          "note": "Programming Language for Test Automation"
+        }
+      ],
+      "preferred_skills": [
+        "skill_jmeter",
+        "skill_docker",
+        "skill_bdd",
+        "skill_jenkins",
+        "skill_linux"
+      ]
+    },
+    {
+      "job_id": "job_test_automation_engineer",
+      "required_skills": [
+        "skill_test_automation",
+        "skill_git",
+        "skill_python",
+        "skill_selenium",
+        "skill_unit_testing",
+        "skill_integration_testing",
+        "skill_postman",
+        "skill_problem_solving",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_csharp"
+          ],
+          "note": "Ngôn ngữ lập trình chính để phát triển các script và framework tự động hóa."
+        },
+        {
+          "one_of": [
+            "skill_selenium",
+            "skill_cypress",
+            "skill_playwright",
+            "skill_puppeteer"
+          ],
+          "note": "Công cụ chính để tự động hóa kiểm thử giao diện người dùng (UI) web."
+        },
+        {
+          "one_of": [
+            "skill_pytest",
+            "skill_junit",
+            "skill_jest"
+          ],
+          "note": "Framework để viết và chạy các bài kiểm thử đơn vị và tích hợp, thường được tích hợp vào các bộ kiểm thử tự động."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_jenkins",
+        "skill_bdd",
+        "skill_sql",
+        "skill_load_testing"
+      ]
+    },
+    {
+      "job_id": "job_python_dev",
+      "required_skills": [
+        "skill_python",
+        "skill_git",
+        "skill_sql",
+        "skill_restful",
+        "skill_oop",
+        "skill_problem_solving",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_linux"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_django",
+            "skill_flask",
+            "skill_fastapi"
+          ],
+          "note": "Các framework web phổ biến của Python để phát triển backend hoặc API."
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb"
+          ],
+          "note": "Các hệ quản trị cơ sở dữ liệu phổ biến để lưu trữ và quản lý dữ liệu ứng dụng."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_aws",
+        "skill_pytest",
+        "skill_agile",
+        "skill_system_design"
+      ]
+    },
+    {
+      "job_id": "job_java_dev",
+      "required_skills": [
+        "skill_java",
+        "skill_spring",
+        "skill_sql",
+        "skill_git",
+        "skill_oop",
+        "skill_restful",
+        "skill_design_patterns",
+        "skill_problem_solving",
+        "skill_teamwork",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_oracle",
+            "skill_sqlserver",
+            "skill_mariadb"
+          ],
+          "note": "Relational Database Management System (RDBMS)"
+        },
+        {
+          "one_of": [
+            "skill_maven",
+            "skill_gradle"
+          ],
+          "note": "Java Build Automation Tool"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platform"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_junit",
+        "skill_microservices",
+        "skill_clean_code",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_nodejs_dev",
+      "required_skills": [
+        "skill_javascript",
+        "skill_nodejs",
+        "skill_express",
+        "skill_restful",
+        "skill_git",
+        "skill_sql",
+        "skill_json",
+        "skill_unit_testing",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_express",
+            "skill_nestjs"
+          ],
+          "note": "Node.js Backend Framework"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb"
+          ],
+          "note": "Common Backend Databases"
+        }
+      ],
+      "preferred_skills": [
+        "skill_typescript",
+        "skill_docker",
+        "skill_aws",
+        "skill_graphql",
+        "skill_redis"
+      ]
+    },
+    {
+      "job_id": "job_golang_dev",
+      "required_skills": [
+        "skill_go",
+        "skill_microservices",
+        "skill_restful",
+        "skill_git",
+        "skill_docker",
+        "skill_sql",
+        "skill_system_design",
+        "skill_problem_solving",
+        "skill_data_structures",
+        "skill_algorithms"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb"
+          ],
+          "note": "Primary Data Storage (Relational or NoSQL)"
+        },
+        {
+          "one_of": [
+            "skill_redis",
+            "skill_memcached"
+          ],
+          "note": "In-memory Data Store for Caching"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platforms"
+        }
+      ],
+      "preferred_skills": [
+        "skill_kubernetes",
+        "skill_grpc",
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_dotnet_dev",
+      "required_skills": [
+        "skill_csharp",
+        "skill_dotnet",
+        "skill_aspnet",
+        "skill_sql",
+        "skill_git",
+        "skill_oop",
+        "skill_restful",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Frontend Framework for UI development (if full-stack or working closely with frontend)"
+        },
+        {
+          "one_of": [
+            "skill_azure",
+            "skill_aws",
+            "skill_gcp"
+          ],
+          "note": "Cloud platform for deployment and services"
+        }
+      ],
+      "preferred_skills": [
+        "skill_sqlserver",
+        "skill_docker",
+        "skill_azure",
+        "skill_design_patterns",
+        "skill_unit_testing"
+      ]
+    },
+    {
+      "job_id": "job_php_dev",
+      "required_skills": [
+        "skill_php",
+        "skill_html",
+        "skill_css",
+        "skill_javascript",
+        "skill_sql",
+        "skill_git",
+        "skill_restful",
+        "skill_json"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_laravel",
+            "skill_symfony"
+          ],
+          "note": "PHP Web Framework"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mariadb"
+          ],
+          "note": "Relational Database System"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_nginx",
+        "skill_tailwind",
+        "skill_unit_testing",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_react_dev",
+      "required_skills": [
+        "skill_react",
+        "skill_javascript",
+        "skill_html",
+        "skill_css",
+        "skill_git",
+        "skill_restful",
+        "skill_json",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_sass",
+            "skill_tailwind",
+            "skill_bootstrap",
+            "skill_material_ui",
+            "skill_antd"
+          ],
+          "note": "CSS Preprocessors or UI Component Libraries for styling"
+        },
+        {
+          "one_of": [
+            "skill_webpack",
+            "skill_vite",
+            "skill_parcel"
+          ],
+          "note": "Frontend Build Tools for bundling and development"
+        }
+      ],
+      "preferred_skills": [
+        "skill_typescript",
+        "skill_nextjs",
+        "skill_unit_testing",
+        "skill_responsive_design",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_angular_dev",
+      "required_skills": [
+        "skill_angular",
+        "skill_typescript",
+        "skill_javascript",
+        "skill_html",
+        "skill_css",
+        "skill_git",
+        "skill_restful",
+        "skill_unit_testing"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_sass",
+            "skill_tailwind",
+            "skill_bootstrap",
+            "skill_material_ui"
+          ],
+          "note": "CSS Preprocessors or UI Frameworks for efficient styling"
+        }
+      ],
+      "preferred_skills": [
+        "skill_responsive_design",
+        "skill_agile",
+        "skill_pwa",
+        "skill_webpack",
+        "skill_docker"
+      ]
+    },
+    {
+      "job_id": "job_vue_dev",
+      "required_skills": [
+        "skill_vuejs",
+        "skill_javascript",
+        "skill_html",
+        "skill_css",
+        "skill_git",
+        "skill_restful",
+        "skill_problem_solving",
+        "skill_teamwork"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_sass",
+            "skill_tailwind",
+            "skill_bootstrap",
+            "skill_less"
+          ],
+          "note": "CSS Preprocessors or Utility Frameworks"
+        },
+        {
+          "one_of": [
+            "skill_webpack",
+            "skill_vite",
+            "skill_parcel",
+            "skill_rollup"
+          ],
+          "note": "Frontend Build Tools"
+        }
+      ],
+      "preferred_skills": [
+        "skill_typescript",
+        "skill_nuxtjs",
+        "skill_jest",
+        "skill_responsive_design",
+        "skill_vercel"
+      ]
+    },
+    {
+      "job_id": "job_ai_engineer",
+      "required_skills": [
+        "skill_python",
+        "skill_ml_basics",
+        "skill_deep_learning",
+        "skill_data_analysis",
+        "skill_pandas",
+        "skill_numpy",
+        "skill_git",
+        "skill_docker",
+        "skill_restful",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tensorflow",
+            "skill_pytorch"
+          ],
+          "note": "Major Deep Learning Frameworks"
+        },
+        {
+          "one_of": [
+            "skill_flask",
+            "skill_fastapi",
+            "skill_django"
+          ],
+          "note": "Python Web Frameworks for API Deployment"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platforms"
+        }
+      ],
+      "preferred_skills": [
+        "skill_scikit_learn",
+        "skill_nlp",
+        "skill_kubernetes",
+        "skill_sql",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_cloud_engineer",
+      "required_skills": [
+        "skill_linux",
+        "skill_git",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_terraform",
+        "skill_bash",
+        "skill_python",
+        "skill_restful",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platform"
+        },
+        {
+          "one_of": [
+            "skill_jenkins",
+            "skill_gitlab_ci",
+            "skill_github_actions"
+          ],
+          "note": "CI/CD Tools for Automation"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_dynamodb"
+          ],
+          "note": "Common Cloud Database Systems"
+        }
+      ],
+      "preferred_skills": [
+        "skill_ansible",
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_nginx",
+        "skill_serverless"
+      ]
+    },
+    {
+      "job_id": "job_game_dev",
+      "required_skills": [
+        "skill_cpp",
+        "skill_oop",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_problem_solving",
+        "skill_git",
+        "skill_teamwork",
+        "skill_creativity"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_csharp",
+            "skill_python",
+            "skill_lua"
+          ],
+          "note": "Ngôn ngữ lập trình chính cho logic game, scripting hoặc phát triển công cụ trong các game engine phổ biến."
+        }
+      ],
+      "preferred_skills": [
+        "skill_design_patterns",
+        "skill_sql",
+        "skill_restful",
+        "skill_linux",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_software_architect",
+      "required_skills": [
+        "skill_system_design",
+        "skill_design_patterns",
+        "skill_api_design",
+        "skill_scalability",
+        "skill_database_design",
+        "skill_communication",
+        "skill_leadership",
+        "skill_problem_solving",
+        "skill_critical_thinking"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_java",
+            "skill_python",
+            "skill_csharp",
+            "skill_go",
+            "skill_javascript"
+          ],
+          "note": "Proficiency in a major backend programming language to understand implementation details and guide development teams."
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Expertise in at least one major cloud computing platform, as most modern systems are cloud-native or cloud-hosted."
+        }
+      ],
+      "preferred_skills": [
+        "skill_devops",
+        "skill_kubernetes",
+        "skill_event_driven",
+        "skill_cybersecurity",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_software_engineer",
+      "required_skills": [
+        "skill_oop",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_system_design",
+        "skill_git",
+        "skill_problem_solving",
+        "skill_communication",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_csharp",
+            "skill_go"
+          ],
+          "note": "Ngôn ngữ lập trình cốt lõi"
+        },
+        {
+          "one_of": [
+            "skill_spring",
+            "skill_django",
+            "skill_nodejs",
+            "skill_dotnet",
+            "skill_laravel"
+          ],
+          "note": "Framework phát triển Backend"
+        },
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Framework phát triển Frontend"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_aws",
+        "skill_unit_testing",
+        "skill_api_design",
+        "skill_postgresql"
+      ]
+    },
+    {
+      "job_id": "job_bi_developer",
+      "required_skills": [
+        "skill_sql",
+        "skill_data_analysis",
+        "skill_python",
+        "skill_communication",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tableau",
+            "skill_powerbi"
+          ],
+          "note": "Business Intelligence Visualization Tools"
+        },
+        {
+          "one_of": [
+            "skill_sqlserver",
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_oracle"
+          ],
+          "note": "Common Relational Database Systems"
+        }
+      ],
+      "preferred_skills": [
+        "skill_git",
+        "skill_pandas",
+        "skill_apache_spark",
+        "skill_aws",
+        "skill_airflow"
+      ]
+    },
+    {
+      "job_id": "job_sre",
+      "required_skills": [
+        "skill_linux",
+        "skill_bash",
+        "skill_git",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go"
+          ],
+          "note": "Scripting/Automation Language"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Cloud Platform Expertise"
+        }
+      ],
+      "preferred_skills": [
+        "skill_terraform",
+        "skill_ansible",
+        "skill_system_design",
+        "skill_sql",
+        "skill_jenkins"
+      ]
+    },
+    {
+      "job_id": "job_penetration_tester",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_penetration_testing",
+        "skill_ethical_hacking",
+        "skill_vulnerability_assessment",
+        "skill_network_security",
+        "skill_linux",
+        "skill_burp_suite",
+        "skill_nmap",
+        "skill_metasploit",
+        "skill_owasp"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_bash",
+            "skill_ruby",
+            "skill_c"
+          ],
+          "note": "Scripting/Exploit Development Language"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Cloud Platform Knowledge"
+        }
+      ],
+      "preferred_skills": [
+        "skill_wireshark",
+        "skill_incident_response",
+        "skill_forensics",
+        "skill_docker",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_security_analyst",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_network_security",
+        "skill_siem",
+        "skill_linux",
+        "skill_incident_response",
+        "skill_vulnerability_assessment",
+        "skill_problem_solving",
+        "skill_critical_thinking",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_splunk",
+            "skill_elasticsearch",
+            "skill_grafana"
+          ],
+          "note": "Tools for log aggregation, analysis, and visualization of security events."
+        }
+      ],
+      "preferred_skills": [
+        "skill_python",
+        "skill_penetration_testing",
+        "skill_forensics",
+        "skill_ids_ips",
+        "skill_firewall"
+      ]
+    },
+    {
+      "job_id": "job_tech_lead",
+      "required_skills": [
+        "skill_leadership",
+        "skill_problem_solving",
+        "skill_agile",
+        "skill_system_design",
+        "skill_design_patterns",
+        "skill_clean_code",
+        "skill_refactoring",
+        "skill_git",
+        "skill_communication",
+        "skill_mentoring"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_csharp",
+            "skill_go"
+          ],
+          "note": "Primary Backend Development Language/Ecosystem"
+        },
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Primary Frontend Framework (if applicable to team's focus)"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_sqlserver"
+          ],
+          "note": "Database System Expertise"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_aws",
+        "skill_microservices",
+        "skill_test_automation",
+        "skill_api_design"
+      ]
+    },
+    {
+      "job_id": "job_engineering_manager",
+      "required_skills": [
+        "skill_leadership",
+        "skill_project_management",
+        "skill_agile",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_system_design",
+        "skill_git",
+        "skill_mentoring",
+        "skill_decision_making"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Familiarity with at least one major cloud platform for infrastructure understanding and strategic decision-making."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_microservices",
+        "skill_scalability",
+        "skill_clean_code",
+        "skill_database_design"
+      ]
+    },
+    {
+      "job_id": "job_product_manager",
+      "required_skills": [
+        "skill_project_management",
+        "skill_agile",
+        "skill_communication",
+        "skill_leadership",
+        "skill_customer_focus",
+        "skill_system_design",
+        "skill_problem_solving",
+        "skill_critical_thinking"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_nodejs"
+          ],
+          "note": "Familiarity with a common backend programming language or runtime environment to understand development processes and technical feasibility."
+        }
+      ],
+      "preferred_skills": [
+        "skill_data_analysis",
+        "skill_user_research",
+        "skill_microservices",
+        "skill_docker",
+        "skill_presentation"
+      ]
+    },
+    {
+      "job_id": "job_blockchain_dev",
+      "required_skills": [
+        "skill_git",
+        "skill_javascript",
+        "skill_typescript",
+        "skill_cybersecurity",
+        "skill_encryption",
+        "skill_unit_testing",
+        "skill_problem_solving",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_restful"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_rust",
+            "skill_go",
+            "skill_python"
+          ],
+          "note": "Primary language for smart contract development or core blockchain logic (e.g., Solidity alternatives, Hyperledger, Vyper)."
+        },
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Frontend framework for building decentralized applications (dApps)."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_linux",
+        "skill_agile",
+        "skill_system_design",
+        "skill_aws"
+      ]
+    },
+    {
+      "job_id": "job_embedded_engineer",
+      "required_skills": [
+        "skill_c",
+        "skill_cpp",
+        "skill_python",
+        "skill_git",
+        "skill_linux",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_oop"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Cloud platform for IoT backend integration and data management."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_restful",
+        "skill_cybersecurity",
+        "skill_unit_testing",
+        "skill_design_patterns"
+      ]
+    },
+    {
+      "job_id": "job_system_admin",
+      "required_skills": [
+        "skill_linux",
+        "skill_bash",
+        "skill_git",
+        "skill_network_security",
+        "skill_firewall",
+        "skill_nginx",
+        "skill_docker",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Provider Management"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_sqlserver"
+          ],
+          "note": "Relational Database Management System"
+        }
+      ],
+      "preferred_skills": [
+        "skill_ansible",
+        "skill_kubernetes",
+        "skill_python",
+        "skill_grafana",
+        "skill_vmware"
+      ]
+    },
+    {
+      "job_id": "job_network_engineer",
+      "required_skills": [
+        "skill_linux",
+        "skill_network_security",
+        "skill_firewall",
+        "skill_wireshark",
+        "skill_problem_solving",
+        "skill_communication",
+        "skill_system_design",
+        "skill_scalability",
+        "skill_load_balancing"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Nền tảng điện toán đám mây (Cloud Networking Platforms)"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_bash"
+          ],
+          "note": "Ngôn ngữ lập trình/scripting cho tự động hóa mạng"
+        }
+      ],
+      "preferred_skills": [
+        "skill_ansible",
+        "skill_git",
+        "skill_ssl_tls",
+        "skill_vmware",
+        "skill_sql"
+      ]
+    },
+    {
+      "job_id": "job_qa_lead",
+      "required_skills": [
+        "skill_leadership",
+        "skill_project_management",
+        "skill_agile",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_test_automation",
+        "skill_unit_testing",
+        "skill_integration_testing",
+        "skill_bdd",
+        "skill_postman"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_selenium",
+            "skill_cypress",
+            "skill_playwright"
+          ],
+          "note": "Web UI Automation Framework"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript"
+          ],
+          "note": "Programming Language for Test Automation"
+        }
+      ],
+      "preferred_skills": [
+        "skill_git",
+        "skill_sql",
+        "skill_jenkins",
+        "skill_mentoring",
+        "skill_owasp"
+      ]
+    },
+    {
+      "job_id": "job_ruby_dev",
+      "required_skills": [
+        "skill_ruby",
+        "skill_rails",
+        "skill_html",
+        "skill_css",
+        "skill_javascript",
+        "skill_sql",
+        "skill_git",
+        "skill_restful",
+        "skill_json"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_postgresql",
+            "skill_mysql",
+            "skill_mariadb"
+          ],
+          "note": "Relational Database Management System (RDBMS) commonly used with Ruby on Rails."
+        },
+        {
+          "one_of": [
+            "skill_react",
+            "skill_vuejs",
+            "skill_angular"
+          ],
+          "note": "Popular frontend JavaScript frameworks often integrated with Rails applications for dynamic UIs."
+        }
+      ],
+      "preferred_skills": [
+        "skill_unit_testing",
+        "skill_docker",
+        "skill_redis",
+        "skill_agile",
+        "skill_oop"
+      ]
+    },
+    {
+      "job_id": "job_etl_developer",
+      "required_skills": [
+        "skill_sql",
+        "skill_python",
+        "skill_data_analysis",
+        "skill_database_design",
+        "skill_git",
+        "skill_linux",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_oracle",
+            "skill_sqlserver",
+            "skill_mariadb"
+          ],
+          "note": "Common Relational Database Systems for data sources or targets"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platform for data services and infrastructure"
+        },
+        {
+          "one_of": [
+            "skill_apache_spark",
+            "skill_hadoop"
+          ],
+          "note": "Big Data Processing Framework for large-scale ETL"
+        }
+      ],
+      "preferred_skills": [
+        "skill_airflow",
+        "skill_pandas",
+        "skill_docker",
+        "skill_data_structures",
+        "skill_system_design"
+      ]
+    },
+    {
+      "job_id": "job_big_data_engineer",
+      "required_skills": [
+        "skill_python",
+        "skill_apache_spark",
+        "skill_hadoop",
+        "skill_sql",
+        "skill_aws",
+        "skill_airflow",
+        "skill_git",
+        "skill_linux",
+        "skill_system_design"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_java",
+            "skill_scala"
+          ],
+          "note": "JVM-based language for high-performance data processing"
+        },
+        {
+          "one_of": [
+            "skill_mongodb",
+            "skill_cassandra",
+            "skill_dynamodb",
+            "skill_elasticsearch"
+          ],
+          "note": "Distributed NoSQL Database"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_message_queues",
+        "skill_data_analysis",
+        "skill_terraform"
+      ]
+    },
+    {
+      "job_id": "job_nlp_engineer",
+      "required_skills": [
+        "skill_nlp",
+        "skill_python",
+        "skill_ml_basics",
+        "skill_deep_learning",
+        "skill_data_analysis",
+        "skill_numpy",
+        "skill_pandas"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tensorflow",
+            "skill_pytorch",
+            "skill_keras"
+          ],
+          "note": "Deep Learning Frameworks for building and training NLP models"
+        }
+      ],
+      "preferred_skills": [
+        "skill_huggingface",
+        "skill_spacy",
+        "skill_jupyter",
+        "skill_git",
+        "skill_fastapi"
+      ]
+    },
+    {
+      "job_id": "job_computer_vision_engineer",
+      "required_skills": [
+        "skill_computer_vision",
+        "skill_deep_learning",
+        "skill_ml_basics",
+        "skill_python",
+        "skill_numpy",
+        "skill_opencv",
+        "skill_git",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tensorflow",
+            "skill_pytorch"
+          ],
+          "note": "Main Deep Learning Frameworks for model development."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_aws",
+        "skill_jupyter",
+        "skill_cpp",
+        "skill_scikit_learn"
+      ]
+    },
+    {
+      "job_id": "job_research_scientist",
+      "required_skills": [
+        "skill_python",
+        "skill_ml_basics",
+        "skill_deep_learning",
+        "skill_numpy",
+        "skill_pandas",
+        "skill_data_analysis",
+        "skill_git",
+        "skill_jupyter",
+        "skill_problem_solving",
+        "skill_algorithms"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tensorflow",
+            "skill_pytorch",
+            "skill_keras"
+          ],
+          "note": "Major Deep Learning Framework"
+        },
+        {
+          "one_of": [
+            "skill_matplotlib",
+            "skill_seaborn"
+          ],
+          "note": "Data Visualization Library"
+        },
+        {
+          "one_of": [
+            "skill_scikit_learn",
+            "skill_xgboost"
+          ],
+          "note": "Traditional ML/Gradient Boosting Library for baselines and specific tasks"
+        }
+      ],
+      "preferred_skills": [
+        "skill_nlp",
+        "skill_computer_vision",
+        "skill_docker",
+        "skill_aws",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_platform_engineer",
+      "required_skills": [
+        "skill_linux",
+        "skill_git",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_terraform",
+        "skill_bash",
+        "skill_system_design",
+        "skill_restful",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Kinh nghiệm với một trong các nền tảng điện toán đám mây lớn."
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go",
+            "skill_java",
+            "skill_typescript"
+          ],
+          "note": "Ngôn ngữ lập trình đa năng để phát triển công cụ, tự động hóa và API."
+        },
+        {
+          "one_of": [
+            "skill_jenkins",
+            "skill_gitlab_ci",
+            "skill_github_actions"
+          ],
+          "note": "Kinh nghiệm với một công cụ tự động hóa CI/CD."
+        }
+      ],
+      "preferred_skills": [
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_helm",
+        "skill_nginx",
+        "skill_microservices"
+      ]
+    },
+    {
+      "job_id": "job_infrastructure_engineer",
+      "required_skills": [
+        "skill_linux",
+        "skill_git",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_terraform",
+        "skill_ansible",
+        "skill_bash",
+        "skill_system_design",
+        "skill_prometheus",
+        "skill_grafana"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Nền tảng điện toán đám mây chính"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go",
+            "skill_ruby"
+          ],
+          "note": "Ngôn ngữ lập trình/scripting cho tự động hóa và công cụ"
+        },
+        {
+          "one_of": [
+            "skill_jenkins",
+            "skill_gitlab_ci",
+            "skill_github_actions"
+          ],
+          "note": "Công cụ CI/CD"
+        }
+      ],
+      "preferred_skills": [
+        "skill_network_security",
+        "skill_sql",
+        "skill_nginx",
+        "skill_elasticsearch",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_aws_engineer",
+      "required_skills": [
+        "skill_aws",
+        "skill_system_design",
+        "skill_terraform",
+        "skill_docker",
+        "skill_linux",
+        "skill_restful",
+        "skill_microservices",
+        "skill_communication",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_go"
+          ],
+          "note": "Programming language for AWS automation, serverless functions, or application development."
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_dynamodb"
+          ],
+          "note": "Understanding of relational and NoSQL database technologies."
+        }
+      ],
+      "preferred_skills": [
+        "skill_kubernetes",
+        "skill_aws_lambda",
+        "skill_aws_s3",
+        "skill_cybersecurity",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_azure_engineer",
+      "required_skills": [
+        "skill_azure",
+        "skill_terraform",
+        "skill_git",
+        "skill_docker",
+        "skill_linux",
+        "skill_python",
+        "skill_restful",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_github_actions",
+            "skill_jenkins",
+            "skill_gitlab_ci"
+          ],
+          "note": "CI/CD Pipeline Tool for automated deployments"
+        }
+      ],
+      "preferred_skills": [
+        "skill_kubernetes",
+        "skill_azure_functions",
+        "skill_sqlserver",
+        "skill_network_security",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_gcp_engineer",
+      "required_skills": [
+        "skill_gcp",
+        "skill_terraform",
+        "skill_git",
+        "skill_linux",
+        "skill_bash",
+        "skill_problem_solving",
+        "skill_communication",
+        "skill_system_design",
+        "skill_restful"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go",
+            "skill_java",
+            "skill_javascript"
+          ],
+          "note": "Programming language for cloud-native development, scripting, and automation on GCP."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_github_actions",
+        "skill_sql",
+        "skill_microservices"
+      ]
+    },
+    {
+      "job_id": "job_kubernetes_admin",
+      "required_skills": [
+        "skill_kubernetes",
+        "skill_docker",
+        "skill_linux",
+        "skill_bash",
+        "skill_git",
+        "skill_helm",
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_terraform"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platform (Nền tảng đám mây lớn)"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_go"
+          ],
+          "note": "Scripting/Automation Language (Ngôn ngữ lập trình để scripting/tự động hóa)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_argocd",
+        "skill_ansible",
+        "skill_gitlab_ci",
+        "skill_nginx",
+        "skill_microservices"
+      ]
+    },
+    {
+      "job_id": "job_application_security",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_owasp",
+        "skill_vulnerability_assessment",
+        "skill_penetration_testing",
+        "skill_encryption",
+        "skill_linux",
+        "skill_git",
+        "skill_sql",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_csharp"
+          ],
+          "note": "Proficiency in at least one common application programming language for code review and understanding application logic."
+        },
+        {
+          "one_of": [
+            "skill_spring",
+            "skill_django",
+            "skill_nodejs",
+            "skill_dotnet"
+          ],
+          "note": "Familiarity with at least one common web application framework to understand typical application architectures and vulnerabilities."
+        }
+      ],
+      "preferred_skills": [
+        "skill_burp_suite",
+        "skill_docker",
+        "skill_aws",
+        "skill_restful",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_cloud_security",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_network_security",
+        "skill_linux",
+        "skill_python",
+        "skill_terraform",
+        "skill_vulnerability_assessment",
+        "skill_incident_response",
+        "skill_encryption",
+        "skill_firewall"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Provider Expertise"
+        },
+        {
+          "one_of": [
+            "skill_jenkins",
+            "skill_gitlab_ci",
+            "skill_github_actions"
+          ],
+          "note": "CI/CD for Secure DevOps"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_siem",
+        "skill_penetration_testing",
+        "skill_owasp"
+      ]
+    },
+    {
+      "job_id": "job_devsecops",
+      "required_skills": [
+        "skill_git",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_linux",
+        "skill_bash",
+        "skill_python",
+        "skill_cybersecurity",
+        "skill_owasp",
+        "skill_vulnerability_assessment",
+        "skill_terraform"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_jenkins",
+            "skill_gitlab_ci",
+            "skill_github_actions",
+            "skill_circleci"
+          ],
+          "note": "CI/CD Pipeline Automation Tool"
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major Cloud Platform"
+        }
+      ],
+      "preferred_skills": [
+        "skill_penetration_testing",
+        "skill_network_security",
+        "skill_siem",
+        "skill_ansible",
+        "skill_helm"
+      ]
+    },
+    {
+      "job_id": "job_soc_analyst",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_siem",
+        "skill_incident_response",
+        "skill_network_security",
+        "skill_linux",
+        "skill_firewall",
+        "skill_vulnerability_assessment",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_critical_thinking"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_bash"
+          ],
+          "note": "Scripting for automation and log analysis"
+        },
+        {
+          "one_of": [
+            "skill_wireshark",
+            "skill_nmap"
+          ],
+          "note": "Network analysis and reconnaissance tools"
+        }
+      ],
+      "preferred_skills": [
+        "skill_splunk",
+        "skill_ids_ips",
+        "skill_metasploit",
+        "skill_kali_linux",
+        "skill_sql"
+      ]
+    },
+    {
+      "job_id": "job_threat_intelligence",
+      "required_skills": [
+        "skill_cybersecurity",
+        "skill_network_security",
+        "skill_vulnerability_assessment",
+        "skill_incident_response",
+        "skill_linux",
+        "skill_data_analysis",
+        "skill_critical_thinking",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_bash",
+            "skill_go"
+          ],
+          "note": "Scripting and automation for data processing, analysis, and tool development."
+        },
+        {
+          "one_of": [
+            "skill_siem",
+            "skill_splunk",
+            "skill_elasticsearch"
+          ],
+          "note": "Platforms for collecting, analyzing, and correlating security event data."
+        }
+      ],
+      "preferred_skills": [
+        "skill_ethical_hacking",
+        "skill_penetration_testing",
+        "skill_forensics",
+        "skill_ml_basics",
+        "skill_encryption"
+      ]
+    },
+    {
+      "job_id": "job_sdet",
+      "required_skills": [
+        "skill_test_automation",
+        "skill_git",
+        "skill_oop",
+        "skill_unit_testing",
+        "skill_integration_testing",
+        "skill_restful",
+        "skill_problem_solving",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_csharp"
+          ],
+          "note": "Primary programming language for developing test automation frameworks."
+        },
+        {
+          "one_of": [
+            "skill_selenium",
+            "skill_cypress",
+            "skill_playwright"
+          ],
+          "note": "Popular framework for web UI test automation."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_jenkins",
+        "skill_sql",
+        "skill_bdd",
+        "skill_load_testing"
+      ]
+    },
+    {
+      "job_id": "job_performance_tester",
+      "required_skills": [
+        "skill_load_testing",
+        "skill_jmeter",
+        "skill_restful",
+        "skill_json",
+        "skill_sql",
+        "skill_linux",
+        "skill_problem_solving",
+        "skill_critical_thinking"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript"
+          ],
+          "note": "Scripting language for test automation and tool extension"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_oracle",
+            "skill_sqlserver",
+            "skill_mongodb"
+          ],
+          "note": "Experience with common database systems"
+        }
+      ],
+      "preferred_skills": [
+        "skill_prometheus",
+        "skill_grafana",
+        "skill_docker",
+        "skill_aws",
+        "skill_system_design"
+      ]
+    },
+    {
+      "job_id": "job_mobile_qa",
+      "required_skills": [
+        "skill_ios",
+        "skill_android",
+        "skill_test_automation",
+        "skill_integration_testing",
+        "skill_postman",
+        "skill_git",
+        "skill_problem_solving",
+        "skill_communication",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_appium",
+            "skill_xcode",
+            "skill_android_studio"
+          ],
+          "note": "Mobile Test Automation Frameworks (native or cross-platform)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_jmeter",
+        "skill_owasp",
+        "skill_jenkins",
+        "skill_sql",
+        "skill_bdd"
+      ]
+    },
+    {
+      "job_id": "job_solution_architect",
+      "required_skills": [
+        "skill_system_design",
+        "skill_microservices",
+        "skill_api_design",
+        "skill_scalability",
+        "skill_communication",
+        "skill_leadership",
+        "skill_problem_solving",
+        "skill_cybersecurity",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Proficiency in at least one major cloud platform"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_csharp",
+            "skill_go",
+            "skill_nodejs"
+          ],
+          "note": "Understanding of a common backend programming language ecosystem"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_oracle"
+          ],
+          "note": "Experience with relational or NoSQL databases"
+        }
+      ],
+      "preferred_skills": [
+        "skill_kubernetes",
+        "skill_terraform",
+        "skill_event_driven",
+        "skill_uml",
+        "skill_git"
+      ]
+    },
+    {
+      "job_id": "job_enterprise_architect",
+      "required_skills": [
+        "skill_system_design",
+        "skill_microservices",
+        "skill_api_design",
+        "skill_database_design",
+        "skill_leadership",
+        "skill_communication",
+        "skill_critical_thinking",
+        "skill_project_management",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Proficiency in at least one major cloud provider is essential for modern enterprise architectures."
+        },
+        {
+          "one_of": [
+            "skill_java",
+            "skill_python",
+            "skill_csharp",
+            "skill_go"
+          ],
+          "note": "Understanding of at least one common enterprise programming language to grasp implementation details and technical debt."
+        }
+      ],
+      "preferred_skills": [
+        "skill_devops",
+        "skill_cybersecurity",
+        "skill_uml",
+        "skill_domain_driven_design",
+        "skill_presentation"
+      ]
+    },
+    {
+      "job_id": "job_data_architect",
+      "required_skills": [
+        "skill_database_design",
+        "skill_nosql_design",
+        "skill_sql",
+        "skill_system_design",
+        "skill_data_analysis",
+        "skill_python",
+        "skill_communication",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Expertise in at least one major cloud platform is crucial for modern data architectures."
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_oracle",
+            "skill_sqlserver"
+          ],
+          "note": "Proficiency with at least one widely used relational database system."
+        },
+        {
+          "one_of": [
+            "skill_mongodb",
+            "skill_cassandra",
+            "skill_dynamodb",
+            "skill_elasticsearch"
+          ],
+          "note": "Experience with at least one popular NoSQL database system."
+        }
+      ],
+      "preferred_skills": [
+        "skill_apache_spark",
+        "skill_airflow",
+        "skill_docker",
+        "skill_microservices",
+        "skill_cybersecurity"
+      ]
+    },
+    {
+      "job_id": "job_scrum_master",
+      "required_skills": [
+        "skill_agile",
+        "skill_communication",
+        "skill_leadership",
+        "skill_mentoring",
+        "skill_conflict_resolution",
+        "skill_problem_solving",
+        "skill_teamwork",
+        "skill_project_management"
+      ],
+      "skill_alternatives": [],
+      "preferred_skills": [
+        "skill_presentation",
+        "skill_time_management",
+        "skill_adaptability",
+        "skill_collaboration",
+        "skill_remote_work"
+      ]
+    },
+    {
+      "job_id": "job_agile_coach",
+      "required_skills": [
+        "skill_agile",
+        "skill_mentoring",
+        "skill_communication",
+        "skill_leadership",
+        "skill_problem_solving",
+        "skill_conflict_resolution",
+        "skill_teamwork",
+        "skill_presentation"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_tdd",
+            "skill_bdd"
+          ],
+          "note": "Understanding of Agile engineering practices"
+        }
+      ],
+      "preferred_skills": [
+        "skill_project_management",
+        "skill_git",
+        "skill_docker",
+        "skill_system_design",
+        "skill_emotional_intelligence"
+      ]
+    },
+    {
+      "job_id": "job_cto",
+      "required_skills": [
+        "skill_leadership",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_critical_thinking",
+        "skill_decision_making",
+        "skill_system_design",
+        "skill_project_management",
+        "skill_agile",
+        "skill_microservices",
+        "skill_cybersecurity"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_nodejs",
+            "skill_go",
+            "skill_csharp"
+          ],
+          "note": "Proficiency in at least one major backend programming language and its associated ecosystem."
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Deep understanding and experience with at least one major cloud computing platform."
+        }
+      ],
+      "preferred_skills": [
+        "skill_ml_basics",
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_negotiation",
+        "skill_mentoring"
+      ]
+    },
+    {
+      "job_id": "job_iot_engineer",
+      "required_skills": [
+        "skill_c",
+        "skill_python",
+        "skill_linux",
+        "skill_sql",
+        "skill_aws",
+        "skill_restful",
+        "skill_git",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_java",
+            "skill_go",
+            "skill_nodejs"
+          ],
+          "note": "Backend development language for cloud services and APIs."
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Major cloud platform for IoT backend infrastructure."
+        },
+        {
+          "one_of": [
+            "skill_mongodb",
+            "skill_cassandra",
+            "skill_dynamodb"
+          ],
+          "note": "NoSQL database for scalable IoT data storage."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_influxdb",
+        "skill_grafana",
+        "skill_message_queues",
+        "skill_ml_basics"
+      ]
+    },
+    {
+      "job_id": "job_ar_vr_dev",
+      "required_skills": [
+        "skill_git",
+        "skill_oop",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_system_design",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_csharp",
+            "skill_cpp"
+          ],
+          "note": "Primary programming language for AR/VR engines like Unity (C#) or Unreal Engine (C++)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_computer_vision",
+        "skill_ml_basics",
+        "skill_android",
+        "skill_restful",
+        "skill_creativity"
+      ]
+    },
+    {
+      "job_id": "job_unity_dev",
+      "required_skills": [
+        "skill_csharp",
+        "skill_oop",
+        "skill_design_patterns",
+        "skill_git",
+        "skill_problem_solving",
+        "skill_data_structures",
+        "skill_algorithms"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb",
+            "skill_firebase_db"
+          ],
+          "note": "Database for storing game/app data (e.g., user profiles, game states, leaderboards)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_agile",
+        "skill_communication",
+        "skill_restful",
+        "skill_visual_design",
+        "skill_unit_testing"
+      ]
+    },
+    {
+      "job_id": "job_unreal_dev",
+      "required_skills": [
+        "skill_cpp",
+        "skill_oop",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_git",
+        "skill_problem_solving",
+        "skill_teamwork",
+        "skill_agile"
+      ],
+      "skill_alternatives": [],
+      "preferred_skills": [
+        "skill_python",
+        "skill_design_patterns",
+        "skill_clean_code",
+        "skill_creativity",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_firmware_engineer",
+      "required_skills": [
+        "skill_c",
+        "skill_cpp",
+        "skill_git",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_problem_solving",
+        "skill_linux",
+        "skill_unit_testing"
+      ],
+      "skill_alternatives": [],
+      "preferred_skills": [
+        "skill_python",
+        "skill_rust",
+        "skill_bash",
+        "skill_agile",
+        "skill_communication"
+      ]
+    },
+    {
+      "job_id": "job_robotics_engineer",
+      "required_skills": [
+        "skill_cpp",
+        "skill_python",
+        "skill_linux",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_oop",
+        "skill_git",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_c",
+            "skill_cpp",
+            "skill_rust"
+          ],
+          "note": "Low-level/Embedded programming for real-time control or performance-critical components."
+        }
+      ],
+      "preferred_skills": [
+        "skill_computer_vision",
+        "skill_ml_basics",
+        "skill_opencv",
+        "skill_docker",
+        "skill_teamwork"
+      ]
+    },
+    {
+      "job_id": "job_database_admin",
+      "required_skills": [
+        "skill_sql",
+        "skill_database_design",
+        "skill_linux",
+        "skill_bash",
+        "skill_problem_solving",
+        "skill_communication"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_oracle",
+            "skill_sqlserver",
+            "skill_mariadb"
+          ],
+          "note": "Thành thạo ít nhất một hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) phổ biến."
+        },
+        {
+          "one_of": [
+            "skill_mongodb",
+            "skill_cassandra",
+            "skill_redis",
+            "skill_elasticsearch"
+          ],
+          "note": "Kinh nghiệm với ít nhất một hệ quản trị cơ sở dữ liệu NoSQL lớn, tùy thuộc vào yêu cầu của hệ thống."
+        }
+      ],
+      "preferred_skills": [
+        "skill_python",
+        "skill_docker",
+        "skill_aws_rds",
+        "skill_prometheus",
+        "skill_grafana"
+      ]
+    },
+    {
+      "job_id": "job_erp_consultant",
+      "required_skills": [
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_project_management",
+        "skill_sql",
+        "skill_customer_focus",
+        "skill_agile",
+        "skill_data_analysis",
+        "skill_critical_thinking"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_oracle",
+            "skill_sqlserver",
+            "skill_mysql",
+            "skill_postgresql"
+          ],
+          "note": "Kiến thức về một trong các hệ quản trị cơ sở dữ liệu phổ biến được sử dụng trong các hệ thống ERP."
+        }
+      ],
+      "preferred_skills": [
+        "skill_presentation",
+        "skill_restful",
+        "skill_powerbi",
+        "skill_leadership",
+        "skill_database_design"
+      ]
+    },
+    {
+      "job_id": "job_sap_consultant",
+      "required_skills": [
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_customer_focus",
+        "skill_project_management",
+        "skill_sql",
+        "skill_data_analysis",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_oracle",
+            "skill_sqlserver",
+            "skill_mysql",
+            "skill_postgresql"
+          ],
+          "note": "Kiến thức về cơ sở dữ liệu quan hệ (cho cơ sở dữ liệu SAP nền tảng hoặc tích hợp)"
+        },
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_csharp"
+          ],
+          "note": "Ngôn ngữ lập trình đa năng (để tích hợp, viết script hoặc phát triển công cụ tùy chỉnh)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_aws",
+        "skill_azure",
+        "skill_restful",
+        "skill_git",
+        "skill_linux"
+      ]
+    },
+    {
+      "job_id": "job_salesforce_dev",
+      "required_skills": [
+        "skill_javascript",
+        "skill_html",
+        "skill_css",
+        "skill_sql",
+        "skill_git",
+        "skill_restful",
+        "skill_problem_solving",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Experience with a modern component-based UI framework, which aids in learning Salesforce Lightning Web Components (LWC)."
+        }
+      ],
+      "preferred_skills": [
+        "skill_oop",
+        "skill_design_patterns",
+        "skill_unit_testing",
+        "skill_aws",
+        "skill_typescript"
+      ]
+    },
+    {
+      "job_id": "job_technical_writer",
+      "required_skills": [
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_critical_thinking",
+        "skill_git",
+        "skill_html",
+        "skill_css",
+        "skill_restful",
+        "skill_json",
+        "skill_agile"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_go",
+            "skill_csharp"
+          ],
+          "note": "Hiểu biết về một ngôn ngữ lập trình phổ biến để đọc hiểu code ví dụ và nắm bắt ngữ cảnh kỹ thuật."
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Quen thuộc với một nền tảng điện toán đám mây lớn để tài liệu hóa các dịch vụ dựa trên đám mây."
+        }
+      ],
+      "preferred_skills": [
+        "skill_seo",
+        "skill_content_strategy",
+        "skill_linux",
+        "skill_docker",
+        "skill_postman"
+      ]
+    },
+    {
+      "job_id": "job_devrel",
+      "required_skills": [
+        "skill_communication",
+        "skill_presentation",
+        "skill_git",
+        "skill_problem_solving",
+        "skill_adaptability",
+        "skill_customer_focus",
+        "skill_collaboration",
+        "skill_content_strategy",
+        "skill_restful"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_go",
+            "skill_csharp"
+          ],
+          "note": "Proficiency in at least one common backend programming language for building examples, understanding APIs, and demonstrating server-side logic."
+        },
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Familiarity with at least one popular frontend framework for creating interactive demos, tutorials, and user interfaces."
+        },
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Experience with at least one major cloud platform for deploying applications, managing services, and understanding cloud-native development."
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_agile",
+        "skill_mentoring",
+        "skill_seo",
+        "skill_digital_marketing"
+      ]
+    },
+    {
+      "job_id": "job_ux_designer",
+      "required_skills": [
+        "skill_user_research",
+        "skill_usability_testing",
+        "skill_wireframing",
+        "skill_information_architecture",
+        "skill_interaction_design",
+        "skill_visual_design",
+        "skill_responsive_design",
+        "skill_figma",
+        "skill_communication",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Alternative UI/UX design and prototyping tools to Figma."
+        }
+      ],
+      "preferred_skills": [
+        "skill_html",
+        "skill_css",
+        "skill_accessibility",
+        "skill_agile",
+        "skill_adobe_photoshop"
+      ]
+    },
+    {
+      "job_id": "job_ui_designer",
+      "required_skills": [
+        "skill_visual_design",
+        "skill_interaction_design",
+        "skill_wireframing",
+        "skill_prototyping",
+        "skill_responsive_design",
+        "skill_communication",
+        "skill_creativity"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_figma",
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Industry-standard UI design tools"
+        }
+      ],
+      "preferred_skills": [
+        "skill_user_research",
+        "skill_usability_testing",
+        "skill_accessibility",
+        "skill_html",
+        "skill_css"
+      ]
+    },
+    {
+      "job_id": "job_ux_ui_designer",
+      "required_skills": [
+        "skill_user_research",
+        "skill_wireframing",
+        "skill_prototyping",
+        "skill_usability_testing",
+        "skill_visual_design",
+        "skill_responsive_design",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_creativity"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_figma",
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Primary UI/UX design software"
+        }
+      ],
+      "preferred_skills": [
+        "skill_html",
+        "skill_css",
+        "skill_adobe_photoshop",
+        "skill_adobe_illustrator",
+        "skill_agile"
+      ]
+    },
+    {
+      "job_id": "job_product_designer",
+      "required_skills": [
+        "skill_user_research",
+        "skill_wireframing",
+        "skill_visual_design",
+        "skill_interaction_design",
+        "skill_responsive_design",
+        "skill_figma",
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_creativity"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_figma",
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Primary UI/UX Design Tool"
+        }
+      ],
+      "preferred_skills": [
+        "skill_usability_testing",
+        "skill_information_architecture",
+        "skill_accessibility",
+        "skill_agile",
+        "skill_html"
+      ]
+    },
+    {
+      "job_id": "job_ux_researcher",
+      "required_skills": [
+        "skill_user_research",
+        "skill_usability_testing",
+        "skill_data_analysis",
+        "skill_communication",
+        "skill_critical_thinking",
+        "skill_problem_solving",
+        "skill_customer_focus",
+        "skill_collaboration"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_r",
+            "skill_python",
+            "skill_tableau",
+            "skill_powerbi"
+          ],
+          "note": "Công cụ phân tích và trực quan hóa dữ liệu định lượng"
+        },
+        {
+          "one_of": [
+            "skill_figma",
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Công cụ thiết kế và tạo mẫu (prototyping) để hỗ trợ nghiên cứu"
+        }
+      ],
+      "preferred_skills": [
+        "skill_information_architecture",
+        "skill_interaction_design",
+        "skill_prototyping",
+        "skill_agile",
+        "skill_google_analytics"
+      ]
+    },
+    {
+      "job_id": "job_web_designer",
+      "required_skills": [
+        "skill_html",
+        "skill_css",
+        "skill_responsive_design",
+        "skill_visual_design",
+        "skill_wireframing",
+        "skill_user_research",
+        "skill_usability_testing",
+        "skill_communication",
+        "skill_creativity",
+        "skill_prototyping"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_figma",
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Công cụ thiết kế UI/UX hàng đầu để tạo wireframe, mockup và prototype."
+        },
+        {
+          "one_of": [
+            "skill_sass",
+            "skill_tailwind",
+            "skill_bootstrap"
+          ],
+          "note": "Các công cụ hoặc framework giúp viết CSS hiệu quả và nhanh chóng hơn."
+        },
+        {
+          "one_of": [
+            "skill_adobe_photoshop",
+            "skill_adobe_illustrator"
+          ],
+          "note": "Công cụ chỉnh sửa hình ảnh và đồ họa vector để tạo và tối ưu hóa tài nguyên thiết kế."
+        }
+      ],
+      "preferred_skills": [
+        "skill_javascript",
+        "skill_git",
+        "skill_seo",
+        "skill_accessibility",
+        "skill_information_architecture"
+      ]
+    },
+    {
+      "job_id": "job_graphic_designer",
+      "required_skills": [
+        "skill_adobe_photoshop",
+        "skill_adobe_illustrator",
+        "skill_adobe_indesign",
+        "skill_visual_design",
+        "skill_creativity",
+        "skill_communication",
+        "skill_problem_solving"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_figma",
+            "skill_sketch",
+            "skill_adobe_xd"
+          ],
+          "note": "Công cụ thiết kế và tạo mẫu giao diện số (Digital design and prototyping tools)"
+        }
+      ],
+      "preferred_skills": [
+        "skill_responsive_design",
+        "skill_prototyping",
+        "skill_wireframing",
+        "skill_seo",
+        "skill_digital_marketing"
+      ]
+    },
+    {
+      "job_id": "job_it_support",
+      "required_skills": [
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_customer_focus",
+        "skill_linux",
+        "skill_network_security",
+        "skill_cybersecurity",
+        "skill_time_management",
+        "skill_adaptability"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Familiarity with one major cloud platform for user/resource management and basic troubleshooting."
+        }
+      ],
+      "preferred_skills": [
+        "skill_bash",
+        "skill_sql",
+        "skill_docker",
+        "skill_restful",
+        "skill_git"
+      ]
+    },
+    {
+      "job_id": "job_help_desk",
+      "required_skills": [
+        "skill_communication",
+        "skill_problem_solving",
+        "skill_customer_focus",
+        "skill_critical_thinking",
+        "skill_adaptability",
+        "skill_linux",
+        "skill_network_security"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_aws",
+            "skill_azure",
+            "skill_gcp"
+          ],
+          "note": "Familiarity with at least one major cloud platform for basic user/service management."
+        }
+      ],
+      "preferred_skills": [
+        "skill_bash",
+        "skill_sql",
+        "skill_cybersecurity",
+        "skill_agile",
+        "skill_postman"
+      ]
+    }
+  ]
+}

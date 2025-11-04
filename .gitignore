@@ -2,3 +2,5 @@ test/
 .venv/
 archive/
 job_descriptions.csv/
+code/
+__pycache__/

@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "version": "4.0",
+    "last_updated": "2024-11-04",
+    "description": "AI-generated job-skill mapping using Google Gemini",
+    "ai_provider": "gemini",
+    "total_mappings": 1
+  },
+  "job_skill_mappings": [
+    {
+      "job_id": "job_software_engineer",
+      "required_skills": [
+        "skill_git",
+        "skill_problem_solving",
+        "skill_data_structures",
+        "skill_algorithms",
+        "skill_oop",
+        "skill_communication",
+        "skill_teamwork",
+        "skill_sql"
+      ],
+      "skill_alternatives": [
+        {
+          "one_of": [
+            "skill_python",
+            "skill_java",
+            "skill_javascript",
+            "skill_csharp",
+            "skill_cpp",
+            "skill_go"
+          ],
+          "note": "Backend programming language"
+        },
+        {
+          "one_of": [
+            "skill_react",
+            "skill_angular",
+            "skill_vuejs"
+          ],
+          "note": "Frontend framework"
+        },
+        {
+          "one_of": [
+            "skill_mysql",
+            "skill_postgresql",
+            "skill_mongodb"
+          ],
+          "note": "Database technology"
+        }
+      ],
+      "preferred_skills": [
+        "skill_docker",
+        "skill_kubernetes",
+        "skill_aws",
+        "skill_agile",
+        "skill_system_design"
+      ]
+    }
+  ]
+}

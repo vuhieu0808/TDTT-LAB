@@ -1,0 +1,57 @@
+[
+  {
+    "id": "skill_python",
+    "label": "Python",
+    "learning_time_hours": 40,
+    "prereqs": []
+  },
+  {
+    "id": "skill_oop",
+    "label": "Object Oriented Programming",
+    "learning_time_hours": 20,
+    "prereqs": [
+      "skill_python"
+    ]
+  },
+  {
+    "id": "skill_ds_algo",
+    "label": "Data Structures and Algorithms",
+    "learning_time_hours": 60,
+    "prereqs": []
+  },
+  {
+    "id": "skill_sql",
+    "label": "SQL",
+    "learning_time_hours": 30,
+    "prereqs": []
+  },
+  {
+    "id": "skill_git",
+    "label": "Git",
+    "learning_time_hours": 8,
+    "prereqs": []
+  },
+  {
+    "id": "skill_ml_basics",
+    "label": "Machine Learning Basics",
+    "learning_time_hours": 80,
+    "prereqs": [
+      "skill_python",
+      "skill_ds_algo"
+    ]
+  },
+  {
+    "id": "skill_tests",
+    "label": "Unit Testing",
+    "learning_time_hours": 10,
+    "prereqs": [
+      "skill_python"
+    ]
+  },
+  {
+    "id": "skill_comm",
+    "label": "Communication",
+    "learning_time_hours": 20,
+    "prereqs": []
+  }
+]

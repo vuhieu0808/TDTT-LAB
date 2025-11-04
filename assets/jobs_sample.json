@@ -1,0 +1,42 @@
+[
+  {
+    "id": "job_1",
+    "title": "Junior Python Developer",
+    "company": "Acme Tech",
+    "description": "We need a junior Python developer familiar with Python, OOP, Git, and SQL. Basic unit tests expected.",
+    "skills": [
+      "Python",
+      "Object Oriented Programming",
+      "Git",
+      "SQL",
+      "Unit Testing"
+    ],
+    "location": "Hanoi"
+  },
+  {
+    "id": "job_2",
+    "title": "Data Analyst",
+    "company": "Data Insights",
+    "description": "Looking for candidates with SQL, Python, and good communication skills. Familiarity with data structures is a plus.",
+    "skills": [
+      "SQL",
+      "Python",
+      "Communication",
+      "Data Structures and Algorithms"
+    ],
+    "location": "Remote"
+  },
+  {
+    "id": "job_3",
+    "title": "Machine Learning Intern",
+    "company": "ML Labs",
+    "description": "Intern for ML projects; required Machine Learning basics, Python, DS & Algos, and Git.",
+    "skills": [
+      "Machine Learning Basics",
+      "Python",
+      "Data Structures and Algorithms",
+      "Git"
+    ],
+    "location": "HCMC"
+  }
+]
