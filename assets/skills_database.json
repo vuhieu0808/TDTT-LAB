@@ -907,90 +907,6 @@
       ]
     },
     {
-      "category_id": "cat_soft_skills",
-      "category_name": "Kỹ năng mềm",
-      "category_name_en": "Soft Skills",
-      "description": "Kỹ năng giao tiếp và làm việc nhóm",
-      "skills": [
-        {
-          "id": "skill_communication",
-          "name": "Communication"
-        },
-        {
-          "id": "skill_teamwork",
-          "name": "Teamwork"
-        },
-        {
-          "id": "skill_problem_solving",
-          "name": "Problem Solving"
-        },
-        {
-          "id": "skill_agile",
-          "name": "Agile/Scrum"
-        },
-        {
-          "id": "skill_project_management",
-          "name": "Project Management"
-        },
-        {
-          "id": "skill_time_management",
-          "name": "Time Management"
-        },
-        {
-          "id": "skill_critical_thinking",
-          "name": "Critical Thinking"
-        },
-        {
-          "id": "skill_adaptability",
-          "name": "Adaptability"
-        },
-        {
-          "id": "skill_leadership",
-          "name": "Leadership"
-        },
-        {
-          "id": "skill_conflict_resolution",
-          "name": "Conflict Resolution"
-        },
-        {
-          "id": "skill_presentation",
-          "name": "Presentation Skills"
-        },
-        {
-          "id": "skill_negotiation",
-          "name": "Negotiation"
-        },
-        {
-          "id": "skill_emotional_intelligence",
-          "name": "Emotional Intelligence"
-        },
-        {
-          "id": "skill_creativity",
-          "name": "Creativity & Innovation"
-        },
-        {
-          "id": "skill_decision_making",
-          "name": "Decision Making"
-        },
-        {
-          "id": "skill_mentoring",
-          "name": "Mentoring & Coaching"
-        },
-        {
-          "id": "skill_customer_focus",
-          "name": "Customer Focus"
-        },
-        {
-          "id": "skill_collaboration",
-          "name": "Collaboration"
-        },
-        {
-          "id": "skill_remote_work",
-          "name": "Remote Work Skills"
-        }
-      ]
-    },
-    {
       "category_id": "cat_testing",
       "category_name": "Kiểm thử & QA",
       "category_name_en": "Testing and Quality Assurance",
@@ -1175,34 +1091,6 @@
         {
           "id": "skill_nosql_design",
           "name": "NoSQL Database Design"
-        }
-      ]
-    },
-    {
-      "category_id": "cat_business",
-      "category_name": "Business & Marketing",
-      "category_name_en": "Business and Marketing",
-      "description": "Kỹ năng kinh doanh và marketing",
-      "skills": [
-        {
-          "id": "skill_seo",
-          "name": "SEO (Search Engine Optimization)"
-        },
-        {
-          "id": "skill_sem",
-          "name": "SEM (Search Engine Marketing)"
-        },
-        {
-          "id": "skill_google_analytics",
-          "name": "Google Analytics"
-        },
-        {
-          "id": "skill_content_strategy",
-          "name": "Content Strategy"
-        },
-        {
-          "id": "skill_digital_marketing",
-          "name": "Digital Marketing"
         }
       ]
     }
