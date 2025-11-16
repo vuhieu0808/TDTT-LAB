@@ -1,0 +1,5431 @@
+[
+    {
+        "skill": "JavaScript",
+        "level": 6,
+        "detailed": [
+            "DOM Manipulation",
+            "Asynchronous JavaScript (Promises, Async/Await)",
+            "ES6+ Features",
+            "Event Handling",
+            "Browser APIs",
+            "JSON",
+            "Closures"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "cloud security and compliance",
+        "level": 7,
+        "detailed": [
+            "IAM (Identity and Access Management)",
+            "Data Encryption in Cloud",
+            "Network Security Groups",
+            "Compliance Frameworks (NIST, ISO 27001)",
+            "Cloud Governance",
+            "Vulnerability Management",
+            "Incident Response in Cloud"
+        ],
+        "prerequisites": [
+            "cloud technologies",
+            "cyber security",
+            "information security strategy"
+        ]
+    },
+    {
+        "skill": "system backup best practice",
+        "level": 6,
+        "detailed": [
+            "Backup Strategies (Full, Incremental, Differential)",
+            "Disaster Recovery Planning",
+            "Data Retention Policies",
+            "Backup Tools and Technologies",
+            "Recovery Time Objective (RTO)",
+            "Recovery Point Objective (RPO)",
+            "Data Redundancy"
+        ],
+        "prerequisites": [
+            "data storage",
+            "ICT infrastructure"
+        ]
+    },
+    {
+        "skill": "ICT system programming",
+        "level": 7,
+        "detailed": [
+            "Operating System APIs",
+            "System Calls",
+            "Concurrency and Parallelism",
+            "Memory Management",
+            "Inter-process Communication",
+            "Device Drivers",
+            "Scripting Languages (Bash, Python)"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "computer engineering",
+        "level": 8,
+        "detailed": [
+            "Hardware Architectures",
+            "Embedded Systems Design",
+            "Digital Signal Processing",
+            "VLSI Design",
+            "Operating System Design",
+            "Network Engineering",
+            "Computer Architecture"
+        ],
+        "prerequisites": [
+            "computer science",
+            "hardware architectures",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "DevOps",
+        "level": 7,
+        "detailed": [
+            "CI/CD Pipelines",
+            "Infrastructure as Code (IaC)",
+            "Containerization (Docker, Kubernetes)",
+            "Configuration Management (Ansible, Puppet)",
+            "Monitoring and Logging",
+            "Cloud Platforms",
+            "Version Control (Git)"
+        ],
+        "prerequisites": [
+            "ICT system programming",
+            "cloud technologies",
+            "Agile development"
+        ]
+    },
+    {
+        "skill": "cloud technologies",
+        "level": 6,
+        "detailed": [
+            "IaaS, PaaS, SaaS Models",
+            "Virtualization",
+            "Containerization",
+            "Serverless Computing",
+            "Cloud Storage Solutions",
+            "Cloud Networking",
+            "Cloud Deployment Models (Public, Private, Hybrid)"
+        ],
+        "prerequisites": [
+            "ICT infrastructure",
+            "ICT networking hardware"
+        ]
+    },
+    {
+        "skill": "Jenkins (tools for software configuration management)",
+        "level": 6,
+        "detailed": [
+            "CI/CD Pipeline Setup",
+            "Plugin Management",
+            "Jenkinsfile (Pipeline as Code)",
+            "Distributed Builds",
+            "Job Configuration",
+            "Source Code Management Integration",
+            "Automated Testing Integration"
+        ],
+        "prerequisites": [
+            "tools for software configuration management",
+            "DevOps"
+        ]
+    },
+    {
+        "skill": "integrated development environment software",
+        "level": 5,
+        "detailed": [
+            "Code Editing Features",
+            "Debugging Tools",
+            "Compiler/Interpreter Integration",
+            "Version Control Integration",
+            "Project Management",
+            "Code Completion",
+            "Refactoring Tools"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "software frameworks",
+        "level": 6,
+        "detailed": [
+            "MVC Architecture",
+            "API Design",
+            "Dependency Injection",
+            "Routing",
+            "State Management",
+            "ORM (Object-Relational Mapping)",
+            "Template Engines"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "software design methodologies"
+        ]
+    },
+    {
+        "skill": "cloud monitoring and reporting",
+        "level": 6,
+        "detailed": [
+            "Log Management",
+            "Performance Metrics Collection",
+            "Alerting and Notifications",
+            "Cost Optimization Monitoring",
+            "Compliance Reporting",
+            "Audit Trails",
+            "Dashboard Visualization"
+        ],
+        "prerequisites": [
+            "cloud technologies",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "ASP.NET",
+        "level": 6,
+        "detailed": [
+            "ASP.NET Core",
+            "MVC Pattern",
+            "Web API Development",
+            "Entity Framework",
+            "Razor Pages",
+            "Blazor",
+            "C#"
+        ],
+        "prerequisites": [
+            "C#",
+            "web programming",
+            "software frameworks"
+        ]
+    },
+    {
+        "skill": "Eclipse (integrated development environment software)",
+        "level": 5,
+        "detailed": [
+            "Workspace Management",
+            "Plugin Development (PDE)",
+            "Debugging Java Applications",
+            "Version Control Integration (Git)",
+            "Code Generation",
+            "Refactoring",
+            "Maven/Gradle Integration"
+        ],
+        "prerequisites": [
+            "integrated development environment software",
+            "Java (computer programming)"
+        ]
+    },
+    {
+        "skill": "ICT project management methodologies",
+        "level": 7,
+        "detailed": [
+            "Waterfall development",
+            "Agile project management",
+            "Scrum Framework",
+            "Kanban Method",
+            "PRINCE2",
+            "Lean Project Management",
+            "PMBOK"
+        ],
+        "prerequisites": [
+            "ICT project management",
+            "business processes"
+        ]
+    },
+    {
+        "skill": "application usability",
+        "level": 6,
+        "detailed": [
+            "User-Centered Design Principles",
+            "Usability Testing",
+            "Heuristic Evaluation",
+            "Information Architecture",
+            "Interaction Design",
+            "Accessibility Standards",
+            "User Interface (UI) Design"
+        ],
+        "prerequisites": [
+            "software UI design patterns",
+            "software interaction design"
+        ]
+    },
+    {
+        "skill": "KDevelop",
+        "level": 5,
+        "detailed": [
+            "C++ Support",
+            "Code Navigation",
+            "Debugging Tools",
+            "Version Control Integration",
+            "Project Templates",
+            "CMake Integration",
+            "Refactoring"
+        ],
+        "prerequisites": [
+            "integrated development environment software",
+            "C++"
+        ]
+    },
+    {
+        "skill": "Agile development",
+        "level": 6,
+        "detailed": [
+            "Scrum Framework",
+            "Kanban Method",
+            "Iterative development",
+            "Incremental development",
+            "User Stories",
+            "Daily Stand-ups",
+            "Retrospectives"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "ICT project management methodologies"
+        ]
+    },
+    {
+        "skill": "ICT architectural frameworks",
+        "level": 7,
+        "detailed": [
+            "TOGAF",
+            "Zachman Framework",
+            "NIST Cybersecurity Framework",
+            "Enterprise Architecture Principles",
+            "Solution Architecture",
+            "Technical Architecture",
+            "Security Architecture"
+        ],
+        "prerequisites": [
+            "software architecture models",
+            "system design"
+        ]
+    },
+    {
+        "skill": "Agile project management",
+        "level": 7,
+        "detailed": [
+            "Scrum Master Role",
+            "Product Ownership",
+            "Sprint Planning",
+            "Backlog Management",
+            "Burn-down/Burn-up Charts",
+            "Release Planning",
+            "Stakeholder Collaboration"
+        ],
+        "prerequisites": [
+            "Agile development",
+            "ICT project management"
+        ]
+    },
+    {
+        "skill": "information governance compliance",
+        "level": 7,
+        "detailed": [
+            "Data Privacy Regulations (GDPR)",
+            "Data Retention Policies",
+            "Records Management",
+            "Auditing and Reporting",
+            "Data Classification",
+            "Legal Holds",
+            "Information Lifecycle Management"
+        ],
+        "prerequisites": [
+            "data protection",
+            "information security strategy"
+        ]
+    },
+    {
+        "skill": "DB2",
+        "level": 6,
+        "detailed": [
+            "SQL Queries (Advanced)",
+            "Database Administration",
+            "Performance Tuning",
+            "Backup and Recovery",
+            "Replication",
+            "Security Management",
+            "Stored Procedures"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "information security strategy",
+        "level": 8,
+        "detailed": [
+            "Risk Assessment and Management",
+            "Security Policy Development",
+            "Incident Response Planning",
+            "Security Architecture Design",
+            "Compliance Management",
+            "Threat Intelligence Integration",
+            "Security Awareness Training"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "risk management",
+            "ICT security standards"
+        ]
+    },
+    {
+        "skill": "internal risk management policy",
+        "level": 6,
+        "detailed": [
+            "Risk Identification",
+            "Risk Analysis and Evaluation",
+            "Risk Mitigation Strategies",
+            "Risk Monitoring and Reporting",
+            "Business Impact Analysis",
+            "Compliance with Regulations",
+            "Incident Management"
+        ],
+        "prerequisites": [
+            "risk management"
+        ]
+    },
+    {
+        "skill": "ICT security legislation",
+        "level": 6,
+        "detailed": [
+            "Data Protection Laws (GDPR, CCPA)",
+            "Cybercrime Laws",
+            "Industry-Specific Regulations (HIPAA, PCI DSS)",
+            "Breach Notification Laws",
+            "Intellectual Property Law",
+            "Privacy by Design Principles",
+            "Digital Signatures Legislation"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "information governance compliance"
+        ]
+    },
+    {
+        "skill": "database",
+        "level": 5,
+        "detailed": [
+            "Relational Databases",
+            "NoSQL Databases",
+            "Data Modeling",
+            "SQL Queries (Basic)",
+            "Database Normalization",
+            "Indexing",
+            "Transactions"
+        ],
+        "prerequisites": [
+            "information structure"
+        ]
+    },
+    {
+        "skill": "web programming",
+        "level": 6,
+        "detailed": [
+            "HTML5",
+            "CSS",
+            "JavaScript",
+            "Client-Side Scripting",
+            "Server-Side Scripting",
+            "RESTful APIs",
+            "HTTP/HTTPS Protocols"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "ICT communications protocols"
+        ]
+    },
+    {
+        "skill": "resource description framework query language",
+        "level": 5,
+        "detailed": [
+            "SPARQL Syntax",
+            "RDF Triples",
+            "Graph Patterns",
+            "Federated Queries",
+            "OWL Ontologies",
+            "Linked Data Principles",
+            "Query Optimization"
+        ],
+        "prerequisites": [
+            "query languages",
+            "SPARQL"
+        ]
+    },
+    {
+        "skill": "database management systems",
+        "level": 6,
+        "detailed": [
+            "SQL Databases (RDBMS)",
+            "NoSQL Databases",
+            "Database Architecture",
+            "Data Backup and Recovery",
+            "Performance Tuning",
+            "Security Management",
+            "Transaction Management"
+        ],
+        "prerequisites": [
+            "database",
+            "query languages"
+        ]
+    },
+    {
+        "skill": "query languages",
+        "level": 5,
+        "detailed": [
+            "SQL Syntax (SELECT, INSERT, UPDATE, DELETE)",
+            "Filtering and Sorting Data",
+            "Joins and Subqueries",
+            "Aggregate Functions",
+            "NoSQL Query Languages (e.g., MongoDB Query Language)",
+            "XPath/XQuery",
+            "SPARQL"
+        ],
+        "prerequisites": [
+            "database",
+            "data models"
+        ]
+    },
+    {
+        "skill": "data warehouse",
+        "level": 7,
+        "detailed": [
+            "ETL Processes",
+            "Dimensional Modeling (Star/Snowflake Schema)",
+            "Fact and Dimension Tables",
+            "Data Marts",
+            "Online Analytical Processing (OLAP)",
+            "Data Governance",
+            "Data Lake Concepts"
+        ],
+        "prerequisites": [
+            "database",
+            "data models",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "database development tools",
+        "level": 6,
+        "detailed": [
+            "SQL Clients (e.g., DBeaver, SQL Developer)",
+            "ORM Frameworks",
+            "Schema Migration Tools",
+            "Database Design Tools",
+            "Version Control for Schemas",
+            "Data Generation Tools",
+            "Performance Profilers"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "Smalltalk (computer programming)",
+        "level": 5,
+        "detailed": [
+            "Object-Oriented Programming (OOP)",
+            "Message Passing Paradigm",
+            "Dynamic Typing",
+            "Image-based Persistence",
+            "Metaclasses",
+            "Refactoring Browser",
+            "Interactive Development Environment"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "Perl",
+        "level": 5,
+        "detailed": [
+            "Regular Expressions",
+            "Text Processing",
+            "CGI Scripting",
+            "CPAN Modules",
+            "System Administration Scripting",
+            "Data Manipulation",
+            "Object-Oriented Perl"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "SAS language",
+        "level": 6,
+        "detailed": [
+            "DATA Step",
+            "PROC Step",
+            "Macro Programming",
+            "Data Import/Export",
+            "Statistical Procedures",
+            "Reporting (ODS)",
+            "Data Cleaning and Transformation"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "statistics"
+        ]
+    },
+    {
+        "skill": "Java (computer programming)",
+        "level": 7,
+        "detailed": [
+            "Object-Oriented Programming (OOP)",
+            "JVM (Java Virtual Machine)",
+            "Concurrency (Threads)",
+            "Java Collections Framework",
+            "Spring Framework",
+            "Maven/Gradle",
+            "Unit Testing (JUnit)"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "C++",
+        "level": 7,
+        "detailed": [
+            "Object-Oriented Programming (OOP)",
+            "Memory Management (Pointers, RAII)",
+            "Templates",
+            "Standard Template Library (STL)",
+            "Concurrency (C++11+)",
+            "Embedded Systems Programming",
+            "Performance Optimization"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "systems theory"
+        ]
+    },
+    {
+        "skill": "MarkLogic",
+        "level": 6,
+        "detailed": [
+            "NoSQL Database Operations",
+            "XQuery",
+            "JSON and XML Handling",
+            "Search and Indexing",
+            "Data Ingestion",
+            "Security Features",
+            "Semantics (RDF, SPARQL)"
+        ],
+        "prerequisites": [
+            "NoSQL",
+            "XQuery",
+            "database management systems"
+        ]
+    },
+    {
+        "skill": "C#",
+        "level": 7,
+        "detailed": [
+            ".NET Framework/.NET Core",
+            "Object-Oriented Programming (OOP)",
+            "LINQ",
+            "Asynchronous Programming (Async/Await)",
+            "ASP.NET",
+            "Entity Framework",
+            "Windows Presentation Foundation (WPF)"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "MySQL",
+        "level": 6,
+        "detailed": [
+            "SQL Queries (Advanced)",
+            "Database Administration",
+            "Performance Tuning",
+            "Replication",
+            "Backup and Recovery",
+            "Stored Procedures and Triggers",
+            "Schema Design"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "TypeScript",
+        "level": 6,
+        "detailed": [
+            "Static Typing",
+            "Interfaces and Types",
+            "Classes and Modules",
+            "Decorators",
+            "Transpilation to JavaScript",
+            "Generics",
+            "Integration with JavaScript Frameworks"
+        ],
+        "prerequisites": [
+            "JavaScript",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "AJAX",
+        "level": 5,
+        "detailed": [
+            "XMLHttpRequest Object",
+            "Fetch API",
+            "Asynchronous Data Loading",
+            "JSON/XML Data Exchange",
+            "Error Handling",
+            "Partial Page Updates",
+            "Cross-Origin Resource Sharing (CORS)"
+        ],
+        "prerequisites": [
+            "JavaScript",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "lean project management",
+        "level": 6,
+        "detailed": [
+            "Value Stream Mapping",
+            "Waste Identification (Muda)",
+            "Just-in-Time (JIT)",
+            "Continuous Improvement (Kaizen)",
+            "Pull Systems",
+            "Flow Management",
+            "Respect for People"
+        ],
+        "prerequisites": [
+            "ICT project management methodologies",
+            "Agile project management"
+        ]
+    },
+    {
+        "skill": "LDAP",
+        "level": 5,
+        "detailed": [
+            "Directory Services Concepts",
+            "LDAP Schema",
+            "LDAP Queries",
+            "Authentication and Authorization",
+            "Replication",
+            "Security (TLS/SSL)",
+            "Integration with Applications"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "ICT network routing"
+        ]
+    },
+    {
+        "skill": "Microsoft Access",
+        "level": 4,
+        "detailed": [
+            "Database Design (Tables, Relationships)",
+            "Form Design",
+            "Report Generation",
+            "VBA Programming",
+            "SQL Queries (Basic)",
+            "Macros",
+            "Data Import/Export"
+        ],
+        "prerequisites": [
+            "database",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "Objective-C",
+        "level": 6,
+        "detailed": [
+            "Message Passing",
+            "Classes and Objects",
+            "Categories and Protocols",
+            "Memory Management (ARC)",
+            "Cocoa/Cocoa Touch Frameworks",
+            "Xcode IDE",
+            "Interoperability with C/C++"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "object-oriented modelling",
+            "C++"
+        ]
+    },
+    {
+        "skill": "Lisp",
+        "level": 6,
+        "detailed": [
+            "S-expressions",
+            "Functional Programming",
+            "Macros",
+            "Metaprogramming",
+            "Garbage Collection",
+            "Dynamic Typing",
+            "Recursion"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "unstructured data",
+        "level": 5,
+        "detailed": [
+            "Text Analytics",
+            "Natural Language Processing (NLP)",
+            "NoSQL Databases for Unstructured Data",
+            "Data Extraction",
+            "Sentiment Analysis",
+            "Information Retrieval",
+            "Schema-on-Read"
+        ],
+        "prerequisites": [
+            "data storage",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "SQL Server",
+        "level": 6,
+        "detailed": [
+            "Transact-SQL (T-SQL)",
+            "Database Administration",
+            "Performance Tuning",
+            "AlwaysOn Availability Groups",
+            "SSIS, SSAS, SSRS",
+            "Backup and Recovery",
+            "Security Features"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "data science",
+        "level": 8,
+        "detailed": [
+            "Statistical Modeling",
+            "Machine Learning",
+            "Data Cleaning and Preprocessing",
+            "Data Visualization",
+            "Predictive Analytics",
+            "Feature Engineering",
+            "Python/R Programming"
+        ],
+        "prerequisites": [
+            "statistics",
+            "computer programming",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "Haskell",
+        "level": 6,
+        "detailed": [
+            "Functional Programming Paradigm",
+            "Pure Functions",
+            "Lazy Evaluation",
+            "Type System (Hindley-Milner)",
+            "Monads",
+            "Recursion",
+            "Pattern Matching"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "OpenEdge Database",
+        "level": 5,
+        "detailed": [
+            "OpenEdge Advanced Business Language (ABL)",
+            "Database Administration",
+            "Performance Monitoring",
+            "Backup and Recovery",
+            "Procedures and Triggers",
+            "Schema Management",
+            "Client-Server Architecture"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "OpenEdge Advanced Business Language"
+        ]
+    },
+    {
+        "skill": "R",
+        "level": 6,
+        "detailed": [
+            "Statistical Computing",
+            "Data Visualization (ggplot2)",
+            "Data Manipulation (dplyr)",
+            "Machine Learning Packages",
+            "Scripting for Data Analysis",
+            "RMarkdown for Reporting",
+            "Package Management"
+        ],
+        "prerequisites": [
+            "statistics",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "Common Lisp",
+        "level": 6,
+        "detailed": [
+            "Macros",
+            "CLOS (Common Lisp Object System)",
+            "Condition System",
+            "REPL-driven Development",
+            "Functional Programming",
+            "Dynamic Environment",
+            "Package Management"
+        ],
+        "prerequisites": [
+            "Lisp",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "data visualisation software",
+        "level": 6,
+        "detailed": [
+            "Dashboard Design",
+            "Chart Types (Bar, Line, Scatter, etc.)",
+            "Interactive Visualizations",
+            "Data Storytelling",
+            "Data Integration",
+            "KPI Tracking",
+            "Report Generation"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "business intelligence"
+        ]
+    },
+    {
+        "skill": "Visual Basic",
+        "level": 5,
+        "detailed": [
+            "GUI Development (Forms)",
+            "Event-Driven Programming",
+            "Database Connectivity (ADO.NET)",
+            "COM Interoperability",
+            "Error Handling",
+            "Control Structures",
+            "Object-Oriented Concepts (basic)"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "Prolog (computer programming)",
+        "level": 5,
+        "detailed": [
+            "Logic Programming",
+            "Facts and Rules",
+            "Unification",
+            "Backtracking",
+            "Recursion",
+            "Knowledge Representation",
+            "Constraint Logic Programming"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "Swift (computer programming)",
+        "level": 6,
+        "detailed": [
+            "Optionals",
+            "Structs and Classes",
+            "Protocols",
+            "Error Handling",
+            "Concurrency (Grand Central Dispatch)",
+            "iOS/macOS Development (UIKit/AppKit)",
+            "Xcode IDE"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "object-oriented modelling",
+            "Xcode"
+        ]
+    },
+    {
+        "skill": "Scratch (computer programming)",
+        "level": 2,
+        "detailed": [
+            "Block-based Programming",
+            "Event Handling",
+            "Sprite Animation",
+            "Loops and Conditionals",
+            "Variables",
+            "User Interface Design",
+            "Interactive Storytelling"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "IBM Informix",
+        "level": 5,
+        "detailed": [
+            "SQL Queries (Advanced)",
+            "Database Administration",
+            "Performance Tuning",
+            "High Availability",
+            "Replication",
+            "Backup and Recovery",
+            "Stored Procedures"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "APL",
+        "level": 4,
+        "detailed": [
+            "Array Programming",
+            "Vectorized Operations",
+            "Symbolic Notation",
+            "Functional Programming Concepts",
+            "Matrix Operations",
+            "Interactive Interpreter",
+            "Problem Solving Paradigms"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "Erlang",
+        "level": 6,
+        "detailed": [
+            "Concurrency Model (Actors)",
+            "Fault Tolerance (Let It Crash)",
+            "Distributed Systems",
+            "Pattern Matching",
+            "Functional Programming",
+            "Hot Code Swapping",
+            "OTP Framework"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "distributed computing"
+        ]
+    },
+    {
+        "skill": "Scala",
+        "level": 6,
+        "detailed": [
+            "Functional Programming",
+            "Object-Oriented Programming",
+            "JVM Integration",
+            "Type Inference",
+            "Pattern Matching",
+            "Akka Framework",
+            "Concurrency (Futures, Actors)"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "Process-based management",
+        "level": 6,
+        "detailed": [
+            "Process Mapping",
+            "Process Optimization",
+            "Key Performance Indicators (KPIs)",
+            "Continuous Improvement",
+            "Business Process Reengineering",
+            "Process Documentation",
+            "Workflow Automation"
+        ],
+        "prerequisites": [
+            "business processes"
+        ]
+    },
+    {
+        "skill": "LINQ",
+        "level": 5,
+        "detailed": [
+            "LINQ to Objects",
+            "LINQ to SQL",
+            "LINQ to XML",
+            "Lambda Expressions",
+            "Extension Methods",
+            "Query Syntax",
+            "Method Syntax"
+        ],
+        "prerequisites": [
+            "C#",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "SAP R3",
+        "level": 6,
+        "detailed": [
+            "ABAP Programming",
+            "Module Integration (FI, CO, SD, MM)",
+            "Customizing and Configuration",
+            "Reporting",
+            "User Exits and BAdIs",
+            "Data Migration",
+            "System Administration"
+        ],
+        "prerequisites": [
+            "ABAP",
+            "business processes"
+        ]
+    },
+    {
+        "skill": "VBScript",
+        "level": 4,
+        "detailed": [
+            "Scripting for Windows Environments",
+            "COM Automation",
+            "Web Development (ASP Classic)",
+            "File System Object",
+            "Error Handling",
+            "Subroutines and Functions",
+            "Basic Data Types"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "COBOL",
+        "level": 5,
+        "detailed": [
+            "Procedure Division",
+            "Data Division",
+            "File Handling",
+            "Legacy Systems Maintenance",
+            "Batch Processing",
+            "Arithmetic Operations",
+            "Report Generation"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "PHP",
+        "level": 6,
+        "detailed": [
+            "Server-Side Scripting",
+            "Web Frameworks (Laravel, Symfony)",
+            "Database Connectivity (PDO)",
+            "Object-Oriented PHP",
+            "RESTful APIs",
+            "Composer for Dependency Management",
+            "Error Handling"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "Pascal (computer programming)",
+        "level": 4,
+        "detailed": [
+            "Structured Programming",
+            "Strong Typing",
+            "Procedures and Functions",
+            "Records and Arrays",
+            "Pointer Usage",
+            "Object Pascal (Delphi)",
+            "Input/Output Operations"
+        ],
+        "prerequisites": [
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "N1QL",
+        "level": 5,
+        "detailed": [
+            "JSON Data Model Queries",
+            "SQL-like Syntax",
+            "JOIN Operations",
+            "Indexes",
+            "Data Manipulation (INSERT, UPDATE, DELETE)",
+            "Aggregation Functions",
+            "Subqueries"
+        ],
+        "prerequisites": [
+            "NoSQL",
+            "query languages"
+        ]
+    },
+    {
+        "skill": "Microsoft Visual C++",
+        "level": 7,
+        "detailed": [
+            "MFC (Microsoft Foundation Classes)",
+            "Windows API Programming",
+            "ATL (Active Template Library)",
+            "COM/DCOM Development",
+            "Debugging with Visual Studio",
+            "Linker and Compiler Options",
+            "Performance Optimization"
+        ],
+        "prerequisites": [
+            "C++",
+            "integrated development environment software"
+        ]
+    },
+    {
+        "skill": "Teradata Database",
+        "level": 6,
+        "detailed": [
+            "SQL Queries (Advanced)",
+            "Massively Parallel Processing (MPP) Architecture",
+            "Teradata Utilities (FastLoad, MLoad, BTEQ)",
+            "Performance Tuning",
+            "Workload Management",
+            "Data Warehousing Concepts",
+            "Data Loading Strategies"
+        ],
+        "prerequisites": [
+            "data warehouse",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "data models",
+        "level": 6,
+        "detailed": [
+            "Relational Model",
+            "Dimensional Model",
+            "Entity-Relationship Diagrams (ERD)",
+            "NoSQL Data Models (Document, Key-Value, Graph)",
+            "Conceptual Data Modeling",
+            "Logical Data Modeling",
+            "Physical Data Modeling"
+        ],
+        "prerequisites": [
+            "database",
+            "information structure"
+        ]
+    },
+    {
+        "skill": "OpenEdge Advanced Business Language",
+        "level": 6,
+        "detailed": [
+            "ABL Syntax and Constructs",
+            "Database Interaction",
+            "Business Logic Implementation",
+            "GUI Development (AppBuilder)",
+            "Procedures and Functions",
+            "Error Handling",
+            "Legacy Application Modernization"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "OpenEdge Database"
+        ]
+    },
+    {
+        "skill": "ABAP",
+        "level": 6,
+        "detailed": [
+            "ABAP Workbench",
+            "Data Dictionary",
+            "Internal Tables",
+            "Modularization (Subroutines, Function Modules)",
+            "Reporting (ALV Grids)",
+            "SAP Enhancement Technologies (BAdIs, User Exits)",
+            "Object-Oriented ABAP"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "SAP R3"
+        ]
+    },
+    {
+        "skill": "SPARQL",
+        "level": 5,
+        "detailed": [
+            "RDF Graph Queries",
+            "Triple Patterns",
+            "Graph Traversal",
+            "FILTER, OPTIONAL, UNION Clauses",
+            "Federated Queries",
+            "Construct Queries",
+            "Update Queries"
+        ],
+        "prerequisites": [
+            "query languages",
+            "resource description framework query language"
+        ]
+    },
+    {
+        "skill": "CA Datacom/DB",
+        "level": 5,
+        "detailed": [
+            "Database Administration",
+            "SQL Queries (Basic)",
+            "Performance Tuning",
+            "Backup and Recovery",
+            "Data Definition Language (DDL)",
+            "Data Manipulation Language (DML)",
+            "Security Management"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "CoffeeScript",
+        "level": 4,
+        "detailed": [
+            "Syntactic Sugar for JavaScript",
+            "Classes and Objects",
+            "Function Binding",
+            "Destructuring Assignments",
+            "List Comprehensions",
+            "Transpilation to JavaScript",
+            "Readability Features"
+        ],
+        "prerequisites": [
+            "JavaScript",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "PostgreSQL",
+        "level": 6,
+        "detailed": [
+            "SQL Queries (Advanced)",
+            "Database Administration",
+            "Performance Tuning",
+            "Extensions (PostGIS)",
+            "Replication and High Availability",
+            "JSONB Data Type",
+            "Stored Procedures and Functions"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "ObjectStore",
+        "level": 5,
+        "detailed": [
+            "Object-Oriented Database Concepts",
+            "Persistence Mechanisms",
+            "Querying Objects",
+            "Concurrency Control",
+            "Schema Evolution",
+            "C++ Integration",
+            "Transaction Management"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "Python (computer programming)",
+        "level": 7,
+        "detailed": [
+            "Object-Oriented Programming (OOP)",
+            "Data Structures (Lists, Dictionaries)",
+            "Libraries (NumPy, Pandas)",
+            "Web Frameworks (Django, Flask)",
+            "Scripting for Automation",
+            "Error Handling",
+            "Virtual Environments"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "TripleStore",
+        "level": 5,
+        "detailed": [
+            "RDF Data Model",
+            "SPARQL Query Language",
+            "Graph Database Concepts",
+            "Ontology Management",
+            "Linked Data Principles",
+            "Data Ingestion",
+            "Reasoning Engines"
+        ],
+        "prerequisites": [
+            "database",
+            "SPARQL"
+        ]
+    },
+    {
+        "skill": "Ruby (computer programming)",
+        "level": 6,
+        "detailed": [
+            "Object-Oriented Programming (OOP)",
+            "Ruby on Rails Framework",
+            "Metaprogramming",
+            "Blocks, Procs, Lambdas",
+            "Gem Management",
+            "Testing (RSpec)",
+            "Web Development"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "ML (computer programming)",
+        "level": 5,
+        "detailed": [
+            "Functional Programming",
+            "Strong Static Typing",
+            "Pattern Matching",
+            "Recursion",
+            "Polymorphism",
+            "Type Inference",
+            "Standard ML (SML) or OCaml"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "XQuery",
+        "level": 5,
+        "detailed": [
+            "XML Data Model",
+            "XPath Expressions",
+            "FLWOR Expressions",
+            "Functions and Operators",
+            "Modules",
+            "Transforming XML Data",
+            "Querying XML Databases"
+        ],
+        "prerequisites": [
+            "query languages",
+            "database"
+        ]
+    },
+    {
+        "skill": "MATLAB",
+        "level": 6,
+        "detailed": [
+            "Matrix Operations",
+            "Numerical Computation",
+            "Data Visualization",
+            "Scripting and Functions",
+            "Toolboxes (e.g., Signal Processing, Image Processing)",
+            "Simulation (Simulink)",
+            "Algorithm Development"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "computer programming",
+        "level": 4,
+        "detailed": [
+            "Algorithms",
+            "Data Structures",
+            "Control Flow (Loops, Conditionals)",
+            "Variables and Data Types",
+            "Functions and Procedures",
+            "Debugging",
+            "Syntax of at least one language"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "computer science"
+        ]
+    },
+    {
+        "skill": "Groovy",
+        "level": 5,
+        "detailed": [
+            "JVM Language",
+            "Dynamic Typing (Optional Static Typing)",
+            "Domain-Specific Languages (DSL)",
+            "Scripting Capabilities",
+            "Metaprogramming",
+            "Grails Framework",
+            "Gradle Build Tool"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "Filemaker (database management systems)",
+        "level": 4,
+        "detailed": [
+            "Relational Database Design",
+            "Layout Design",
+            "Scripting",
+            "Formulas and Functions",
+            "Reporting",
+            "Security Management",
+            "WebDirect Publishing"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "database"
+        ]
+    },
+    {
+        "skill": "Oracle Relational Database",
+        "level": 7,
+        "detailed": [
+            "SQL Queries (Advanced)",
+            "PL/SQL Programming",
+            "Database Administration (DBA)",
+            "Performance Tuning",
+            "Real Application Clusters (RAC)",
+            "Data Guard",
+            "Backup and Recovery (RMAN)"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "Assembly (computer programming)",
+        "level": 6,
+        "detailed": [
+            "Instruction Set Architecture (ISA)",
+            "Registers",
+            "Memory Addressing Modes",
+            "System Calls",
+            "Low-level Optimization",
+            "Linkers and Loaders",
+            "Reverse Engineering Basics"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "hardware architectures"
+        ]
+    },
+    {
+        "skill": "MDX",
+        "level": 5,
+        "detailed": [
+            "Multidimensional Data Model",
+            "Cube Navigation",
+            "Tuple and Set Operations",
+            "Calculated Members",
+            "KPIs",
+            "Subqueries",
+            "Reporting and Analysis"
+        ],
+        "prerequisites": [
+            "query languages",
+            "data warehouse",
+            "online analytical processing"
+        ]
+    },
+    {
+        "skill": "hardware testing methods",
+        "level": 6,
+        "detailed": [
+            "Functional Testing",
+            "Stress Testing",
+            "Environmental Testing",
+            "Electromagnetic Compatibility (EMC) Testing",
+            "In-Circuit Testing (ICT)",
+            "Boundary Scan Testing (JTAG)",
+            "Failure Analysis"
+        ],
+        "prerequisites": [
+            "computer engineering",
+            "hardware components"
+        ]
+    },
+    {
+        "skill": "Internet of Things",
+        "level": 7,
+        "detailed": [
+            "IoT Device Architectures",
+            "Sensor Technologies",
+            "IoT Protocols (MQTT, CoAP)",
+            "Cloud Platforms for IoT",
+            "Edge Computing",
+            "Data Security and Privacy",
+            "Firmware Development"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "embedded systems",
+            "cloud technologies"
+        ]
+    },
+    {
+        "skill": "principles of artificial intelligence",
+        "level": 6,
+        "detailed": [
+            "Problem Solving (Search Algorithms)",
+            "Knowledge Representation",
+            "Logical Reasoning",
+            "Machine Learning Fundamentals",
+            "Natural Language Processing Fundamentals",
+            "Expert Systems",
+            "Ethical AI Considerations"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "computer science"
+        ]
+    },
+    {
+        "skill": "machine learning",
+        "level": 7,
+        "detailed": [
+            "Supervised Learning",
+            "Unsupervised Learning",
+            "Reinforcement Learning",
+            "Model Evaluation (Metrics, Cross-Validation)",
+            "Feature Engineering",
+            "Scikit-learn/TensorFlow/PyTorch",
+            "Deployment of Models"
+        ],
+        "prerequisites": [
+            "principles of artificial intelligence",
+            "statistics",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "mechatronics",
+        "level": 7,
+        "detailed": [
+            "Robotics",
+            "Control Systems",
+            "Sensors and Actuators",
+            "Embedded Systems Programming",
+            "CAD/CAM",
+            "System Integration",
+            "Real-time Computing"
+        ],
+        "prerequisites": [
+            "computer engineering",
+            "embedded systems",
+            "real-time computing"
+        ]
+    },
+    {
+        "skill": "ICT software specifications",
+        "level": 6,
+        "detailed": [
+            "Requirements Elicitation",
+            "Functional Requirements",
+            "Non-Functional Requirements",
+            "Use Cases",
+            "User Stories",
+            "UML Diagrams",
+            "Traceability Matrix"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "ICT system user requirements"
+        ]
+    },
+    {
+        "skill": "task algorithmisation",
+        "level": 5,
+        "detailed": [
+            "Flowcharting",
+            "Pseudocode",
+            "Decomposition",
+            "Problem Solving Strategies",
+            "Efficiency Analysis (Big O Notation)",
+            "Data Flow Analysis",
+            "Decision Trees"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "algorithms",
+        "level": 5,
+        "detailed": [
+            "Sorting Algorithms",
+            "Searching Algorithms",
+            "Graph Algorithms",
+            "Dynamic Programming",
+            "Greedy Algorithms",
+            "Complexity Analysis (Time/Space)",
+            "Data Structures"
+        ],
+        "prerequisites": [
+            "computer science"
+        ]
+    },
+    {
+        "skill": "computer science",
+        "level": 8,
+        "detailed": [
+            "Algorithms",
+            "Data Structures",
+            "Theory of Computation",
+            "Operating Systems",
+            "Computer Architecture",
+            "Programming Paradigms",
+            "Discrete Mathematics"
+        ],
+        "prerequisites": []
+    },
+    {
+        "skill": "computer technology",
+        "level": 6,
+        "detailed": [
+            "Hardware Components",
+            "Operating Systems",
+            "Networking Fundamentals",
+            "Software Applications",
+            "Troubleshooting",
+            "Cyber Security Basics",
+            "Cloud Computing Basics"
+        ],
+        "prerequisites": [
+            "hardware components",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "mobile device software frameworks",
+        "level": 6,
+        "detailed": [
+            "iOS SDK (UIKit, SwiftUI)",
+            "Android SDK (Jetpack Compose, XML Layouts)",
+            "Cross-platform Frameworks (React Native, Flutter)",
+            "API Integration",
+            "User Interface (UI) Components",
+            "Lifecycle Management",
+            "Push Notifications"
+        ],
+        "prerequisites": [
+            "software frameworks",
+            "mobile operating systems"
+        ]
+    },
+    {
+        "skill": "decentralized application frameworks",
+        "level": 7,
+        "detailed": [
+            "Blockchain Platforms (Ethereum, Solana)",
+            "Smart Contract Development (Solidity)",
+            "Web3.js/Ethers.js",
+            "IPFS/Filecoin",
+            "Consensus Mechanisms",
+            "Cryptographic Principles",
+            "Token Standards (ERC-20, ERC-721)"
+        ],
+        "prerequisites": [
+            "blockchain platforms",
+            "smart contract",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "service-oriented modelling",
+        "level": 6,
+        "detailed": [
+            "Service Identification",
+            "Service Design Principles",
+            "Loose Coupling",
+            "Service Contracts",
+            "Reusability",
+            "Service Orchestration",
+            "SOA Governance"
+        ],
+        "prerequisites": [
+            "object-oriented modelling",
+            "software architecture models"
+        ]
+    },
+    {
+        "skill": "JavaScript Framework",
+        "level": 7,
+        "detailed": [
+            "React.js",
+            "Vue.js",
+            "Angular",
+            "State Management (Redux, Vuex)",
+            "Component-Based Architecture",
+            "Routing",
+            "Build Tools (Webpack, Vite)"
+        ],
+        "prerequisites": [
+            "JavaScript",
+            "software frameworks",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "IBM WebSphere",
+        "level": 6,
+        "detailed": [
+            "Application Server Administration",
+            "J2EE Deployment",
+            "Clustering and Load Balancing",
+            "Security Configuration",
+            "Performance Monitoring",
+            "Message Queuing",
+            "Web Services Integration"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "web services",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "data storage",
+        "level": 5,
+        "detailed": [
+            "Relational Databases",
+            "NoSQL Databases",
+            "Cloud Storage (Object, Block, File)",
+            "Data Archiving",
+            "Storage Area Networks (SAN)",
+            "Network Attached Storage (NAS)",
+            "Data Redundancy (RAID)"
+        ],
+        "prerequisites": [
+            "database",
+            "ICT infrastructure"
+        ]
+    },
+    {
+        "skill": "data analytics",
+        "level": 7,
+        "detailed": [
+            "Exploratory Data Analysis (EDA)",
+            "Statistical Analysis",
+            "Data Cleaning and Preprocessing",
+            "Data Visualization",
+            "Predictive Modeling",
+            "SQL for Data Retrieval",
+            "Python/R for Analysis"
+        ],
+        "prerequisites": [
+            "statistics",
+            "database",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "statistics",
+        "level": 6,
+        "detailed": [
+            "Descriptive Statistics",
+            "Inferential Statistics",
+            "Hypothesis Testing",
+            "Regression Analysis",
+            "Probability Theory",
+            "Sampling Methods",
+            "Statistical Software (R, SAS, Python libraries)"
+        ],
+        "prerequisites": []
+    },
+    {
+        "skill": "SAS Data Management",
+        "level": 6,
+        "detailed": [
+            "DATA Step Programming",
+            "Data Extraction, Transformation, Loading (ETL)",
+            "Data Quality Management",
+            "Data Integration",
+            "Metadata Management",
+            "Data Governance",
+            "SAS Management Console"
+        ],
+        "prerequisites": [
+            "SAS language",
+            "data storage",
+            "data extraction, transformation and loading tools"
+        ]
+    },
+    {
+        "skill": "levels of software testing",
+        "level": 6,
+        "detailed": [
+            "Unit Testing",
+            "Integration Testing",
+            "System Testing",
+            "Acceptance Testing",
+            "Performance Testing",
+            "Security Testing",
+            "Regression Testing"
+        ],
+        "prerequisites": [
+            "quality assurance methodologies",
+            "software anomalies"
+        ]
+    },
+    {
+        "skill": "ICT performance analysis methods",
+        "level": 6,
+        "detailed": [
+            "Benchmarking",
+            "Load Testing",
+            "Stress Testing",
+            "Profiling",
+            "Bottleneck Identification",
+            "Response Time Analysis",
+            "Throughput Analysis"
+        ],
+        "prerequisites": [
+            "system design",
+            "ICT infrastructure"
+        ]
+    },
+    {
+        "skill": "decision support systems",
+        "level": 7,
+        "detailed": [
+            "Data Warehousing Integration",
+            "Online Analytical Processing (OLAP)",
+            "Business Intelligence (BI) Tools",
+            "Predictive Modeling",
+            "What-If Analysis",
+            "Data Mining Techniques",
+            "Dashboard and Reporting"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "business intelligence",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "ICT debugging tools",
+        "level": 5,
+        "detailed": [
+            "Breakpoints",
+            "Step-by-Step Execution",
+            "Variable Inspection",
+            "Call Stack Analysis",
+            "Memory Inspection",
+            "Remote Debugging",
+            "Log Analysis"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "software anomalies"
+        ]
+    },
+    {
+        "skill": "tools for ICT test automation",
+        "level": 6,
+        "detailed": [
+            "Selenium",
+            "Cypress",
+            "JMeter",
+            "Postman (for API testing)",
+            "TestNG/JUnit",
+            "CI/CD Integration",
+            "Robot Framework"
+        ],
+        "prerequisites": [
+            "levels of software testing",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "ICT quality policy",
+        "level": 6,
+        "detailed": [
+            "Quality Management Systems (QMS)",
+            "Continuous Improvement",
+            "Customer Satisfaction Metrics",
+            "Compliance with Standards (ISO 9001)",
+            "Quality Assurance Processes",
+            "Defect Management",
+            "Root Cause Analysis"
+        ],
+        "prerequisites": [
+            "quality standards",
+            "quality assurance methodologies"
+        ]
+    },
+    {
+        "skill": "software anomalies",
+        "level": 5,
+        "detailed": [
+            "Bug Identification",
+            "Error Categorization",
+            "Reproducing Defects",
+            "Impact Assessment",
+            "Root Cause Analysis",
+            "Defect Tracking Systems",
+            "Severity and Priority Assignment"
+        ],
+        "prerequisites": [
+            "levels of software testing",
+            "software metrics"
+        ]
+    },
+    {
+        "skill": "quality assurance methodologies",
+        "level": 6,
+        "detailed": [
+            "Software Development Life Cycle (SDLC) Integration",
+            "Test Planning and Strategy",
+            "Test Case Design",
+            "Defect Management Process",
+            "Risk-Based Testing",
+            "Agile QA",
+            "Static and Dynamic Testing"
+        ],
+        "prerequisites": [
+            "quality standards",
+            "systems development life-cycle"
+        ]
+    },
+    {
+        "skill": "ICT process quality models",
+        "level": 6,
+        "detailed": [
+            "CMMI (Capability Maturity Model Integration)",
+            "ISO/IEC 15504 (SPICE)",
+            "ITIL (Information Technology Infrastructure Library)",
+            "COBIT",
+            "Process Definition",
+            "Process Measurement",
+            "Process Improvement"
+        ],
+        "prerequisites": [
+            "quality assurance methodologies",
+            "quality standards"
+        ]
+    },
+    {
+        "skill": "quality standards",
+        "level": 6,
+        "detailed": [
+            "ISO 9001",
+            "ISO/IEC 27001 (Information Security)",
+            "IEEE Software Engineering Standards",
+            "CMMI Levels",
+            "Six Sigma",
+            "Total Quality Management (TQM)",
+            "Compliance Audits"
+        ],
+        "prerequisites": [
+            "ICT quality policy",
+            "audit techniques"
+        ]
+    },
+    {
+        "skill": "data quality assessment",
+        "level": 6,
+        "detailed": [
+            "Data Profiling",
+            "Data Cleansing Techniques",
+            "Data Validation Rules",
+            "Accuracy, Completeness, Consistency, Timeliness",
+            "Data Quality Metrics",
+            "Master Data Management (MDM)",
+            "Data Governance Frameworks"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "database quality standards"
+        ]
+    },
+    {
+        "skill": "database quality standards",
+        "level": 6,
+        "detailed": [
+            "Data Integrity Constraints",
+            "Referential Integrity",
+            "Normalization Rules",
+            "Data Consistency Checks",
+            "Data Validation",
+            "Schema Enforcement",
+            "Audit Trails"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "data models",
+            "quality standards"
+        ]
+    },
+    {
+        "skill": "usability engineering",
+        "level": 7,
+        "detailed": [
+            "User Research (Interviews, Surveys)",
+            "Usability Testing",
+            "Heuristic Evaluation",
+            "Cognitive Walkthroughs",
+            "Prototyping",
+            "Interaction Design",
+            "Accessibility Standards"
+        ],
+        "prerequisites": [
+            "application usability",
+            "software interaction design"
+        ]
+    },
+    {
+        "skill": "systems development life-cycle",
+        "level": 6,
+        "detailed": [
+            "Requirements Gathering",
+            "Design Phase",
+            "Implementation Phase",
+            "Testing Phase",
+            "Deployment Phase",
+            "Maintenance Phase",
+            "Waterfall, Agile, Spiral Models"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "ICT project management methodologies"
+        ]
+    },
+    {
+        "skill": "ICT security standards",
+        "level": 7,
+        "detailed": [
+            "ISO/IEC 27001",
+            "NIST Cybersecurity Framework",
+            "PCI DSS",
+            "HIPAA",
+            "OWASP Top 10",
+            "CIS Benchmarks",
+            "GDPR Compliance"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "information security strategy",
+            "quality standards"
+        ]
+    },
+    {
+        "skill": "ICT project management",
+        "level": 7,
+        "detailed": [
+            "Scope Management",
+            "Time Management (Scheduling)",
+            "Cost Management (Budgeting)",
+            "Risk Management",
+            "Resource Management",
+            "Stakeholder Communication",
+            "Project Planning Software"
+        ],
+        "prerequisites": [
+            "project management",
+            "ICT project management methodologies"
+        ]
+    },
+    {
+        "skill": "World Wide Web Consortium standards",
+        "level": 6,
+        "detailed": [
+            "HTML5",
+            "CSS3",
+            "DOM (Document Object Model)",
+            "Web Accessibility Initiative (WAI)",
+            "ARIA (Accessible Rich Internet Applications)",
+            "Semantic Web Technologies",
+            "XML/XPath/XQuery Standards"
+        ],
+        "prerequisites": [
+            "web programming",
+            "ICT accessibility standards"
+        ]
+    },
+    {
+        "skill": "ICT network security risks",
+        "level": 6,
+        "detailed": [
+            "Malware and Ransomware",
+            "Phishing and Social Engineering",
+            "DDoS Attacks",
+            "Insider Threats",
+            "Vulnerabilities in Network Devices",
+            "Zero-Day Exploits",
+            "Man-in-the-Middle Attacks"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "ICT network routing",
+            "attack vectors"
+        ]
+    },
+    {
+        "skill": "cyber security",
+        "level": 7,
+        "detailed": [
+            "Threat Intelligence",
+            "Vulnerability Management",
+            "Incident Response",
+            "Network Security",
+            "Endpoint Security",
+            "Identity and Access Management (IAM)",
+            "Security Information and Event Management (SIEM)"
+        ],
+        "prerequisites": [
+            "ICT network security risks",
+            "information security strategy",
+            "risk management"
+        ]
+    },
+    {
+        "skill": "ICT accessibility standards",
+        "level": 6,
+        "detailed": [
+            "WCAG (Web Content Accessibility Guidelines)",
+            "ARIA (Accessible Rich Internet Applications)",
+            "Section 508 Compliance",
+            "Assistive Technologies (Screen Readers)",
+            "Keyboard Navigation",
+            "Color Contrast",
+            "Captions and Transcripts"
+        ],
+        "prerequisites": [
+            "web programming",
+            "application usability"
+        ]
+    },
+    {
+        "skill": "3D texturing",
+        "level": 6,
+        "detailed": [
+            "UV Mapping",
+            "PBR (Physically Based Rendering)",
+            "Texture Painting",
+            "Normal Maps",
+            "Displacement Maps",
+            "Procedural Texturing",
+            "Material Shaders"
+        ],
+        "prerequisites": [
+            "computer graphics",
+            "3D modelling"
+        ]
+    },
+    {
+        "skill": "tools for software configuration management",
+        "level": 6,
+        "detailed": [
+            "Git",
+            "Subversion (SVN)",
+            "Ansible",
+            "Puppet",
+            "Chef",
+            "Jenkins",
+            "Version Control Systems"
+        ],
+        "prerequisites": [
+            "software development life-cycle",
+            "DevOps"
+        ]
+    },
+    {
+        "skill": "computer graphics",
+        "level": 7,
+        "detailed": [
+            "Rasterization",
+            "Ray Tracing",
+            "3D Modeling",
+            "Shading Languages (GLSL, HLSL)",
+            "OpenGL/DirectX",
+            "Texture Mapping",
+            "Transformations (Translation, Rotation, Scale)"
+        ],
+        "prerequisites": [
+            "computer science",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "3D lighting",
+        "level": 6,
+        "detailed": [
+            "Global Illumination",
+            "Local Illumination",
+            "Light Types (Point, Spot, Directional)",
+            "HDR Lighting",
+            "Shadow Mapping",
+            "Render Engines",
+            "Physically Based Lighting"
+        ],
+        "prerequisites": [
+            "computer graphics",
+            "3D modelling"
+        ]
+    },
+    {
+        "skill": "Xcode",
+        "level": 6,
+        "detailed": [
+            "Interface Builder",
+            "Debugger",
+            "Instruments (Performance Analysis)",
+            "Version Editor",
+            "Asset Catalog Management",
+            "Project Configuration",
+            "Simulator and Device Deployment"
+        ],
+        "prerequisites": [
+            "integrated development environment software",
+            "Objective-C",
+            "Swift (computer programming)"
+        ]
+    },
+    {
+        "skill": "Ansible",
+        "level": 6,
+        "detailed": [
+            "Playbooks (YAML)",
+            "Modules",
+            "Inventory Management",
+            "Roles",
+            "Vault for Secrets Management",
+            "Ad-hoc Commands",
+            "Idempotency"
+        ],
+        "prerequisites": [
+            "tools for software configuration management",
+            "DevOps",
+            "Python (computer programming)"
+        ]
+    },
+    {
+        "skill": "augmented reality",
+        "level": 7,
+        "detailed": [
+            "AR SDKs (ARKit, ARCore)",
+            "Marker-based AR",
+            "Markerless AR",
+            "SLAM (Simultaneous Localization and Mapping)",
+            "3D Object Tracking",
+            "Computer Vision for AR",
+            "User Interface Design for AR"
+        ],
+        "prerequisites": [
+            "computer vision",
+            "3D modelling",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "Joomla",
+        "level": 5,
+        "detailed": [
+            "Content Management System (CMS) Administration",
+            "Extension Management (Components, Modules, Plugins)",
+            "Template Customization",
+            "User Management",
+            "SEO Configuration",
+            "Security Best Practices",
+            "Database Management"
+        ],
+        "prerequisites": [
+            "WebCMS",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "Puppet (tools for software configuration management)",
+        "level": 6,
+        "detailed": [
+            "Puppet DSL (Domain Specific Language)",
+            "Manifests",
+            "Modules",
+            "Facter (System Inventory)",
+            "Puppet Master/Agent Architecture",
+            "Idempotency",
+            "Resource Abstraction"
+        ],
+        "prerequisites": [
+            "tools for software configuration management",
+            "DevOps"
+        ]
+    },
+    {
+        "skill": "STAF",
+        "level": 5,
+        "detailed": [
+            "STAF Architecture",
+            "STAF Commands",
+            "Service Management",
+            "Process Control",
+            "Logging and Monitoring",
+            "Cross-Platform Automation",
+            "Scripting Integration"
+        ],
+        "prerequisites": [
+            "tools for ICT test automation",
+            "ICT system programming"
+        ]
+    },
+    {
+        "skill": "Apache Maven",
+        "level": 6,
+        "detailed": [
+            "POM (Project Object Model)",
+            "Build Lifecycle",
+            "Plugins",
+            "Dependency Management",
+            "Repositories (Local, Remote)",
+            "Project Aggregation",
+            "Release Management"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "tools for software configuration management"
+        ]
+    },
+    {
+        "skill": "Salt (tools for software configuration management)",
+        "level": 6,
+        "detailed": [
+            "Salt Master/Minion Architecture",
+            "States (SLS Files)",
+            "Grains and Pillars",
+            "Modules",
+            "Orchestration",
+            "Remote Execution",
+            "Reactor System"
+        ],
+        "prerequisites": [
+            "tools for software configuration management",
+            "DevOps",
+            "Python (computer programming)"
+        ]
+    },
+    {
+        "skill": "object-oriented modelling",
+        "level": 6,
+        "detailed": [
+            "Classes and Objects",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation",
+            "Association and Aggregation",
+            "Unified Modeling Language (UML)",
+            "Design Patterns"
+        ],
+        "prerequisites": [
+            "unified modelling language",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "interactive media",
+        "level": 6,
+        "detailed": [
+            "User Interface (UI) Design",
+            "User Experience (UX) Design",
+            "Multimedia Integration (Audio, Video, Graphics)",
+            "Game Design Principles",
+            "Web Technologies (HTML5, CSS, JavaScript)",
+            "Storyboarding",
+            "Accessibility"
+        ],
+        "prerequisites": [
+            "software UI design patterns",
+            "software interaction design",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "ICT network routing",
+        "level": 6,
+        "detailed": [
+            "IP Addressing and Subnetting",
+            "Routing Protocols (OSPF, BGP)",
+            "Static vs. Dynamic Routing",
+            "Network Address Translation (NAT)",
+            "Virtual LANs (VLANs)",
+            "Packet Forwarding",
+            "Router Configuration (Cisco IOS)"
+        ],
+        "prerequisites": [
+            "network standards",
+            "ICT communications protocols",
+            "ICT networking hardware"
+        ]
+    },
+    {
+        "skill": "network standards",
+        "level": 6,
+        "detailed": [
+            "OSI Model",
+            "TCP/IP Model",
+            "Ethernet (IEEE 802.3)",
+            "Wireless (IEEE 802.11)",
+            "IPv4/IPv6",
+            "DNS",
+            "HTTP/HTTPS"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "ICT networking hardware"
+        ]
+    },
+    {
+        "skill": "network engineering",
+        "level": 7,
+        "detailed": [
+            "Network Design",
+            "Network Implementation",
+            "Network Troubleshooting",
+            "Network Security",
+            "WAN/LAN Technologies",
+            "Cloud Networking",
+            "Network Monitoring"
+        ],
+        "prerequisites": [
+            "ICT network routing",
+            "network standards",
+            "ICT networking hardware"
+        ]
+    },
+    {
+        "skill": "system design",
+        "level": 7,
+        "detailed": [
+            "Architectural Patterns (Microservices, Monolith)",
+            "Scalability and Performance",
+            "Reliability and Fault Tolerance",
+            "Security Considerations",
+            "Data Storage Strategies",
+            "API Design",
+            "System Integration"
+        ],
+        "prerequisites": [
+            "software architecture models",
+            "unified modelling language",
+            "object-oriented modelling"
+        ]
+    },
+    {
+        "skill": "ICT networking hardware",
+        "level": 6,
+        "detailed": [
+            "Routers",
+            "Switches",
+            "Firewalls",
+            "Access Points",
+            "Cables and Connectors",
+            "Network Interface Cards (NICs)",
+            "Server Hardware"
+        ],
+        "prerequisites": [
+            "network standards",
+            "hardware components"
+        ]
+    },
+    {
+        "skill": "ICT network simulation",
+        "level": 6,
+        "detailed": [
+            "Network Simulators (NS-2, GNS3, Cisco Packet Tracer)",
+            "Network Topology Design",
+            "Traffic Generation",
+            "Performance Metrics Collection",
+            "Protocol Analysis",
+            "What-If Scenario Analysis",
+            "Network Optimization"
+        ],
+        "prerequisites": [
+            "network engineering",
+            "computer simulation"
+        ]
+    },
+    {
+        "skill": "network management system tools",
+        "level": 6,
+        "detailed": [
+            "SNMP (Simple Network Management Protocol)",
+            "Network Monitoring Tools (Nagios, Zabbix)",
+            "Configuration Management Tools",
+            "Performance Baselines",
+            "Alerting and Reporting",
+            "Troubleshooting Tools",
+            "Asset Inventory Management"
+        ],
+        "prerequisites": [
+            "network engineering",
+            "ICT debugging tools"
+        ]
+    },
+    {
+        "skill": "attack vectors",
+        "level": 6,
+        "detailed": [
+            "Phishing",
+            "Malware (Viruses, Worms, Trojans)",
+            "Exploits (Buffer Overflows, SQL Injection)",
+            "Denial of Service (DoS/DDoS)",
+            "Social Engineering",
+            "Weak Credentials",
+            "Supply Chain Attacks"
+        ],
+        "prerequisites": [
+            "ICT network security risks",
+            "cyber security"
+        ]
+    },
+    {
+        "skill": "Cisco",
+        "level": 7,
+        "detailed": [
+            "Cisco IOS Configuration",
+            "Cisco Routers and Switches",
+            "Cisco ASA Firewalls",
+            "VLANs and Trunking",
+            "Routing Protocols (EIGRP, OSPF)",
+            "Network Security Features",
+            "Cisco Certification Tracks (CCNA, CCNP)"
+        ],
+        "prerequisites": [
+            "network engineering",
+            "ICT networking hardware"
+        ]
+    },
+    {
+        "skill": "industrial software",
+        "level": 6,
+        "detailed": [
+            "SCADA Systems",
+            "PLC Programming",
+            "Human-Machine Interface (HMI) Design",
+            "Distributed Control Systems (DCS)",
+            "Real-time Operating Systems (RTOS)",
+            "Industrial Communication Protocols (Modbus, Profibus)",
+            "Cybersecurity for Industrial Control Systems"
+        ],
+        "prerequisites": [
+            "embedded systems",
+            "real-time computing",
+            "ICT system programming"
+        ]
+    },
+    {
+        "skill": "embedded systems",
+        "level": 7,
+        "detailed": [
+            "Microcontrollers/Microprocessors",
+            "Real-time Operating Systems (RTOS)",
+            "Firmware Development (C/C++)",
+            "Hardware/Software Co-design",
+            "Sensor and Actuator Interfacing",
+            "Low-power Design",
+            "Debugging Embedded Systems"
+        ],
+        "prerequisites": [
+            "computer engineering",
+            "Assembly (computer programming)",
+            "hardware architectures"
+        ]
+    },
+    {
+        "skill": "mobile operating systems",
+        "level": 6,
+        "detailed": [
+            "iOS Architecture",
+            "Android Architecture",
+            "Application Lifecycle Management",
+            "Security Features",
+            "Memory Management",
+            "Multitasking",
+            "User Interface Frameworks"
+        ],
+        "prerequisites": [
+            "operating systems",
+            "mobile device software frameworks"
+        ]
+    },
+    {
+        "skill": "screen reader",
+        "level": 5,
+        "detailed": [
+            "NVDA",
+            "JAWS",
+            "VoiceOver",
+            "Accessibility Tree",
+            "ARIA Attributes",
+            "Keyboard Navigation",
+            "Web Content Accessibility Guidelines (WCAG)"
+        ],
+        "prerequisites": [
+            "ICT accessibility standards"
+        ]
+    },
+    {
+        "skill": "iOS",
+        "level": 6,
+        "detailed": [
+            "Swift (computer programming)",
+            "Xcode IDE",
+            "UIKit/SwiftUI",
+            "Cocoa Touch Frameworks",
+            "App Store Submission Process",
+            "Core Data/Realm",
+            "Grand Central Dispatch (GCD)"
+        ],
+        "prerequisites": [
+            "mobile operating systems",
+            "Swift (computer programming)",
+            "Xcode"
+        ]
+    },
+    {
+        "skill": "BlackBerry",
+        "level": 4,
+        "detailed": [
+            "BlackBerry OS Development (Java/C++)",
+            "BlackBerry Enterprise Server",
+            "Push Services",
+            "Security Model",
+            "Application Signing",
+            "BlackBerry WebWorks",
+            "Device Management"
+        ],
+        "prerequisites": [
+            "mobile operating systems",
+            "Java (computer programming)"
+        ]
+    },
+    {
+        "skill": "trading software",
+        "level": 6,
+        "detailed": [
+            "Algorithmic Trading Strategies",
+            "Real-time Data Processing",
+            "Order Management Systems (OMS)",
+            "Execution Management Systems (EMS)",
+            "Market Data APIs",
+            "Low Latency Systems",
+            "Risk Management Modules"
+        ],
+        "prerequisites": [
+            "real-time computing",
+            "computer programming",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "Android (mobile operating systems)",
+        "level": 6,
+        "detailed": [
+            "Java/Kotlin Programming",
+            "Android SDK",
+            "Android Studio",
+            "Activity Lifecycle",
+            "Layouts (XML, Jetpack Compose)",
+            "Google Play Store Submission",
+            "Material Design"
+        ],
+        "prerequisites": [
+            "mobile operating systems",
+            "Java (computer programming)",
+            "Kotlin (computer programming, if it was in the list)"
+        ]
+    },
+    {
+        "skill": "security engineering",
+        "level": 8,
+        "detailed": [
+            "Secure System Design",
+            "Threat Modeling",
+            "Vulnerability Assessment",
+            "Cryptography Implementation",
+            "Security Testing (Penetration Testing)",
+            "Identity and Access Management (IAM)",
+            "Security Architecture"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "system design",
+            "information security strategy"
+        ]
+    },
+    {
+        "skill": "ICT recovery techniques",
+        "level": 6,
+        "detailed": [
+            "Disaster Recovery Planning (DRP)",
+            "Business Continuity Planning (BCP)",
+            "Data Backup and Restoration",
+            "High Availability Architectures",
+            "Failover Mechanisms",
+            "Incident Response Procedures",
+            "Recovery Time Objective (RTO) / Recovery Point Objective (RPO)"
+        ],
+        "prerequisites": [
+            "system backup best practice",
+            "ICT infrastructure"
+        ]
+    },
+    {
+        "skill": "ethical hacking principles",
+        "level": 7,
+        "detailed": [
+            "Reconnaissance (Passive/Active)",
+            "Scanning and Enumeration",
+            "Vulnerability Analysis",
+            "Exploitation Techniques",
+            "Post-Exploitation",
+            "Reporting and Remediation",
+            "Legal and Ethical Boundaries"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "attack vectors",
+            "penetration testing tool"
+        ]
+    },
+    {
+        "skill": "core banking software",
+        "level": 6,
+        "detailed": [
+            "Account Management",
+            "Transaction Processing",
+            "Loan Management",
+            "Customer Information Systems (CIS)",
+            "Regulatory Compliance",
+            "Integration with Payment Gateways",
+            "Security and Fraud Detection"
+        ],
+        "prerequisites": [
+            "industrial software",
+            "database management systems"
+        ]
+    },
+    {
+        "skill": "ICT system user requirements",
+        "level": 6,
+        "detailed": [
+            "Requirements Elicitation Techniques",
+            "User Stories",
+            "Use Cases",
+            "Stakeholder Analysis",
+            "Functional Requirements",
+            "Non-Functional Requirements",
+            "Requirements Validation"
+        ],
+        "prerequisites": [
+            "business requirements techniques",
+            "systems development life-cycle"
+        ]
+    },
+    {
+        "skill": "ICT sales methodologies",
+        "level": 5,
+        "detailed": [
+            "Solution Selling",
+            "Consultative Selling",
+            "Value-Based Selling",
+            "Customer Relationship Management (CRM) Software",
+            "Sales Pipeline Management",
+            "Negotiation Skills",
+            "Product Knowledge (ICT)"
+        ],
+        "prerequisites": [
+            "sales strategies",
+            "business ICT systems"
+        ]
+    },
+    {
+        "skill": "ICT system integration",
+        "level": 7,
+        "detailed": [
+            "API Integration",
+            "Middleware Technologies",
+            "Enterprise Service Bus (ESB)",
+            "Data Mapping and Transformation",
+            "Workflow Orchestration",
+            "Security Considerations",
+            "Testing Integrated Systems"
+        ],
+        "prerequisites": [
+            "system design",
+            "interfacing techniques",
+            "web services"
+        ]
+    },
+    {
+        "skill": "emergent technologies",
+        "level": 7,
+        "detailed": [
+            "Artificial Intelligence (AI)",
+            "Machine Learning",
+            "Blockchain",
+            "Quantum Computing",
+            "Augmented Reality/Virtual Reality",
+            "Internet of Things (IoT)",
+            "Edge Computing"
+        ],
+        "prerequisites": [
+            "computer science",
+            "computer technology"
+        ]
+    },
+    {
+        "skill": "software components libraries",
+        "level": 5,
+        "detailed": [
+            "API Documentation Reading",
+            "Package Management (npm, Maven, NuGet)",
+            "Dependency Management",
+            "Version Control for Libraries",
+            "Licensing Considerations",
+            "Reusable Code Practices",
+            "Open Source Contribution"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "software frameworks"
+        ]
+    },
+    {
+        "skill": "hardware components",
+        "level": 5,
+        "detailed": [
+            "Processors (CPU, GPU)",
+            "Memory (RAM, ROM)",
+            "Storage Devices (HDD, SSD)",
+            "Motherboards",
+            "Network Interface Cards (NICs)",
+            "Power Supplies",
+            "Input/Output Devices"
+        ],
+        "prerequisites": [
+            "computer technology"
+        ]
+    },
+    {
+        "skill": "style sheet languages",
+        "level": 5,
+        "detailed": [
+            "CSS Selectors",
+            "Box Model",
+            "Flexbox and Grid Layouts",
+            "Responsive Design",
+            "Preprocessors (Sass, LESS)",
+            "Variables and Functions",
+            "Browser Compatibility"
+        ],
+        "prerequisites": [
+            "web programming",
+            "CSS"
+        ]
+    },
+    {
+        "skill": "software UI design patterns",
+        "level": 6,
+        "detailed": [
+            "Navigation Patterns (Menus, Tabs)",
+            "Input Patterns (Forms, Validation)",
+            "Feedback Patterns (Notifications, Progress Bars)",
+            "Content Patterns (Cards, Lists)",
+            "Modal Dialogs",
+            "Responsive Design Patterns",
+            "Accessibility Patterns"
+        ],
+        "prerequisites": [
+            "software interaction design",
+            "application usability"
+        ]
+    },
+    {
+        "skill": "graphics editor software",
+        "level": 6,
+        "detailed": [
+            "Image Manipulation (Layers, Filters)",
+            "Vector Graphics",
+            "Raster Graphics",
+            "Color Management",
+            "File Formats (JPEG, PNG, SVG)",
+            "Retouching and Compositing",
+            "Typography"
+        ],
+        "prerequisites": [
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "LESS",
+        "level": 5,
+        "detailed": [
+            "Variables",
+            "Mixins",
+            "Nested Rules",
+            "Functions",
+            "Operations",
+            "Imports",
+            "Compilation to CSS"
+        ],
+        "prerequisites": [
+            "style sheet languages",
+            "CSS"
+        ]
+    },
+    {
+        "skill": "Synfig",
+        "level": 5,
+        "detailed": [
+            "Vector-based Animation",
+            "Keyframing",
+            "Tweening",
+            "Bone System",
+            "Layers and Blending Modes",
+            "Rendering Animations",
+            "Open-source Tools"
+        ],
+        "prerequisites": [
+            "graphics editor software",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "SketchBook Pro",
+        "level": 5,
+        "detailed": [
+            "Digital Sketching and Painting",
+            "Brush Customization",
+            "Layers and Blending Modes",
+            "Perspective Tools",
+            "Symmetry Tools",
+            "Copic Markers",
+            "Export Formats"
+        ],
+        "prerequisites": [
+            "graphics editor software",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "Ajax Framework",
+        "level": 6,
+        "detailed": [
+            "Asynchronous Communication",
+            "JSON/XML Parsing",
+            "Error Handling",
+            "Progress Indicators",
+            "Integration with Backend APIs",
+            "Cross-Browser Compatibility",
+            "Security Considerations"
+        ],
+        "prerequisites": [
+            "AJAX",
+            "JavaScript Framework"
+        ]
+    },
+    {
+        "skill": "Sass",
+        "level": 5,
+        "detailed": [
+            "Variables",
+            "Mixins",
+            "Nesting",
+            "Partials and Imports",
+            "Inheritance (@extend)",
+            "Functions and Operators",
+            "Compilation to CSS"
+        ],
+        "prerequisites": [
+            "style sheet languages",
+            "CSS"
+        ]
+    },
+    {
+        "skill": "Microsoft Visio",
+        "level": 5,
+        "detailed": [
+            "Flowcharting",
+            "Network Diagrams",
+            "UML Diagrams",
+            "Org Charts",
+            "Floor Plans",
+            "Data Linking",
+            "Shape Customization"
+        ],
+        "prerequisites": [
+            "unified modelling language",
+            "system design"
+        ]
+    },
+    {
+        "skill": "JSSS",
+        "level": 4,
+        "detailed": [
+            "JavaScript-based Styling",
+            "Dynamic Styling",
+            "Object-Oriented CSS",
+            "Component-Based Styling",
+            "Integration with JavaScript Applications",
+            "Theming",
+            "Scoped Styles"
+        ],
+        "prerequisites": [
+            "JavaScript",
+            "CSS"
+        ]
+    },
+    {
+        "skill": "Adobe Illustrator",
+        "level": 6,
+        "detailed": [
+            "Vector Graphics",
+            "Pen Tool",
+            "Path Manipulation",
+            "Layers and Artboards",
+            "Typography",
+            "Color Management",
+            "Logo Design"
+        ],
+        "prerequisites": [
+            "graphics editor software",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "Adobe Photoshop",
+        "level": 6,
+        "detailed": [
+            "Raster Graphics",
+            "Layers and Masks",
+            "Image Retouching",
+            "Color Correction",
+            "Filters and Effects",
+            "Compositing",
+            "Web Graphics Optimization"
+        ],
+        "prerequisites": [
+            "graphics editor software",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "WordPress",
+        "level": 5,
+        "detailed": [
+            "CMS Administration",
+            "Theme Customization",
+            "Plugin Management",
+            "Content Creation (Gutenberg Editor)",
+            "User Management",
+            "SEO Basics",
+            "Security Best Practices"
+        ],
+        "prerequisites": [
+            "WebCMS",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "Drupal",
+        "level": 5,
+        "detailed": [
+            "CMS Administration",
+            "Module Development",
+            "Theme Development",
+            "Content Types and Fields",
+            "Views for Data Display",
+            "User and Permissions Management",
+            "Security Best Practices"
+        ],
+        "prerequisites": [
+            "WebCMS",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "software interaction design",
+        "level": 7,
+        "detailed": [
+            "User Flows",
+            "Wireframing and Prototyping",
+            "Information Architecture",
+            "Feedback Mechanisms",
+            "Gestural Interfaces",
+            "Microinteractions",
+            "Accessibility"
+        ],
+        "prerequisites": [
+            "software UI design patterns",
+            "application usability"
+        ]
+    },
+    {
+        "skill": "CSS",
+        "level": 5,
+        "detailed": [
+            "Selectors and Properties",
+            "Box Model",
+            "Flexbox",
+            "Grid Layout",
+            "Responsive Design (Media Queries)",
+            "Animations and Transitions",
+            "Specificity and Cascade"
+        ],
+        "prerequisites": [
+            "web programming"
+        ]
+    },
+    {
+        "skill": "GIMP (graphics editor software)",
+        "level": 5,
+        "detailed": [
+            "Image Manipulation (Layers, Masks)",
+            "Photo Retouching",
+            "Digital Painting",
+            "Filters and Effects",
+            "Image Formats",
+            "Scripting (Python-Fu)",
+            "Open-source Tools"
+        ],
+        "prerequisites": [
+            "graphics editor software",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "Vagrant",
+        "level": 5,
+        "detailed": [
+            "Virtual Machine Provisioning",
+            "Vagrantfile Configuration",
+            "Box Management",
+            "Networking Configuration",
+            "Shared Folders",
+            "Provider Integration (VirtualBox, VMware)",
+            "Development Environment Setup"
+        ],
+        "prerequisites": [
+            "operating systems",
+            "DevOps"
+        ]
+    },
+    {
+        "skill": "NoSQL",
+        "level": 6,
+        "detailed": [
+            "Document Databases (MongoDB)",
+            "Key-Value Stores (Redis)",
+            "Column-Family Databases (Cassandra)",
+            "Graph Databases (Neo4j)",
+            "Eventual Consistency",
+            "Scalability",
+            "Flexible Schemas"
+        ],
+        "prerequisites": [
+            "database management systems",
+            "data models"
+        ]
+    },
+    {
+        "skill": "ICT market",
+        "level": 6,
+        "detailed": [
+            "Market Segmentation",
+            "Competitive Analysis",
+            "Technology Trends",
+            "Customer Needs Analysis",
+            "Product Lifecycle Stages",
+            "Go-to-Market Strategies",
+            "Regulatory Landscape"
+        ],
+        "prerequisites": [
+            "business processes",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "information architecture",
+        "level": 7,
+        "detailed": [
+            "Content Organization Systems",
+            "Navigation Systems",
+            "Labeling Systems",
+            "Search Systems",
+            "User Research for IA",
+            "Card Sorting and Tree Testing",
+            "Wireframing"
+        ],
+        "prerequisites": [
+            "software interaction design",
+            "application usability"
+        ]
+    },
+    {
+        "skill": "Iterative development",
+        "level": 6,
+        "detailed": [
+            "Short Development Cycles (Iterations)",
+            "Early Feedback Integration",
+            "Continuous Refinement",
+            "Risk Reduction",
+            "Adaptive Planning",
+            "Incremental Delivery",
+            "Agile Principles"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "Agile development"
+        ]
+    },
+    {
+        "skill": "business requirements techniques",
+        "level": 6,
+        "detailed": [
+            "Stakeholder Interviews",
+            "Workshops (JAD sessions)",
+            "Prototyping",
+            "Use Case Modeling",
+            "User Stories",
+            "Process Mapping",
+            "Requirements Documentation"
+        ],
+        "prerequisites": [
+            "ICT system user requirements",
+            "business processes"
+        ]
+    },
+    {
+        "skill": "Prototyping development",
+        "level": 6,
+        "detailed": [
+            "Rapid Prototyping",
+            "Low-Fidelity Prototyping (Sketches)",
+            "High-Fidelity Prototyping (Interactive Mockups)",
+            "User Feedback Integration",
+            "Iterative Design",
+            "Prototyping Tools (Figma, Adobe XD)",
+            "Proof-of-Concept"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "software interaction design"
+        ]
+    },
+    {
+        "skill": "incremental development",
+        "level": 6,
+        "detailed": [
+            "Modular Design",
+            "Staged Releases",
+            "Feature-Driven Development",
+            "Continuous Integration",
+            "Reduced Risk",
+            "Early Customer Value",
+            "Agile Principles"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "Agile development"
+        ]
+    },
+    {
+        "skill": "software design methodologies",
+        "level": 7,
+        "detailed": [
+            "Object-Oriented Design (OOD)",
+            "Modular Design",
+            "Top-Down Design",
+            "Bottom-Up Design",
+            "Design Patterns",
+            "Domain-Driven Design (DDD)",
+            "Service-Oriented Architecture (SOA)"
+        ],
+        "prerequisites": [
+            "object-oriented modelling",
+            "unified modelling language"
+        ]
+    },
+    {
+        "skill": "Spiral development",
+        "level": 6,
+        "detailed": [
+            "Risk-Driven Process",
+            "Iterative Cycles",
+            "Phased Approach (Planning, Risk Analysis, Engineering, Evaluation)",
+            "Prototyping",
+            "Early Risk Mitigation",
+            "Adaptability",
+            "Suitable for Large, Complex Projects"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "risk management"
+        ]
+    },
+    {
+        "skill": "unified modelling language",
+        "level": 6,
+        "detailed": [
+            "Class Diagrams",
+            "Use Case Diagrams",
+            "Sequence Diagrams",
+            "Activity Diagrams",
+            "State Machine Diagrams",
+            "Component Diagrams",
+            "Deployment Diagrams"
+        ],
+        "prerequisites": [
+            "object-oriented modelling",
+            "software design methodologies"
+        ]
+    },
+    {
+        "skill": "Rapid application development",
+        "level": 6,
+        "detailed": [
+            "Iterative and Incremental Development",
+            "Prototyping",
+            "User Involvement",
+            "Time-Boxing",
+            "Low-Code/No-Code Platforms",
+            "Component-Based Construction",
+            "Reduced Development Time"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "Prototyping development"
+        ]
+    },
+    {
+        "skill": "Waterfall development",
+        "level": 5,
+        "detailed": [
+            "Sequential Phases (Requirements, Design, Implementation, Testing, Maintenance)",
+            "Rigid Structure",
+            "Extensive Documentation",
+            "Clear Milestones",
+            "Suitable for Well-Defined Projects",
+            "Limited Flexibility",
+            "Early Planning Emphasis"
+        ],
+        "prerequisites": [
+            "software design methodologies",
+            "systems development life-cycle"
+        ]
+    },
+    {
+        "skill": "software architecture models",
+        "level": 7,
+        "detailed": [
+            "Layered Architecture",
+            "Client-Server Architecture",
+            "Microservices Architecture",
+            "Event-Driven Architecture",
+            "Monolithic Architecture",
+            "MVC/MVVM/MVP Patterns",
+            "Serverless Architecture"
+        ],
+        "prerequisites": [
+            "system design",
+            "software design methodologies"
+        ]
+    },
+    {
+        "skill": "digital systems",
+        "level": 6,
+        "detailed": [
+            "Boolean Algebra",
+            "Logic Gates",
+            "Combinational Logic",
+            "Sequential Logic (Flip-Flops, Registers)",
+            "Microprocessor Architecture",
+            "Digital Signal Processing Basics",
+            "Embedded Systems Design"
+        ],
+        "prerequisites": [
+            "computer engineering",
+            "hardware architectures"
+        ]
+    },
+    {
+        "skill": "inter-organisational middleware system",
+        "level": 7,
+        "detailed": [
+            "Enterprise Application Integration (EAI)",
+            "Enterprise Service Bus (ESB)",
+            "API Management",
+            "Message Queues (Kafka, RabbitMQ)",
+            "Data Transformation",
+            "Security and Authentication",
+            "Protocol Bridging"
+        ],
+        "prerequisites": [
+            "ICT system integration",
+            "web services",
+            "ICT communications protocols"
+        ]
+    },
+    {
+        "skill": "interfacing techniques",
+        "level": 6,
+        "detailed": [
+            "API Design (REST, SOAP)",
+            "Data Formats (JSON, XML)",
+            "Protocol Adapters",
+            "Middleware Technologies",
+            "Authentication and Authorization",
+            "Error Handling in Integration",
+            "Message Queues"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "web services"
+        ]
+    },
+    {
+        "skill": "digital image processing",
+        "level": 7,
+        "detailed": [
+            "Image Filtering (Convolution)",
+            "Edge Detection",
+            "Image Segmentation",
+            "Feature Extraction",
+            "Image Restoration",
+            "Color Spaces",
+            "Computer Vision Algorithms"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "computer graphics",
+            "MATLAB"
+        ]
+    },
+    {
+        "skill": "computer simulation",
+        "level": 6,
+        "detailed": [
+            "Modeling Techniques",
+            "Monte Carlo Simulation",
+            "Discrete Event Simulation",
+            "System Dynamics",
+            "Verification and Validation",
+            "Statistical Analysis of Results",
+            "Simulation Software (AnyLogic, Arena)"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "statistics"
+        ]
+    },
+    {
+        "skill": "image recognition",
+        "level": 7,
+        "detailed": [
+            "Feature Detection (SIFT, SURF)",
+            "Object Detection (YOLO, R-CNN)",
+            "Image Classification",
+            "Deep Learning for Vision (CNNs)",
+            "Facial Recognition",
+            "Pattern Recognition",
+            "OpenCV Library"
+        ],
+        "prerequisites": [
+            "digital image processing",
+            "machine learning",
+            "computer vision"
+        ]
+    },
+    {
+        "skill": "scientific computing",
+        "level": 7,
+        "detailed": [
+            "Numerical Methods (Linear Algebra, Calculus)",
+            "High-Performance Computing (HPC)",
+            "Parallel Computing",
+            "Data Visualization",
+            "Scientific Libraries (NumPy, SciPy, MATLAB)",
+            "Algorithm Optimization",
+            "Simulation and Modeling"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms",
+            "MATLAB"
+        ]
+    },
+    {
+        "skill": "digital twin technology",
+        "level": 7,
+        "detailed": [
+            "IoT Integration",
+            "Real-time Data Streaming",
+            "3D Modeling and Simulation",
+            "Predictive Analytics",
+            "Physics-based Modeling",
+            "Data Visualization",
+            "Cyber-Physical Systems"
+        ],
+        "prerequisites": [
+            "Internet of Things",
+            "computer simulation",
+            "3D modelling"
+        ]
+    },
+    {
+        "skill": "data engineering",
+        "level": 8,
+        "detailed": [
+            "ETL/ELT Pipeline Design",
+            "Data Warehousing",
+            "Big Data Technologies (Hadoop, Spark)",
+            "Data Lake Architectures",
+            "Distributed Systems",
+            "Database Management",
+            "Cloud Data Services"
+        ],
+        "prerequisites": [
+            "data storage",
+            "database management systems",
+            "cloud technologies"
+        ]
+    },
+    {
+        "skill": "deep learning",
+        "level": 8,
+        "detailed": [
+            "Neural Network Architectures (CNNs, RNNs, Transformers)",
+            "Backpropagation",
+            "TensorFlow/PyTorch",
+            "Image Recognition",
+            "Natural Language Processing",
+            "Generative Models (GANs)",
+            "GPU Computing"
+        ],
+        "prerequisites": [
+            "machine learning",
+            "principles of artificial intelligence",
+            "Python (computer programming)"
+        ]
+    },
+    {
+        "skill": "state estimation",
+        "level": 7,
+        "detailed": [
+            "Kalman Filters",
+            "Extended Kalman Filters (EKF)",
+            "Unscented Kalman Filters (UKF)",
+            "Particle Filters",
+            "Sensor Fusion",
+            "Probabilistic Robotics",
+            "Nonlinear Estimation"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "statistics",
+            "MATLAB"
+        ]
+    },
+    {
+        "skill": "signal processing",
+        "level": 7,
+        "detailed": [
+            "Fourier Transform",
+            "Digital Filters (FIR, IIR)",
+            "Sampling and Quantization",
+            "Convolution",
+            "Spectral Analysis",
+            "Wavelets",
+            "Adaptive Filters"
+        ],
+        "prerequisites": [
+            "algorithms",
+            "MATLAB",
+            "scientific computing"
+        ]
+    },
+    {
+        "skill": "mathematical modelling",
+        "level": 6,
+        "detailed": [
+            "Differential Equations",
+            "Linear Algebra",
+            "Numerical Methods",
+            "Optimization",
+            "Statistical Models",
+            "Simulation",
+            "Model Validation"
+        ],
+        "prerequisites": [
+            "statistics",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "quantum computing",
+        "level": 7,
+        "detailed": [
+            "Quantum Bits (Qubits)",
+            "Quantum Gates",
+            "Superposition",
+            "Entanglement",
+            "Quantum Algorithms (Shor's, Grover's)",
+            "Quantum Hardware Architectures",
+            "Quantum Key Distribution"
+        ],
+        "prerequisites": [
+            "computer science",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "cognitive computing",
+        "level": 7,
+        "detailed": [
+            "Natural Language Processing (NLP)",
+            "Machine Learning",
+            "Pattern Recognition",
+            "Knowledge Representation and Reasoning",
+            "Human-Computer Interaction (HCI) Principles",
+            "Contextual Awareness",
+            "Reinforcement Learning"
+        ],
+        "prerequisites": [
+            "principles of artificial intelligence",
+            "natural language processing",
+            "machine learning"
+        ]
+    },
+    {
+        "skill": "real-time computing",
+        "level": 7,
+        "detailed": [
+            "Real-time Operating Systems (RTOS)",
+            "Task Scheduling (Preemptive, Priority-based)",
+            "Interrupt Handling",
+            "Deadlines and Latency",
+            "Concurrency Control",
+            "Hardware-Software Co-design",
+            "Embedded Systems Programming"
+        ],
+        "prerequisites": [
+            "operating systems",
+            "embedded systems",
+            "ICT system programming"
+        ]
+    },
+    {
+        "skill": "ICT communications protocols",
+        "level": 6,
+        "detailed": [
+            "TCP/IP Suite",
+            "HTTP/HTTPS",
+            "FTP/SFTP",
+            "SMTP/POP3/IMAP",
+            "DNS",
+            "DHCP",
+            "Security Protocols (TLS/SSL)"
+        ],
+        "prerequisites": [
+            "network standards",
+            "ICT networking hardware"
+        ]
+    },
+    {
+        "skill": "SPARK",
+        "level": 6,
+        "detailed": [
+            "Formal Methods",
+            "Ada Programming Language",
+            "Contract-Based Programming",
+            "Proof-Based Verification",
+            "Static Analysis",
+            "High-Integrity Systems",
+            "Safety-Critical Software Development"
+        ],
+        "prerequisites": [
+            "computer programming",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "field-programmable gate arrays",
+        "level": 7,
+        "detailed": [
+            "Hardware Description Languages (VHDL, Verilog)",
+            "FPGA Architecture (LUTs, DSP Blocks)",
+            "Synthesis and Place & Route",
+            "Timing Analysis",
+            "Digital Logic Design",
+            "Embedded Processors (Soft-core)",
+            "High-Level Synthesis"
+        ],
+        "prerequisites": [
+            "digital systems",
+            "hardware architectures",
+            "computer engineering"
+        ]
+    },
+    {
+        "skill": "battery management systems",
+        "level": 6,
+        "detailed": [
+            "Battery Cell Balancing",
+            "State of Charge (SOC) Estimation",
+            "State of Health (SOH) Monitoring",
+            "Over-Voltage/Under-Voltage Protection",
+            "Over-Current/Short-Circuit Protection",
+            "Temperature Management",
+            "Communication Protocols (CAN bus)"
+        ],
+        "prerequisites": [
+            "embedded systems",
+            "real-time computing",
+            "hardware components"
+        ]
+    },
+    {
+        "skill": "hardware architectures",
+        "level": 7,
+        "detailed": [
+            "Von Neumann Architecture",
+            "Harvard Architecture",
+            "CPU Components (ALU, Control Unit, Registers)",
+            "Memory Hierarchy (Cache, RAM, ROM)",
+            "Bus Architectures",
+            "Parallel Architectures (SIMD, MIMD)",
+            "RISC vs. CISC"
+        ],
+        "prerequisites": [
+            "digital systems",
+            "computer engineering"
+        ]
+    },
+    {
+        "skill": "operating systems",
+        "level": 6,
+        "detailed": [
+            "Process Management",
+            "Memory Management",
+            "File Systems",
+            "Device Drivers",
+            "Kernel Architecture",
+            "Concurrency and Synchronization",
+            "Security Mechanisms"
+        ],
+        "prerequisites": [
+            "computer science",
+            "ICT system programming"
+        ]
+    },
+    {
+        "skill": "ICT infrastructure",
+        "level": 6,
+        "detailed": [
+            "Servers (Physical, Virtual)",
+            "Networking Equipment (Routers, Switches)",
+            "Data Centers",
+            "Cloud Infrastructure",
+            "Storage Solutions",
+            "Virtualization Technologies",
+            "High Availability Concepts"
+        ],
+        "prerequisites": [
+            "ICT networking hardware",
+            "data storage"
+        ]
+    },
+    {
+        "skill": "domain name service",
+        "level": 5,
+        "detailed": [
+            "DNS Hierarchy",
+            "DNS Record Types (A, CNAME, MX, NS)",
+            "DNS Resolution Process",
+            "Zone Files",
+            "DNS Security Extensions (DNSSEC)",
+            "Caching",
+            "Troubleshooting DNS Issues"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "ICT network routing"
+        ]
+    },
+    {
+        "skill": "Apache Tomcat",
+        "level": 5,
+        "detailed": [
+            "Servlet Container",
+            "JSP (JavaServer Pages)",
+            "Web Application Deployment",
+            "Configuration Files (server.xml, web.xml)",
+            "Performance Tuning",
+            "Security Configuration",
+            "Clustering"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "web programming",
+            "web services"
+        ]
+    },
+    {
+        "skill": "data extraction, transformation and loading tools",
+        "level": 6,
+        "detailed": [
+            "Data Source Connectivity",
+            "Data Profiling",
+            "Data Cleansing",
+            "Data Transformation Rules",
+            "Job Scheduling",
+            "Error Handling",
+            "Performance Optimization"
+        ],
+        "prerequisites": [
+            "data warehouse",
+            "database management systems",
+            "SQL"
+        ]
+    },
+    {
+        "skill": "Oracle Application Development Framework",
+        "level": 6,
+        "detailed": [
+            "ADF Faces",
+            "ADF Business Components",
+            "ADF Model",
+            "ADF Controller",
+            "JDeveloper IDE",
+            "Data Binding",
+            "Web Application Development"
+        ],
+        "prerequisites": [
+            "Oracle Relational Database",
+            "Java (computer programming)",
+            "software frameworks"
+        ]
+    },
+    {
+        "skill": "QlikView Expressor",
+        "level": 5,
+        "detailed": [
+            "Data Integration Flows",
+            "Data Transformation",
+            "Data Quality Rules",
+            "Metadata Management",
+            "Data Lineage",
+            "Job Orchestration",
+            "Data Governance"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "Oracle Warehouse Builder",
+        "level": 6,
+        "detailed": [
+            "ETL Design",
+            "Data Mapping",
+            "Data Quality Management",
+            "Metadata Management",
+            "Deployment to Oracle Database",
+            "Dimensional Modeling",
+            "Data Governance"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "Oracle Relational Database",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "SQL Server Integration Services",
+        "level": 6,
+        "detailed": [
+            "Control Flow and Data Flow Tasks",
+            "SSIS Packages",
+            "Data Transformations",
+            "Error Handling",
+            "Deployment and Scheduling",
+            "Package Configuration",
+            "Parameterization"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "SQL Server",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "SAP Data Services",
+        "level": 6,
+        "detailed": [
+            "Data Extraction (SAP and non-SAP sources)",
+            "Data Transformation",
+            "Data Cleansing",
+            "Data Quality Management",
+            "Data Integration Workflows",
+            "Reporting",
+            "Batch Processing"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "SAP R3",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "ICT power consumption",
+        "level": 5,
+        "detailed": [
+            "Energy Efficiency Metrics (PUE)",
+            "Power Management Techniques (Hardware & Software)",
+            "Cooling Systems Optimization",
+            "Virtualization for Energy Saving",
+            "Renewable Energy Integration",
+            "Carbon Footprint Calculation",
+            "Green IT Strategies"
+        ],
+        "prerequisites": [
+            "ICT infrastructure",
+            "hardware components"
+        ]
+    },
+    {
+        "skill": "Pentaho Data Integration",
+        "level": 6,
+        "detailed": [
+            "Kettle (Spoon ETL Designer)",
+            "Transformations and Jobs",
+            "Data Source Connectivity",
+            "Data Mapping",
+            "Error Handling",
+            "Scheduling and Monitoring",
+            "Big Data Integration"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "Oracle Data Integrator",
+        "level": 6,
+        "detailed": [
+            "ELT Architecture",
+            "Mappings and Interfaces",
+            "Knowledge Modules",
+            "Topology Configuration",
+            "Change Data Capture (CDC)",
+            "Error Handling",
+            "Data Quality Integration"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "Oracle Relational Database",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "IBM InfoSphere Information Server",
+        "level": 7,
+        "detailed": [
+            "DataStage (ETL)",
+            "QualityStage (Data Quality)",
+            "Information Analyzer (Data Profiling)",
+            "Metadata Workbench",
+            "Data Governance",
+            "Connectivity to Various Sources",
+            "Scalable Data Integration"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "data warehouse",
+            "IBM InfoSphere DataStage"
+        ]
+    },
+    {
+        "skill": "SQL",
+        "level": 5,
+        "detailed": [
+            "SELECT, INSERT, UPDATE, DELETE Statements",
+            "JOIN Operations",
+            "Aggregate Functions",
+            "Subqueries",
+            "Data Definition Language (DDL)",
+            "Data Control Language (DCL)",
+            "Indexing"
+        ],
+        "prerequisites": [
+            "database",
+            "query languages"
+        ]
+    },
+    {
+        "skill": "IBM InfoSphere DataStage",
+        "level": 6,
+        "detailed": [
+            "ETL Job Design",
+            "Parallel Processing",
+            "Data Connectors",
+            "Data Transformation Functions",
+            "Error Handling and Logging",
+            "Job Scheduling",
+            "Integration with other InfoSphere components"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "IBM InfoSphere Information Server",
+            "data warehouse"
+        ]
+    },
+    {
+        "skill": "Informatica PowerCenter",
+        "level": 7,
+        "detailed": [
+            "Mapping Designer",
+            "Workflow Manager",
+            "Workflow Monitor",
+            "Transformations (Source Qualifier, Aggregator, Joiner)",
+            "Data Cleansing",
+            "Error Handling",
+            "Performance Tuning"
+        ],
+        "prerequisites": [
+            "data extraction, transformation and loading tools",
+            "data warehouse",
+            "database management systems"
+        ]
+    },
+    {
+        "skill": "CAD software",
+        "level": 6,
+        "detailed": [
+            "2D Sketching",
+            "3D Modeling (Part Design, Assembly Design)",
+            "Surface Modeling",
+            "Drafting and Documentation",
+            "Finite Element Analysis (FEA) Basics",
+            "Parametric Design",
+            "File Formats (DWG, DXF, STEP)"
+        ],
+        "prerequisites": [
+            "3D modelling",
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "3D modelling",
+        "level": 6,
+        "detailed": [
+            "Mesh Modeling",
+            "NURBS Modeling",
+            "Polygonal Modeling",
+            "Sculpting",
+            "Rigging and Animation (Basic)",
+            "Texturing and Shading",
+            "Rendering"
+        ],
+        "prerequisites": [
+            "computer graphics"
+        ]
+    },
+    {
+        "skill": "business intelligence",
+        "level": 7,
+        "detailed": [
+            "Data Warehousing",
+            "ETL Processes",
+            "OLAP Cubes",
+            "Dashboarding and Reporting",
+            "Data Visualization",
+            "KPI Development",
+            "Predictive Analytics"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "data warehouse",
+            "database"
+        ]
+    },
+    {
+        "skill": "cyber attack counter-measures",
+        "level": 7,
+        "detailed": [
+            "Firewalls and Intrusion Prevention Systems (IPS)",
+            "Endpoint Detection and Response (EDR)",
+            "Security Information and Event Management (SIEM)",
+            "Incident Response Playbooks",
+            "Vulnerability Patching",
+            "Security Awareness Training",
+            "Data Encryption"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "ICT encryption",
+            "security engineering"
+        ]
+    },
+    {
+        "skill": "risk management",
+        "level": 6,
+        "detailed": [
+            "Risk Identification",
+            "Risk Assessment (Likelihood & Impact)",
+            "Risk Prioritization",
+            "Risk Mitigation Strategies",
+            "Risk Monitoring",
+            "Contingency Planning",
+            "Compliance Management"
+        ],
+        "prerequisites": [
+            "security threats",
+            "assessment of risks and threats"
+        ]
+    },
+    {
+        "skill": "security threats",
+        "level": 6,
+        "detailed": [
+            "Malware (Viruses, Ransomware)",
+            "Phishing and Social Engineering",
+            "DDoS Attacks",
+            "Insider Threats",
+            "Zero-Day Exploits",
+            "SQL Injection",
+            "Cross-Site Scripting (XSS)"
+        ],
+        "prerequisites": [
+            "ICT network security risks",
+            "web application security threats"
+        ]
+    },
+    {
+        "skill": "assessment of risks and threats",
+        "level": 7,
+        "detailed": [
+            "Vulnerability Scanning",
+            "Penetration Testing",
+            "Threat Modeling",
+            "Risk Likelihood and Impact Analysis",
+            "Asset Valuation",
+            "Security Audits",
+            "Compliance Gap Analysis"
+        ],
+        "prerequisites": [
+            "risk management",
+            "security threats",
+            "penetration testing tool"
+        ]
+    },
+    {
+        "skill": "mobile device management",
+        "level": 6,
+        "detailed": [
+            "Device Enrollment",
+            "Policy Enforcement",
+            "Application Management",
+            "Security Configuration",
+            "Remote Wipe/Lock",
+            "Inventory Management",
+            "Compliance Reporting"
+        ],
+        "prerequisites": [
+            "mobile operating systems",
+            "ICT security standards"
+        ]
+    },
+    {
+        "skill": "ICT problem management techniques",
+        "level": 6,
+        "detailed": [
+            "Incident vs. Problem Distinction",
+            "Problem Categorization",
+            "Root Cause Analysis (RCA)",
+            "Workaround Implementation",
+            "Known Error Database",
+            "Preventative Actions",
+            "Trend Analysis"
+        ],
+        "prerequisites": [
+            "software anomalies",
+            "ICT debugging tools"
+        ]
+    },
+    {
+        "skill": "information confidentiality",
+        "level": 6,
+        "detailed": [
+            "Data Encryption",
+            "Access Controls (RBAC, ABAC)",
+            "Data Loss Prevention (DLP)",
+            "Secure Data Handling Procedures",
+            "Privacy Enhancing Technologies",
+            "Non-Disclosure Agreements (NDAs)",
+            "Data Masking"
+        ],
+        "prerequisites": [
+            "data protection",
+            "ICT encryption",
+            "information security strategy"
+        ]
+    },
+    {
+        "skill": "ICT encryption",
+        "level": 6,
+        "detailed": [
+            "Symmetric Key Cryptography (AES)",
+            "Asymmetric Key Cryptography (RSA)",
+            "Hashing Algorithms (SHA-256)",
+            "Digital Signatures",
+            "Public Key Infrastructure (PKI)",
+            "Key Management",
+            "Transport Layer Security (TLS)"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "ICT communications protocols"
+        ]
+    },
+    {
+        "skill": "web application security threats",
+        "level": 7,
+        "detailed": [
+            "OWASP Top 10 (Injection, XSS, CSRF)",
+            "Broken Authentication",
+            "Security Misconfiguration",
+            "Insecure Deserialization",
+            "API Security Vulnerabilities",
+            "Server-Side Request Forgery (SSRF)",
+            "Input Validation Bypass"
+        ],
+        "prerequisites": [
+            "web programming",
+            "cyber security",
+            "attack vectors"
+        ]
+    },
+    {
+        "skill": "computer forensics",
+        "level": 7,
+        "detailed": [
+            "Evidence Collection and Preservation",
+            "Chain of Custody",
+            "Disk Imaging and Duplication",
+            "File System Analysis",
+            "Memory Forensics",
+            "Network Forensics",
+            "Reporting and Expert Testimony"
+        ],
+        "prerequisites": [
+            "cyber security",
+            "operating systems",
+            "forensic intelligence"
+        ]
+    },
+    {
+        "skill": "web services",
+        "level": 6,
+        "detailed": [
+            "RESTful APIs",
+            "SOAP Services",
+            "JSON/XML Data Exchange",
+            "HTTP Methods (GET, POST, PUT, DELETE)",
+            "Authentication and Authorization (OAuth, JWT)",
+            "API Versioning",
+            "API Documentation (Swagger/OpenAPI)"
+        ],
+        "prerequisites": [
+            "web programming",
+            "ICT communications protocols"
+        ]
+    },
+    {
+        "skill": "model based system engineering",
+        "level": 7,
+        "detailed": [
+            "SysML (Systems Modeling Language)",
+            "Requirements Modeling",
+            "Architecture Modeling",
+            "Behavioral Modeling",
+            "Parametric Modeling",
+            "Model-Driven Development",
+            "Simulation and Analysis"
+        ],
+        "prerequisites": [
+            "system design",
+            "unified modelling language",
+            "software architecture models"
+        ]
+    },
+    {
+        "skill": "web based collaborative platforms",
+        "level": 5,
+        "detailed": [
+            "Version Control Integration (Git)",
+            "Task Management",
+            "Document Sharing and Editing",
+            "Communication Tools (Chat, Video Conferencing)",
+            "Project Management Features",
+            "Access Control",
+            "Real-time Collaboration"
+        ],
+        "prerequisites": [
+            "web programming",
+            "ICT project management"
+        ]
+    },
+    {
+        "skill": "natural language processing",
+        "level": 7,
+        "detailed": [
+            "Tokenization and Stemming",
+            "Part-of-Speech Tagging",
+            "Named Entity Recognition (NER)",
+            "Sentiment Analysis",
+            "Text Classification",
+            "Language Models (Transformers)",
+            "Word Embeddings (Word2Vec)"
+        ],
+        "prerequisites": [
+            "machine learning",
+            "principles of artificial intelligence",
+            "Python (computer programming)"
+        ]
+    },
+    {
+        "skill": "WildFly",
+        "level": 5,
+        "detailed": [
+            "J2EE Application Server",
+            "Deployment of WAR/EAR Files",
+            "Configuration Management",
+            "Clustering",
+            "DataSource Configuration",
+            "Security Domains",
+            "JMS (Java Message Service)"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "web services",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "project configuration management",
+        "level": 6,
+        "detailed": [
+            "Version Control Systems (Git, SVN)",
+            "Build Automation Tools (Maven, Gradle)",
+            "Release Management",
+            "Baselines and Branching Strategies",
+            "Environment Configuration",
+            "Dependency Management",
+            "Continuous Integration"
+        ],
+        "prerequisites": [
+            "tools for software configuration management",
+            "ICT project management",
+            "DevOps"
+        ]
+    },
+    {
+        "skill": "Chef (tools for software configuration management)",
+        "level": 6,
+        "detailed": [
+            "Recipes and Cookbooks",
+            "Resources",
+            "Nodes",
+            "Chef Server/Workstation/Client",
+            "Idempotency",
+            "Run Lists",
+            "Knife CLI"
+        ],
+        "prerequisites": [
+            "tools for software configuration management",
+            "DevOps",
+            "Ruby (computer programming)"
+        ]
+    },
+    {
+        "skill": "control objectives for information and related technology",
+        "level": 7,
+        "detailed": [
+            "IT Governance Framework",
+            "Management Objectives",
+            "Process Descriptions",
+            "Maturity Models",
+            "Key Goal Indicators (KGIs)",
+            "Key Performance Indicators (KPIs)",
+            "Compliance Management"
+        ],
+        "prerequisites": [
+            "ICT security standards",
+            "information governance compliance",
+            "ICT project management methodologies"
+        ]
+    },
+    {
+        "skill": "Codenvy",
+        "level": 5,
+        "detailed": [
+            "Cloud-Native IDE",
+            "Workspace Management",
+            "Container-Based Development",
+            "Collaboration Features",
+            "Language Support",
+            "Debugging in Cloud",
+            "Integration with Kubernetes/Docker"
+        ],
+        "prerequisites": [
+            "integrated development environment software",
+            "cloud technologies"
+        ]
+    },
+    {
+        "skill": "Octopus Deploy",
+        "level": 6,
+        "detailed": [
+            "Deployment Automation",
+            "Release Management",
+            "Environment Management",
+            "Runbook Automation",
+            "Variable Management",
+            "Integration with CI Servers",
+            "Auditing and Reporting"
+        ],
+        "prerequisites": [
+            "DevOps",
+            "project configuration management"
+        ]
+    },
+    {
+        "skill": "data mining",
+        "level": 7,
+        "detailed": [
+            "Classification Algorithms",
+            "Clustering Algorithms",
+            "Association Rule Learning",
+            "Regression Analysis",
+            "Data Preprocessing",
+            "Pattern Recognition",
+            "Evaluation Metrics"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "machine learning",
+            "database"
+        ]
+    },
+    {
+        "skill": "information extraction",
+        "level": 7,
+        "detailed": [
+            "Named Entity Recognition (NER)",
+            "Relation Extraction",
+            "Event Extraction",
+            "Regular Expressions",
+            "Machine Learning for IE",
+            "Ontology Mapping",
+            "Semi-structured Data Processing"
+        ],
+        "prerequisites": [
+            "natural language processing",
+            "data mining",
+            "unstructured data"
+        ]
+    },
+    {
+        "skill": "computational biology",
+        "level": 7,
+        "detailed": [
+            "Bioinformatics Algorithms",
+            "Sequence Alignment",
+            "Phylogenetics",
+            "Gene Expression Analysis",
+            "Molecular Modeling",
+            "Statistical Genetics",
+            "High-Throughput Data Analysis"
+        ],
+        "prerequisites": [
+            "computer science",
+            "algorithms",
+            "statistics"
+        ]
+    },
+    {
+        "skill": "information categorisation",
+        "level": 6,
+        "detailed": [
+            "Taxonomy Development",
+            "Ontology Design",
+            "Metadata Tagging",
+            "Machine Learning for Classification",
+            "Text Classification",
+            "Content Management Systems",
+            "Information Retrieval"
+        ],
+        "prerequisites": [
+            "natural language processing",
+            "data mining",
+            "information architecture"
+        ]
+    },
+    {
+        "skill": "data ethics",
+        "level": 7,
+        "detailed": [
+            "Privacy by Design",
+            "Algorithmic Bias Detection and Mitigation",
+            "Fairness in AI",
+            "Data Governance",
+            "Transparency and Explainability (XAI)",
+            "Informed Consent",
+            "Ethical AI Frameworks"
+        ],
+        "prerequisites": [
+            "data protection",
+            "information confidentiality",
+            "GDPR"
+        ]
+    },
+    {
+        "skill": "healthcare analytics",
+        "level": 7,
+        "detailed": [
+            "Electronic Health Records (EHR) Analysis",
+            "Predictive Modeling for Patient Outcomes",
+            "Population Health Management",
+            "Clinical Decision Support",
+            "Fraud Detection in Healthcare",
+            "HIPAA Compliance",
+            "Interoperability Standards (FHIR)"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "statistics",
+            "data science"
+        ]
+    },
+    {
+        "skill": "business processes",
+        "level": 6,
+        "detailed": [
+            "Process Mapping (BPMN)",
+            "Process Analysis",
+            "Process Improvement (Lean, Six Sigma)",
+            "Workflow Automation",
+            "Business Process Reengineering (BPR)",
+            "Key Performance Indicators (KPIs)",
+            "Stakeholder Management"
+        ],
+        "prerequisites": []
+    },
+    {
+        "skill": "authoring software",
+        "level": 5,
+        "detailed": [
+            "Content Creation Tools",
+            "Multimedia Integration",
+            "Interactive Elements",
+            "SCORM/xAPI Compliance (for e-learning)",
+            "Version Control for Content",
+            "Export Formats (HTML, PDF)",
+            "Templates and Styles"
+        ],
+        "prerequisites": [
+            "web programming",
+            "graphics editor software"
+        ]
+    },
+    {
+        "skill": "blockchain openness",
+        "level": 6,
+        "detailed": [
+            "Public Blockchains",
+            "Private Blockchains",
+            "Consortium Blockchains",
+            "Transparency of Transactions",
+            "Decentralization Principles",
+            "Access Control",
+            "Governance Models"
+        ],
+        "prerequisites": [
+            "blockchain platforms",
+            "smart contract"
+        ]
+    },
+    {
+        "skill": "smart contract",
+        "level": 7,
+        "detailed": [
+            "Solidity Programming Language",
+            "Ethereum Virtual Machine (EVM)",
+            "ERC Token Standards",
+            "Decentralized Applications (DApps)",
+            "Gas Fees and Optimization",
+            "Security Audits (Reentrancy, Overflow)",
+            "Truffle/Hardhat Development Environment"
+        ],
+        "prerequisites": [
+            "blockchain platforms",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "blockchain platforms",
+        "level": 7,
+        "detailed": [
+            "Ethereum",
+            "Hyperledger Fabric",
+            "Corda",
+            "Solana",
+            "Consensus Mechanisms (PoW, PoS)",
+            "Cryptographic Hashing",
+            "Distributed Ledger Technology (DLT)"
+        ],
+        "prerequisites": [
+            "distributed computing",
+            "cryptography (not in list directly, but implicit in blockchain)"
+        ]
+    },
+    {
+        "skill": "Oracle WebLogic",
+        "level": 6,
+        "detailed": [
+            "Java EE Application Server",
+            "Deployment of WAR/EAR Files",
+            "Clustering and Load Balancing",
+            "JMS (Java Message Service)",
+            "Security Configuration",
+            "Monitoring and Performance Tuning",
+            "Domain Configuration"
+        ],
+        "prerequisites": [
+            "Java (computer programming)",
+            "web services",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "artificial neural networks",
+        "level": 7,
+        "detailed": [
+            "Perceptrons",
+            "Activation Functions",
+            "Feedforward Networks",
+            "Recurrent Neural Networks (RNNs)",
+            "Convolutional Neural Networks (CNNs)",
+            "Backpropagation",
+            "TensorFlow/PyTorch"
+        ],
+        "prerequisites": [
+            "machine learning",
+            "deep learning",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "computer vision",
+        "level": 7,
+        "detailed": [
+            "Image Acquisition",
+            "Image Preprocessing",
+            "Feature Detection (Edges, Corners)",
+            "Object Recognition",
+            "Image Segmentation",
+            "3D Reconstruction",
+            "OpenCV Library"
+        ],
+        "prerequisites": [
+            "digital image processing",
+            "machine learning",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "business analytics",
+        "level": 7,
+        "detailed": [
+            "Descriptive Analytics",
+            "Diagnostic Analytics",
+            "Predictive Analytics",
+            "Prescriptive Analytics",
+            "Data Visualization",
+            "SQL for Data Retrieval",
+            "Business Process Analysis"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "business intelligence",
+            "statistics"
+        ]
+    },
+    {
+        "skill": "web analytics",
+        "level": 6,
+        "detailed": [
+            "Google Analytics",
+            "Website Traffic Analysis",
+            "User Behavior Tracking",
+            "Conversion Rate Optimization (CRO)",
+            "SEO Performance Analysis",
+            "A/B Testing",
+            "Funnel Analysis"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "web programming"
+        ]
+    },
+    {
+        "skill": "online analytical processing",
+        "level": 7,
+        "detailed": [
+            "OLAP Cubes",
+            "Multidimensional Data Models",
+            "Slice and Dice",
+            "Drill Down/Up",
+            "Pivot Table Analysis",
+            "MDX Query Language",
+            "Performance Optimization for OLAP"
+        ],
+        "prerequisites": [
+            "data warehouse",
+            "query languages",
+            "business intelligence"
+        ]
+    },
+    {
+        "skill": "statistical modeling techniques",
+        "level": 7,
+        "detailed": [
+            "Linear Regression",
+            "Logistic Regression",
+            "Time Series Analysis",
+            "ANOVA",
+            "Hypothesis Testing",
+            "Bayesian Modeling",
+            "Generalized Linear Models"
+        ],
+        "prerequisites": [
+            "statistics",
+            "data analytics",
+            "R"
+        ]
+    },
+    {
+        "skill": "marketing analytics",
+        "level": 7,
+        "detailed": [
+            "Customer Segmentation",
+            "Campaign Performance Measurement",
+            "ROI Analysis",
+            "Attribution Modeling",
+            "Predictive Customer Lifetime Value (CLV)",
+            "A/B Testing",
+            "Social Media Analytics"
+        ],
+        "prerequisites": [
+            "business analytics",
+            "web analytics",
+            "social network analysis"
+        ]
+    },
+    {
+        "skill": "Hadoop",
+        "level": 7,
+        "detailed": [
+            "HDFS (Hadoop Distributed File System)",
+            "MapReduce",
+            "YARN (Yet Another Resource Negotiator)",
+            "Hive",
+            "Pig",
+            "Spark Integration",
+            "Cluster Management"
+        ],
+        "prerequisites": [
+            "distributed computing",
+            "data storage",
+            "data engineering"
+        ]
+    },
+    {
+        "skill": "social network analysis",
+        "level": 6,
+        "detailed": [
+            "Network Metrics (Centrality, Density)",
+            "Community Detection",
+            "Influence Analysis",
+            "Graph Databases",
+            "Node.js/Python for Network Analysis",
+            "Data Visualization of Networks",
+            "Sentiment Analysis in Social Data"
+        ],
+        "prerequisites": [
+            "data analytics",
+            "statistics",
+            "data visualisation software"
+        ]
+    },
+    {
+        "skill": "building systems monitoring technology",
+        "level": 6,
+        "detailed": [
+            "SCADA Systems",
+            "Building Management Systems (BMS)",
+            "IoT Sensors Integration",
+            "Data Acquisition",
+            "Real-time Data Visualization",
+            "Alerting and Alarms",
+            "Energy Management Systems"
+        ],
+        "prerequisites": [
+            "Internet of Things",
+            "data analytics",
+            "industrial software"
+        ]
+    },
+    {
+        "skill": "penetration testing tool",
+        "level": 6,
+        "detailed": [
+            "Nmap (Network Scanning)",
+            "Metasploit (Exploitation)",
+            "Burp Suite (Web Application Testing)",
+            "Wireshark (Packet Analysis)",
+            "John the Ripper (Password Cracking)",
+            "Kali Linux (Penetration Testing OS)",
+            "Vulnerability Scanners (Nessus)"
+        ],
+        "prerequisites": [
+            "ethical hacking principles",
+            "cyber security",
+            "ICT network security risks"
+        ]
+    },
+    {
+        "skill": "OWASP ZAP",
+        "level": 6,
+        "detailed": [
+            "Automated Scans",
+            "Active Scan",
+            "Passive Scan",
+            "Proxy Capabilities",
+            "Fuzzing",
+            "API Scanning",
+            "Reporting"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "web application security threats"
+        ]
+    },
+    {
+        "skill": "John The Ripper (penetration testing tool)",
+        "level": 6,
+        "detailed": [
+            "Password Hashing Algorithms",
+            "Dictionary Attacks",
+            "Brute-Force Attacks",
+            "Rule-Based Attacks",
+            "Cracking Formats",
+            "Wordlist Management",
+            "Custom Rules"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "ICT encryption"
+        ]
+    },
+    {
+        "skill": "Maltego",
+        "level": 6,
+        "detailed": [
+            "Open Source Intelligence (OSINT)",
+            "Data Mining and Aggregation",
+            "Graph Visualization",
+            "Transformations",
+            "Entity Recognition",
+            "Threat Intelligence",
+            "Link Analysis"
+        ],
+        "prerequisites": [
+            "computer forensics",
+            "information extraction",
+            "data visualisation software"
+        ]
+    },
+    {
+        "skill": "proxy servers",
+        "level": 5,
+        "detailed": [
+            "Forward Proxy",
+            "Reverse Proxy",
+            "Caching",
+            "Load Balancing",
+            "Security Filtering",
+            "Authentication",
+            "Troubleshooting Proxy Issues"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "ICT network routing"
+        ]
+    },
+    {
+        "skill": "Aircrack (penetration testing tool)",
+        "level": 6,
+        "detailed": [
+            "Wireless Network Hacking",
+            "WEP/WPA/WPA2 Cracking",
+            "Packet Injection",
+            "Deauthentication Attacks",
+            "Handshake Capture",
+            "Airmon-ng, Airodump-ng, Aireplay-ng, Aircrack-ng",
+            "Wireless Adapter Configuration"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "ICT network security risks"
+        ]
+    },
+    {
+        "skill": "WhiteHat Sentinel",
+        "level": 6,
+        "detailed": [
+            "Dynamic Application Security Testing (DAST)",
+            "Static Application Security Testing (SAST)",
+            "Software Composition Analysis (SCA)",
+            "Vulnerability Management",
+            "Reporting and Analytics",
+            "False Positive Management",
+            "Integration with SDLC"
+        ],
+        "prerequisites": [
+            "web application security threats",
+            "security engineering",
+            "quality assurance methodologies"
+        ]
+    },
+    {
+        "skill": "Metasploit",
+        "level": 7,
+        "detailed": [
+            "Exploit Modules",
+            "Payloads",
+            "Auxiliary Modules",
+            "Post-Exploitation Modules",
+            "Meterpreter",
+            "MSFConsole",
+            "Evasion Techniques"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "ethical hacking principles",
+            "computer programming"
+        ]
+    },
+    {
+        "skill": "Kali Linux",
+        "level": 6,
+        "detailed": [
+            "Live Booting and Installation",
+            "Package Management (APT)",
+            "Pre-installed Security Tools",
+            "Network Configuration",
+            "Customization",
+            "Command Line Interface (CLI) Proficiency",
+            "Virtualization Integration"
+        ],
+        "prerequisites": [
+            "operating systems",
+            "penetration testing tool"
+        ]
+    },
+    {
+        "skill": "Backbox (penetration testing tool)",
+        "level": 6,
+        "detailed": [
+            "Security Assessment Tools",
+            "Network Analysis",
+            "Vulnerability Scanners",
+            "Web Application Scanners",
+            "Forensics Tools",
+            "Privacy Tools",
+            "Customization"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "ethical hacking principles"
+        ]
+    },
+    {
+        "skill": "Nexpose",
+        "level": 6,
+        "detailed": [
+            "Vulnerability Scanning",
+            "Asset Discovery",
+            "Risk Scoring",
+            "Remediation Planning",
+            "Compliance Reporting",
+            "Agent-Based Scanning",
+            "Integration with SIEM"
+        ],
+        "prerequisites": [
+            "assessment of risks and threats",
+            "penetration testing tool"
+        ]
+    },
+    {
+        "skill": "Nessus",
+        "level": 6,
+        "detailed": [
+            "Vulnerability Scanning",
+            "Configuration Auditing",
+            "Compliance Checks",
+            "Plugin Management",
+            "Report Generation",
+            "Credentialed Scans",
+            "Policy Creation"
+        ],
+        "prerequisites": [
+            "assessment of risks and threats",
+            "penetration testing tool"
+        ]
+    },
+    {
+        "skill": "Cain and Abel (penetration testing tool)",
+        "level": 5,
+        "detailed": [
+            "Password Recovery",
+            "Network Sniffing",
+            "VoIP Recording",
+            "Brute-Force Attacks",
+            "ARP Poisoning",
+            "Route Tracing",
+            "Hash Calculation"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "ICT network security risks"
+        ]
+    },
+    {
+        "skill": "Wireshark",
+        "level": 6,
+        "detailed": [
+            "Packet Capture",
+            "Protocol Analysis",
+            "Filtering (Capture/Display)",
+            "Follow TCP/UDP Stream",
+            "Network Troubleshooting",
+            "Security Analysis",
+            "Custom Column Configuration"
+        ],
+        "prerequisites": [
+            "ICT communications protocols",
+            "ICT network routing",
+            "network management system tools"
+        ]
+    },
+    {
+        "skill": "Samurai Web Testing Framework",
+        "level": 6,
+        "detailed": [
+            "Web Application Penetration Testing",
+            "Information Gathering Tools",
+            "Vulnerability Mapping",
+            "Exploitation Tools",
+            "Reporting",
+            "Proxy Integration",
+            "Forensics Tools"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "web application security threats",
+            "Kali Linux"
+        ]
+    },
+    {
+        "skill": "Parrot Security OS",
+        "level": 6,
+        "detailed": [
+            "Penetration Testing Tools",
+            "Forensics Tools",
+            "Cloud Anonymity Features",
+            "Development Tools",
+            "Privacy Tools",
+            "Secure Browsing",
+            "Lightweight Environment"
+        ],
+        "prerequisites": [
+            "operating systems",
+            "penetration testing tool",
+            "Kali Linux"
+        ]
+    },
+    {
+        "skill": "BlackArch",
+        "level": 6,
+        "detailed": [
+            "Arch Linux Base",
+            "Extensive Tool Repository",
+            "Custom Kernel Options",
+            "Installation Methods (Live, Netinstall)",
+            "Window Managers (Fluxbox, Openbox)",
+            "System Customization",
+            "Community Support"
+        ],
+        "prerequisites": [
+            "operating systems",
+            "penetration testing tool",
+            "Kali Linux"
+        ]
+    },
+    {
+        "skill": "WebCMS",
+        "level": 5,
+        "detailed": [
+            "Content Creation and Editing",
+            "User and Role Management",
+            "Theme/Template Customization",
+            "Plugin/Extension Management",
+            "SEO Features",
+            "Media Management",
+            "Security Updates"
+        ],
+        "prerequisites": [
+            "web programming",
+            "database"
+        ]
+    },
+    {
+        "skill": "statistical analysis system software",
+        "level": 6,
+        "detailed": [
+            "Data Step Programming",
+            "Proc SQL",
+            "Statistical Procedures (PROC GLM, PROC REG)",
+            "Data Import/Export",
+            "Macro Language",
+            "Reporting (ODS)",
+            "Data Cleaning"
+        ],
+        "prerequisites": [
+            "SAS language",
+            "statistics",
+            "data analytics"
+        ]
+    },
+    {
+        "skill": "hardware platforms",
+        "level": 6,
+        "detailed": [
+            "Server Architectures (x86, ARM)",
+            "Cloud Provider Hardware (AWS, Azure, GCP)",
+            "Embedded Platforms (Raspberry Pi, Arduino)",
+            "Virtualization Platforms (VMware, Hyper-V)",
+            "GPU Architectures",
+            "Network Appliances",
+            "Storage Systems"
+        ],
+        "prerequisites": [
+            "hardware components",
+            "operating systems"
+        ]
+    },
+    {
+        "skill": "project management",
+        "level": 6,
+        "detailed": [
+            "Project Planning",
+            "Resource Allocation",
+            "Risk Management",
+            "Budgeting",
+            "Scheduling (Gantt Charts)",
+            "Stakeholder Communication",
+            "Monitoring and Controlling"
+        ],
+        "prerequisites": []
+    },
+    {
+        "skill": "technical drawings",
+        "level": 5,
+        "detailed": [
+            "Orthographic Projections",
+            "Isometric Projections",
+            "Dimensioning and Tolerancing",
+            "Assembly Drawings",
+            "Bill of Materials (BOM)",
+            "CAD Software Usage",
+            "Industry Standards (ANSI, ISO)"
+        ],
+        "prerequisites": [
+            "CAD software",
+            "3D modelling"
+        ]
+    },
+    {
+        "skill": "distributed computing",
+        "level": 7,
+        "detailed": [
+            "Client-Server Architecture",
+            "Peer-to-Peer Networks",
+            "Message Passing Interface (MPI)",
+            "Remote Procedure Calls (RPC)",
+            "Concurrency Control",
+            "Fault Tolerance",
+            "Distributed Consensus (Paxos, Raft)"
+        ],
+        "prerequisites": [
+            "computer science",
+            "ICT communications protocols",
+            "algorithms"
+        ]
+    },
+    {
+        "skill": "software metrics",
+        "level": 6,
+        "detailed": [
+            "Code Complexity Metrics (Cyclomatic Complexity)",
+            "Code Quality Metrics (Maintainability Index)",
+            "Defect Density",
+            "Test Coverage",
+            "Lines of Code (LOC)",
+            "Function Points",
+            "Effort Estimation"
+        ],
+        "prerequisites": [
+            "software anomalies",
+            "quality assurance methodologies"
+        ]
+    },
+    {
+        "skill": "business ICT systems",
+        "level": 6,
+        "detailed": [
+            "Enterprise Resource Planning (ERP)",
+            "Customer Relationship Management (CRM)",
+            "Supply Chain Management (SCM)",
+            "Business Process Management (BPM)",
+            "Data Warehousing",
+            "Cloud-Based Solutions",
+            "Cybersecurity Integration"
+        ],
+        "prerequisites": [
+            "ICT infrastructure",
+            "business processes"
+        ]
+    },
+    {
+        "skill": "GDPR",
+        "level": 6,
+        "detailed": [
+            "Data Protection Principles",
+            "Rights of Data Subjects",
+            "Lawful Basis for Processing",
+            "Data Protection Impact Assessments (DPIA)",
+            "Data Breach Notification",
+            "Data Processor vs. Controller",
+            "Cross-Border Data Transfers"
+        ],
+        "prerequisites": [
+            "data protection",
+            "information governance compliance"
+        ]
+    },
+    {
+        "skill": "forensic intelligence",
+        "level": 7,
+        "detailed": [
+            "Cyber Threat Intelligence",
+            "Digital Evidence Analysis",
+            "Malware Analysis",
+            "Network Traffic Analysis",
+            "Data Correlation",
+            "Predictive Forensics",
+            "Attribution of Attacks"
+        ],
+        "prerequisites": [
+            "computer forensics",
+            "data analytics",
+            "cyber security"
+        ]
+    },
+    {
+        "skill": "THC Hydra",
+        "level": 6,
+        "detailed": [
+            "Brute-Force Attack Tool",
+            "Dictionary Attacks",
+            "Support for Multiple Protocols (SSH, FTP, HTTP)",
+            "Parallel Attacks",
+            "Custom Wordlists",
+            "Credential Stuffing",
+            "Error Handling"
+        ],
+        "prerequisites": [
+            "penetration testing tool",
+            "ICT network security risks"
+        ]
+    },
+    {
+        "skill": "data protection",
+        "level": 7,
+        "detailed": [
+            "Data Encryption",
+            "Access Control",
+            "Data Redundancy and Backup",
+            "Data Anonymization/Pseudonymization",
+            "Data Minimization",
+            "Compliance with Regulations (GDPR)",
+            "Incident Response Planning"
+        ],
+        "prerequisites": [
+            "information confidentiality",
+            "ICT security standards",
+            "data storage"
+        ]
+    }
+]

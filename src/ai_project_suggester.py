@@ -1,0 +1,330 @@
+"""
+Module tích hợp Google Gemini API để đề xuất project thực hành
+"""
+import os
+import json
+from typing import List, Dict, Optional
+
+
+class AIProjectSuggester:
+    """Class để đề xuất project thực hành sử dụng Google Gemini"""
+    
+    def __init__(self, api_key: Optional[str] = None):
+        """
+        Khởi tạo AI Project Suggester với Google Gemini
+        
+        Args:
+            api_key: Google API key (nếu không cung cấp sẽ lấy từ GOOGLE_API_KEY env variable)
+        """
+        self.api_key = api_key or os.getenv("GOOGLE_API_KEY")
+        self.client = None
+        self.model_name = "gemini-2.5-flash"
+        
+        if self.api_key:
+            self._initialize_client()
+    
+    def _initialize_client(self):
+        """Khởi tạo Google Gemini client"""
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=self.api_key)
+            self.client = genai
+            print("✅ Google Gemini đã được khởi tạo thành công!")
+        except ImportError as e:
+            print(f"❌ Lỗi: Thiếu thư viện google-generativeai. Chạy: pip install google-generativeai")
+            self.client = None
+        except Exception as e:
+            print(f"❌ Lỗi khi khởi tạo Gemini: {e}")
+            self.client = None
+    
+    def _create_prompt(self, job_info: Dict, student_knowledge: List[str]) -> str:
+        """
+        Tạo prompt cho LLM theo format của project_prompt.py
+        
+        Args:
+            job_info: Dictionary chứa thông tin job từ data.json
+            student_knowledge: Danh sách knowledge mà student đã có
+            
+        Returns:
+            Prompt string
+        """
+        # Format job info
+        job_name = job_info.get('name', 'N/A')
+        job_desc = job_info.get('description', 'N/A')
+        other_names = job_info.get('other_name', [])
+        essential_knowledge = job_info.get('essential_knowledge', [])
+        optional_knowledge = job_info.get('optional_knowledge', [])
+        
+        # Format as JSON strings
+        other_names_str = ',\n        '.join([f'"{name}"' for name in other_names])
+        essential_knowledge_str = ',\n        '.join([f'"{k}"' for k in essential_knowledge])
+        optional_knowledge_str = ',\n        '.join([f'"{k}"' for k in optional_knowledge])
+        student_knowledge_str = ',\n    '.join([f'"{k}"' for k in student_knowledge])
+        
+        prompt = f'''Given the job information: 
+{{
+    "name": "{job_name}",
+    "description": "{job_desc}",
+    "other_name": [
+        {other_names_str}
+    ],
+    "essential_knowledge": [
+        {essential_knowledge_str}
+    ],
+    "optional_knowledge": [
+        {optional_knowledge_str}
+    ]
+}},
+
+Given the student knowledge set:
+{{
+    {student_knowledge_str}
+}}
+
+Suggest 5 projects that would help the student bridge the gap between their current knowledge and those required for the job. Priortize essential knowledge first, then optional knowledge that is closely related to the student's existing skills.
+Do not make up knowledges that are not in the provided job information.
+Output in JSON format. Only output like a JSON file. Do not include any Markdown elements or code blocks. (for example ```json ... ```).
+
+Output format:
+{{
+  "project_suggestions": [
+    {{
+      "title": "...",
+      "description": "...",
+      "knowledge_gain": [
+        "a",
+        "b",
+        ...
+      ],
+      "reasoning": "..."
+    }},
+    ...
+  ]
+}}'''
+
+        print(f"Generated prompt for Gemini: {prompt}")
+        return prompt
+    
+    def suggest_project(self, job_info: Dict, student_knowledge: List[str]) -> Dict:
+        """
+        Đề xuất project dựa trên job info và student knowledge
+        
+        Args:
+            job_info: Dictionary chứa thông tin job từ data.json
+            student_knowledge: Danh sách knowledge mà student đã có
+            
+        Returns:
+            Dictionary chứa thông tin project được đề xuất
+        """
+        if not self.client:
+            return {
+                "error": "AI API is not configured."
+            }
+        
+        if not job_info or not student_knowledge:
+            return {
+                "error": "Missing job information or student knowledge"
+            }
+        
+        try:
+            prompt = self._create_prompt(job_info, student_knowledge)
+            response_text = self._call_llm(prompt)
+            
+            # Parse JSON response
+            # Loại bỏ markdown code blocks nếu có
+            if "```json" in response_text:
+                response_text = response_text.split("```json")[1].split("```")[0]
+            elif "```" in response_text:
+                response_text = response_text.split("```")[1].split("```")[0]
+            
+            project_data = json.loads(response_text.strip())
+            project_data["source"] = "Generated by Google Gemini"
+            project_data["job_name"] = job_info.get('name', 'N/A')
+            
+            return project_data
+        
+        except Exception as e:
+            print(f"Lỗi khi gọi AI API: {e}")
+            return {
+                "error": str(e)
+            }
+    
+    def _call_llm(self, prompt: str) -> str:
+        """
+        Gọi Google Gemini API và trả về response
+        
+        Args:
+            prompt: Prompt string
+            
+        Returns:
+            Response text từ Gemini
+        """
+        try:
+            model = self.client.GenerativeModel(self.model_name)
+            response = model.generate_content(
+                prompt,
+                generation_config={
+                    'temperature': 0.7,
+                    'max_output_tokens': 8192,
+                }
+            )
+            return response.text
+        except Exception as e:
+            print(f"❌ Error calling Gemini API: {e}")
+            return ""
+    
+    def _generate_fallback_project(self, learned_items: List[str],
+                                  item_type: str,
+                                  difficulty: str) -> Dict:
+        """
+        Tạo project fallback khi không có AI API
+        
+        Args:
+            learned_items: Danh sách items đã học
+            item_type: Loại items
+            difficulty: Độ khó
+            
+        Returns:
+            Dictionary chứa thông tin project fallback
+        """
+        items_str = ", ".join(learned_items[:5])
+        
+        return {
+            "project_name": f"Practice Project: {items_str}",
+            "description": f"A hands-on project to apply the {item_type} you've learned",
+            "difficulty": difficulty,
+            "estimated_time": "1-2 weeks",
+            "objectives": [
+                f"Apply learned {item_type} in practice",
+                "Build a complete application",
+                "Practice coding and problem solving"
+            ],
+            "technologies_used": learned_items,
+            "implementation_steps": [
+                {
+                    "step": 1,
+                    "title": "Design and Planning",
+                    "description": "Draw diagrams, define requirements, and plan implementation"
+                },
+                {
+                    "step": 2,
+                    "title": "Develop Core Features",
+                    "description": "Implement main features of the project"
+                },
+                {
+                    "step": 3,
+                    "title": "Testing and Debugging",
+                    "description": "Thoroughly test and fix bugs"
+                },
+                {
+                    "step": 4,
+                    "title": "Finalize and Documentation",
+                    "description": "Polish UI/UX, write documentation"
+                }
+            ],
+            "learning_outcomes": [
+                f"Master the learned {item_type}",
+                "Gain real project experience",
+                "Improve problem solving skills"
+            ],
+            "bonus_features": [
+                "Add beautiful UI",
+                "Deploy project to cloud",
+                "Add unit tests"
+            ],
+            "source": "Fallback (no AI API)"
+        }
+    
+    def format_project_for_display(self, project_data: Dict) -> str:
+        """
+        Format project data thành text dễ đọc
+        
+        Args:
+            project_data: Dictionary chứa thông tin project
+            
+        Returns:
+            Formatted string
+        """
+        if "error" in project_data and "fallback" not in project_data:
+            return f"❌ Error: {project_data['error']}"
+        
+        # Nếu có fallback, dùng fallback
+        if "fallback" in project_data:
+            project_data = project_data["fallback"]
+        
+        output = []
+        output.append("=" * 70)
+        output.append("🚀 PROJECT SUGGESTIONS")
+        output.append("=" * 70)
+        output.append("")
+        
+        # Xử lý format mới với project_suggestions array
+        if "project_suggestions" in project_data:
+            suggestions = project_data["project_suggestions"]
+            output.append(f"📚 Total: {len(suggestions)} projects suggested")
+            output.append("")
+            
+            for idx, project in enumerate(suggestions, 1):
+                output.append(f"{'─' * 70}")
+                output.append(f"PROJECT {idx}: {project.get('title', 'N/A')}")
+                output.append(f"{'─' * 70}")
+                output.append("")
+                
+                output.append(f"📝 Description:")
+                output.append(f"   {project.get('description', 'N/A')}")
+                output.append("")
+                
+                if project.get('knowledge_gain'):
+                    output.append(f"💡 Knowledge Applied ({len(project['knowledge_gain'])} items):")
+                    for knowledge in project['knowledge_gain']:
+                        output.append(f"   • {knowledge}")
+                    output.append("")
+                
+                output.append(f"🎯 Reasoning:")
+                output.append(f"   {project.get('reasoning', 'N/A')}")
+                output.append("")
+        
+        else:
+            # Format cũ (fallback)
+            output.append(f"🚀 PROJECT: {project_data.get('project_name', 'N/A')}")
+            output.append("")
+            
+            output.append(f"📝 Description: {project_data.get('description', 'N/A')}")
+            output.append(f"⏱️ Estimated Time: {project_data.get('estimated_time', 'N/A')}")
+            output.append(f"📊 Difficulty: {project_data.get('difficulty', 'N/A')}")
+            output.append("")
+            
+            if project_data.get('objectives'):
+                output.append("🎯 Objectives:")
+                for obj in project_data['objectives']:
+                    output.append(f"  • {obj}")
+                output.append("")
+            
+            if project_data.get('technologies_used'):
+                output.append("🔧 Technologies Used:")
+                output.append(f"  {', '.join(project_data['technologies_used'])}")
+                output.append("")
+            
+            if project_data.get('implementation_steps'):
+                output.append("📋 Implementation Steps:")
+                for step in project_data['implementation_steps']:
+                    output.append(f"  {step['step']}. {step['title']}")
+                    output.append(f"     {step['description']}")
+                output.append("")
+            
+            if project_data.get('learning_outcomes'):
+                output.append("💡 Learning Outcomes:")
+                for outcome in project_data['learning_outcomes']:
+                    output.append(f"  • {outcome}")
+                output.append("")
+            
+            if project_data.get('bonus_features'):
+                output.append("✨ Bonus Features:")
+                for feature in project_data['bonus_features']:
+                    output.append(f"  • {feature}")
+                output.append("")
+        
+        output.append(f"🤖 Source: {project_data.get('source', 'Generated by Google Gemini')}")
+        output.append("=" * 70)
+        
+        return "\n".join(output)
