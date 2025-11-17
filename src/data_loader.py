@@ -284,10 +284,6 @@ class DataLoader:
                 display_name = f"{detailed} → {knowledge}"
                 canonical = self.get_canonical_skill_or_knowledge(detailed)
                 expanded_knowledge.append((display_name, canonical))
-            
-            if len(expanded_knowledge) > 400: 
-                break
-
 
         # Lưu vào cache
         self.expanded_skills_cache = expanded_skills

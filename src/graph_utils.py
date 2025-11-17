@@ -80,7 +80,7 @@ class GraphUtils:
             for prereq in prerequisites:
                 # Nếu prereq đã học, bỏ qua (không thêm vào graph)
                 if prereq in learned_items:
-                    print(f"Skipped learned prerequisite: {prereq}")
+                    # print(f"Skipped learned prerequisite: {prereq}")
                     continue
                     
                 # Đệ quy thêm prerequisite và các prerequisites của nó
@@ -88,7 +88,7 @@ class GraphUtils:
                 
                 # Thêm edge từ prerequisite đến item
                 self.add_edge(prereq, item)
-                print(f"Added edge: ({prereq}) -> ({item})")
+                # print(f"Added edge: ({prereq}) -> ({item})")
         
         # Xử lý tất cả items trong danh sách ban đầu
         for item in items:
@@ -250,7 +250,7 @@ class GraphUtils:
         
         # Sắp xếp theo thứ tự để đảm bảo tính ổn định
         queue = deque(sorted(queue))
-        print(f"Zero in-degree SCCs: {list(queue)}")
+        # print(f"Zero in-degree SCCs: {list(queue)}")
 
         while queue:
             start_scc = queue.popleft()
@@ -298,9 +298,9 @@ class GraphUtils:
                         queue.append(neighbor_scc)
         
         unvisited = set(range(len(sccs))) - visited
-        if unvisited:
-            print(f"WARNING: Unvisited SCCs detected: {unvisited}")
-            print(f"This might indicate a cycle in condensation graph!")
+        # if unvisited:
+        #     print(f"WARNING: Unvisited SCCs detected: {unvisited}")
+        #     print(f"This might indicate a cycle in condensation graph!")
 
         return result
     
@@ -328,48 +328,48 @@ class GraphUtils:
         
         # Tìm SCCs bằng Tarjan's Algorithm
         sccs = self.find_sccs_tarjan()
-        print(f"📊 Found {len(sccs)} SCCs: {sccs}")
+        # print(f"📊 Found {len(sccs)} SCCs: {sccs}")
         
         # Xây dựng condensation graph (nén các SCC thành 1 node)
         condensation_graph, scc_map, scc_in_degree = self.build_condensation_graph(sccs)
         
         # In thông tin chi tiết về SCCs và đồ thị sau nén
-        print("\n" + "="*70)
-        print("🔍 CHI TIẾT CÁC SCC (Strongly Connected Components)")
-        print("="*70)
-        for scc_id, scc_nodes in enumerate(sccs):
-            if len(scc_nodes) > 1:
-                print(f"SCC {scc_id}: {scc_nodes} (CYCLE - {len(scc_nodes)} nodes)")
-            else:
-                print(f"SCC {scc_id}: {scc_nodes}")
+        # print("\n" + "="*70)
+        # print("🔍 CHI TIẾT CÁC SCC (Strongly Connected Components)")
+        # print("="*70)
+        # for scc_id, scc_nodes in enumerate(sccs):
+        #     if len(scc_nodes) > 1:
+        #         print(f"SCC {scc_id}: {scc_nodes} (CYCLE - {len(scc_nodes)} nodes)")
+        #     else:
+        #         print(f"SCC {scc_id}: {scc_nodes}")
         
-        print("\n" + "="*70)
-        print("🗺️  ĐỒ THỊ SAU NÉN (Condensation Graph)")
-        print("="*70)
-        print("Cấu trúc: SCC_id -> [danh sách SCC_id kế tiếp]")
-        for scc_id in range(len(sccs)):
-            neighbors = condensation_graph.get(scc_id, [])
-            if neighbors:
-                # print(f"SCC {scc_id} -> SCC {neighbors}")
-                for neighbor in neighbors:
-                    print(scc_id, neighbor)
+        # print("\n" + "="*70)
+        # print("🗺️  ĐỒ THỊ SAU NÉN (Condensation Graph)")
+        # print("="*70)
+        # print("Cấu trúc: SCC_id -> [danh sách SCC_id kế tiếp]")
+        # for scc_id in range(len(sccs)):
+        #     neighbors = condensation_graph.get(scc_id, [])
+        #     if neighbors:
+        #         # print(f"SCC {scc_id} -> SCC {neighbors}")
+        #         for neighbor in neighbors:
+        #             print(scc_id, neighbor)
             # else:
             #     print(f"SCC {scc_id} -> [] (không có node kế tiếp)")
         
-        print("\n" + "="*70)
-        print("📊 IN-DEGREE CỦA CÁC SCC")
-        print("="*70)
-        for scc_id in range(len(sccs)):
-            in_deg = scc_in_degree.get(scc_id, 0)
-            status = "START" if in_deg == 0 else ""
-            print(f"SCC {scc_id}: in-degree = {in_deg} {status}")
-        print("="*70 + "\n")
+        # print("\n" + "="*70)
+        # print("📊 IN-DEGREE CỦA CÁC SCC")
+        # print("="*70)
+        # for scc_id in range(len(sccs)):
+        #     in_deg = scc_in_degree.get(scc_id, 0)
+        #     status = "START" if in_deg == 0 else ""
+            # print(f"SCC {scc_id}: in-degree = {in_deg} {status}")
+        # print("="*70 + "\n")
         
         # Topological sort theo DFS style
         learning_path = self.topological_sort_dfs_style(
             sccs, condensation_graph, scc_in_degree, node_levels
         )
-        print(f"🎯 Learning path: {learning_path}")
+        # print(f"🎯 Learning path: {learning_path}")
         
         # Tìm các SCCs có nhiều hơn 1 node (có cycle)
         cycles_info = []

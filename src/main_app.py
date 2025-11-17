@@ -13,6 +13,7 @@ from data_loader import DataLoader
 from job_matcher import JobMatcher
 from roadmap_generator import RoadmapGenerator
 from ai_project_suggester import AIProjectSuggester
+from selection_listbox import SelectionListbox
 
 
 class StudentCareerApp(ctk.CTk):
@@ -95,7 +96,7 @@ class StudentCareerApp(ctk.CTk):
         selection_frame = ctk.CTkFrame(main_container)
         selection_frame.pack(pady=5, padx=5, fill="both", expand=True)
         
-        # Left side - Skills
+        # Left side - Skills  
         skills_container = ctk.CTkFrame(selection_frame)
         skills_container.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
         
@@ -105,27 +106,14 @@ class StudentCareerApp(ctk.CTk):
             font=ctk.CTkFont(size=14, weight="bold")
         ).pack(pady=5)
         
-        # Search box cho skills
-        self.tab1_skills_search = ctk.CTkEntry(
+        # Sử dụng SelectionListbox thay vì checkboxes
+        self.tab1_skills_listbox = None  # Sẽ được tạo sau khi data load
+        self.tab1_skills_placeholder = ctk.CTkLabel(
             skills_container,
-            placeholder_text="🔍 Search skills...",
-            width=450
+            text="⏳ Loading skills...",
+            font=ctk.CTkFont(size=12)
         )
-        self.tab1_skills_search.pack(pady=5, padx=10)
-        self.tab1_skills_search.bind("<KeyRelease>", lambda e: self.filter_skills_list())
-        
-        # Scrollable frame cho skills checkboxes
-        self.tab1_skills_scroll = ctk.CTkScrollableFrame(
-            skills_container,
-            width=450,
-            height=250
-        )
-        self.tab1_skills_scroll.pack(pady=5, padx=10, fill="both", expand=True)
-        
-        # Dictionary để lưu checkbox variables
-        self.tab1_skills_vars = {}
-        self.tab1_skills_checkboxes = {}
-        self.tab1_skills_canonical_map = {}  # Map từ display name -> canonical name
+        self.tab1_skills_placeholder.pack(fill="both", expand=True, pady=50)
         
         # Right side - Knowledge
         knowledge_container = ctk.CTkFrame(selection_frame)
@@ -137,72 +125,26 @@ class StudentCareerApp(ctk.CTk):
             font=ctk.CTkFont(size=14, weight="bold")
         ).pack(pady=5)
         
-        # Search box cho knowledge
-        self.tab1_knowledge_search = ctk.CTkEntry(
+        # Sử dụng SelectionListbox thay vì checkboxes
+        self.tab1_knowledge_listbox = None  # Sẽ được tạo sau khi data load
+        self.tab1_knowledge_placeholder = ctk.CTkLabel(
             knowledge_container,
-            placeholder_text="🔍 Search knowledge...",
-            width=450
+            text="⏳ Loading knowledge...",
+            font=ctk.CTkFont(size=12)
         )
-        self.tab1_knowledge_search.pack(pady=5, padx=10)
-        self.tab1_knowledge_search.bind("<KeyRelease>", lambda e: self.filter_knowledge_list())
-        
-        # Scrollable frame cho knowledge checkboxes
-        self.tab1_knowledge_scroll = ctk.CTkScrollableFrame(
-            knowledge_container,
-            width=450,
-            height=250
-        )
-        self.tab1_knowledge_scroll.pack(pady=5, padx=10, fill="both", expand=True)
-        
-        # Dictionary để lưu checkbox variables
-        self.tab1_knowledge_vars = {}
-        self.tab1_knowledge_checkboxes = {}
-        self.tab1_knowledge_canonical_map = {}  # Map từ display name -> canonical name
+        self.tab1_knowledge_placeholder.pack(fill="both", expand=True, pady=50)
         
         # Configure grid weights
         selection_frame.grid_columnconfigure(0, weight=1)
         selection_frame.grid_columnconfigure(1, weight=1)
         selection_frame.grid_rowconfigure(0, weight=1)
         
-        # Populate checkboxes after data is loaded
-        self.after(1000, self.populate_tab1_checkboxes)
+        # Populate listboxes after data is loaded
+        self.after(1000, self.populate_tab1_listboxes)
         
-        # Button frame
-        button_frame = ctk.CTkFrame(main_container)
-        button_frame.pack(pady=10)
-        
-        # Buttons
-        ctk.CTkButton(
-            button_frame,
-            text="✅ Select All Skills",
-            command=lambda: self.select_all_items(True, True),
-            width=180,
-            height=35
-        ).grid(row=0, column=0, padx=5)
-        
-        ctk.CTkButton(
-            button_frame,
-            text="❌ Deselect All Skills",
-            command=lambda: self.select_all_items(True, False),
-            width=180,
-            height=35
-        ).grid(row=0, column=1, padx=5)
-        
-        ctk.CTkButton(
-            button_frame,
-            text="✅ Select All Knowledge",
-            command=lambda: self.select_all_items(False, True),
-            width=180,
-            height=35
-        ).grid(row=0, column=2, padx=5)
-        
-        ctk.CTkButton(
-            button_frame,
-            text="❌ Deselect All Knowledge",
-            command=lambda: self.select_all_items(False, False),
-            width=180,
-            height=35
-        ).grid(row=0, column=3, padx=5)
+        # Button frame - không cần nữa vì SelectionListbox có buttons riêng
+        # button_frame = ctk.CTkFrame(main_container)
+        # button_frame.pack(pady=10)
         
         # Action buttons frame
         action_buttons_frame = ctk.CTkFrame(main_container)
@@ -246,80 +188,75 @@ class StudentCareerApp(ctk.CTk):
         self.tab1_output = ctk.CTkTextbox(output_frame, width=1300, height=350, wrap="word")
         self.tab1_output.pack(padx=10, pady=5, fill="both", expand=True)
     
-    def populate_tab1_checkboxes(self):
-        """Populate checkboxes với data từ data_loader"""
+    def populate_tab1_listboxes(self):
+        """Populate SelectionListbox widgets với data từ data_loader"""
         # Wait for data to be loaded
         if not self.data_loader.skills_data or not self.data_loader.knowledge_data:
-            self.after(500, self.populate_tab1_checkboxes)
+            self.after(500, self.populate_tab1_listboxes)
             return
         
-        # Get expanded skills và knowledge (bao gồm cả detailed items)
+        # Get expanded skills và knowledge
         expanded_skills, expanded_knowledge = self.data_loader.get_expanded_skills_and_knowledge()
         
-        # Debug: kiểm tra xem có data không
         if not expanded_skills or not expanded_knowledge:
-            print(f"Warning: Empty expanded data - skills: {len(expanded_skills)}, knowledge: {len(expanded_knowledge)}")
-            self.after(500, self.populate_tab1_checkboxes)
+            print(f"Warning: Empty expanded data")
+            self.after(500, self.populate_tab1_listboxes)
             return
         
-        print(f"Populating Tab 1: {len(expanded_skills)} skills, {len(expanded_knowledge)} knowledge")
+        print(f"Creating Tab 1 listboxes: {len(expanded_skills)} skills, {len(expanded_knowledge)} knowledge")
         
-        # Populate skills
-        for display_name, canonical_name in sorted(expanded_skills, key=lambda x: x[0]):
-            var = ctk.BooleanVar()
-            checkbox = ctk.CTkCheckBox(
-                self.tab1_skills_scroll,
-                text=display_name,
-                variable=var,
-                font=ctk.CTkFont(size=11)
-            )
-            checkbox.pack(anchor="w", pady=2, padx=5)
-            self.tab1_skills_vars[display_name] = var
-            self.tab1_skills_checkboxes[display_name] = checkbox
-            self.tab1_skills_canonical_map[display_name] = canonical_name
+        # Destroy placeholders
+        self.tab1_skills_placeholder.destroy()
+        self.tab1_knowledge_placeholder.destroy()
         
-        # Populate knowledge
-        for display_name, canonical_name in sorted(expanded_knowledge, key=lambda x: x[0]):
-            var = ctk.BooleanVar()
-            checkbox = ctk.CTkCheckBox(
-                self.tab1_knowledge_scroll,
-                text=display_name,
-                variable=var,
-                font=ctk.CTkFont(size=11)
-            )
-            checkbox.pack(anchor="w", pady=2, padx=5)
-            self.tab1_knowledge_vars[display_name] = var
-            self.tab1_knowledge_checkboxes[display_name] = checkbox
-            self.tab1_knowledge_canonical_map[display_name] = canonical_name
+        # Create SelectionListbox widgets
+        self.tab1_skills_listbox = SelectionListbox(
+            self.tab1_skills_placeholder.master,
+            items=expanded_skills
+        )
+        self.tab1_skills_listbox.pack(fill="both", expand=True, padx=5, pady=5)
+        
+        self.tab1_knowledge_listbox = SelectionListbox(
+            self.tab1_knowledge_placeholder.master,
+            items=expanded_knowledge
+        )
+        self.tab1_knowledge_listbox.pack(fill="both", expand=True, padx=5, pady=5)
     
-    def filter_skills_list(self):
-        """Filter skills list dựa trên search text"""
-        search_text = self.tab1_skills_search.get().lower()
+    def populate_tab2_listboxes(self):
+        """Populate SelectionListbox widgets cho Tab 2 với data từ data_loader"""
+        # Wait for data to be loaded
+        if not self.data_loader.skills_data or not self.data_loader.knowledge_data:
+            self.after(500, self.populate_tab2_listboxes)
+            return
         
-        for skill, checkbox in self.tab1_skills_checkboxes.items():
-            if search_text in skill.lower():
-                checkbox.pack(anchor="w", pady=2, padx=5)
-            else:
-                checkbox.pack_forget()
-    
-    def filter_knowledge_list(self):
-        """Filter knowledge list dựa trên search text"""
-        search_text = self.tab1_knowledge_search.get().lower()
+        # Get expanded skills và knowledge
+        expanded_skills, expanded_knowledge = self.data_loader.get_expanded_skills_and_knowledge()
         
-        for knowledge, checkbox in self.tab1_knowledge_checkboxes.items():
-            if search_text in knowledge.lower():
-                checkbox.pack(anchor="w", pady=2, padx=5)
-            else:
-                checkbox.pack_forget()
+        if not expanded_skills or not expanded_knowledge:
+            print(f"Warning: Empty expanded data")
+            self.after(500, self.populate_tab2_listboxes)
+            return
+        
+        print(f"Creating Tab 2 listboxes: {len(expanded_skills)} skills, {len(expanded_knowledge)} knowledge")
+        
+        # Destroy placeholders
+        self.tab2_skills_placeholder.destroy()
+        self.tab2_knowledge_placeholder.destroy()
+        
+        # Create SelectionListbox widgets
+        self.tab2_skills_listbox = SelectionListbox(
+            self.tab2_skills_placeholder.master,
+            items=expanded_skills
+        )
+        self.tab2_skills_listbox.pack(fill="both", expand=True, padx=5, pady=5)
+        
+        self.tab2_knowledge_listbox = SelectionListbox(
+            self.tab2_knowledge_placeholder.master,
+            items=expanded_knowledge
+        )
+        self.tab2_knowledge_listbox.pack(fill="both", expand=True, padx=5, pady=5)
     
-    def select_all_items(self, is_skills: bool, select: bool):
-        """Chọn/bỏ chọn tất cả items"""
-        if is_skills:
-            for var in self.tab1_skills_vars.values():
-                var.set(select)
-        else:
-            for var in self.tab1_knowledge_vars.values():
-                var.set(select)
+    # Xóa các methods filter và select_all cũ - không cần nữa với SelectionListbox
     
     def setup_tab2(self):
         """Setup Tab 2: User chọn job target và skills/knowledge, tạo roadmap"""
@@ -336,11 +273,13 @@ class StudentCareerApp(ctk.CTk):
         job_frame = ctk.CTkFrame(main_container)
         job_frame.pack(pady=5, padx=5, fill="x")
         
-        ctk.CTkLabel(
+        # Lưu label để tính toán vị trí dropdown
+        self.tab2_job_label = ctk.CTkLabel(
             job_frame,
             text="🎯 Target Job Title:",
             font=ctk.CTkFont(size=14, weight="bold")
-        ).pack(side="left", padx=10, pady=5)
+        )
+        self.tab2_job_label.pack(side="left", padx=10, pady=5)
         
         # Container cho entry và dropdown
         job_input_container = ctk.CTkFrame(job_frame, fg_color="transparent")
@@ -357,14 +296,16 @@ class StudentCareerApp(ctk.CTk):
         self.tab2_job_entry.bind("<FocusOut>", lambda e: self.after(200, self.hide_job_suggestions))
         self.tab2_job_entry.bind("<Escape>", lambda e: self.hide_job_suggestions())
         
-        # Dropdown frame cho autocomplete suggestions
+        # Dropdown frame cho autocomplete suggestions - dùng place để đè lên trên
         self.job_suggestions_frame = ctk.CTkScrollableFrame(
-            job_input_container,
+            main_container,  # Đổi parent thành main_container để có thể đè lên các phần tử khác
             width=500,
             height=0,  # Ẩn ban đầu
-            fg_color=("#E0E0E0", "#2B2B2B")
+            fg_color=("#E0E0E0", "#2B2B2B"),
+            border_width=2,
+            border_color=("gray70", "gray30")
         )
-        # Không pack ngay, sẽ pack khi có suggestions
+        # Sử dụng place để dropdown đè lên trên, không pack
         
         # List để lưu suggestion buttons
         self.job_suggestion_buttons = []
@@ -383,27 +324,14 @@ class StudentCareerApp(ctk.CTk):
             font=ctk.CTkFont(size=14, weight="bold")
         ).pack(pady=5)
         
-        # Search box cho skills
-        self.tab2_skills_search = ctk.CTkEntry(
+        # Sử dụng SelectionListbox
+        self.tab2_skills_listbox = None
+        self.tab2_skills_placeholder = ctk.CTkLabel(
             skills_container,
-            placeholder_text="🔍 Search skills...",
-            width=450
+            text="⏳ Loading skills...",
+            font=ctk.CTkFont(size=12)
         )
-        self.tab2_skills_search.pack(pady=5, padx=10)
-        self.tab2_skills_search.bind("<KeyRelease>", lambda e: self.filter_tab2_skills_list())
-        
-        # Scrollable frame cho skills checkboxes
-        self.tab2_skills_scroll = ctk.CTkScrollableFrame(
-            skills_container,
-            width=450,
-            height=200
-        )
-        self.tab2_skills_scroll.pack(pady=5, padx=10, fill="both", expand=True)
-        
-        # Dictionary để lưu checkbox variables
-        self.tab2_skills_vars = {}
-        self.tab2_skills_checkboxes = {}
-        self.tab2_skills_canonical_map = {}  # Map từ display name -> canonical name
+        self.tab2_skills_placeholder.pack(fill="both", expand=True, pady=50)
         
         # Right side - Knowledge
         knowledge_container = ctk.CTkFrame(selection_frame)
@@ -415,71 +343,22 @@ class StudentCareerApp(ctk.CTk):
             font=ctk.CTkFont(size=14, weight="bold")
         ).pack(pady=5)
         
-        # Search box cho knowledge
-        self.tab2_knowledge_search = ctk.CTkEntry(
+        # Sử dụng SelectionListbox
+        self.tab2_knowledge_listbox = None
+        self.tab2_knowledge_placeholder = ctk.CTkLabel(
             knowledge_container,
-            placeholder_text="🔍 Search knowledge...",
-            width=450
+            text="⏳ Loading knowledge...",
+            font=ctk.CTkFont(size=12)
         )
-        self.tab2_knowledge_search.pack(pady=5, padx=10)
-        self.tab2_knowledge_search.bind("<KeyRelease>", lambda e: self.filter_tab2_knowledge_list())
-        
-        # Scrollable frame cho knowledge checkboxes
-        self.tab2_knowledge_scroll = ctk.CTkScrollableFrame(
-            knowledge_container,
-            width=450,
-            height=200
-        )
-        self.tab2_knowledge_scroll.pack(pady=5, padx=10, fill="both", expand=True)
-        
-        # Dictionary để lưu checkbox variables
-        self.tab2_knowledge_vars = {}
-        self.tab2_knowledge_checkboxes = {}
-        self.tab2_knowledge_canonical_map = {}  # Map từ display name -> canonical name
+        self.tab2_knowledge_placeholder.pack(fill="both", expand=True, pady=50)
         
         # Configure grid weights
         selection_frame.grid_columnconfigure(0, weight=1)
         selection_frame.grid_columnconfigure(1, weight=1)
         selection_frame.grid_rowconfigure(0, weight=1)
         
-        # Populate checkboxes after data is loaded
-        self.after(1000, self.populate_tab2_checkboxes)
-        
-        # Quick action buttons
-        quick_btn_frame = ctk.CTkFrame(main_container)
-        quick_btn_frame.pack(pady=5)
-        
-        ctk.CTkButton(
-            quick_btn_frame,
-            text="✅ Select All Skills",
-            command=lambda: self.select_all_tab2_items(True, True),
-            width=150,
-            height=30
-        ).grid(row=0, column=0, padx=5)
-        
-        ctk.CTkButton(
-            quick_btn_frame,
-            text="❌ Deselect Skills",
-            command=lambda: self.select_all_tab2_items(True, False),
-            width=150,
-            height=30
-        ).grid(row=0, column=1, padx=5)
-        
-        ctk.CTkButton(
-            quick_btn_frame,
-            text="✅ Select All Knowledge",
-            command=lambda: self.select_all_tab2_items(False, True),
-            width=150,
-            height=30
-        ).grid(row=0, column=2, padx=5)
-        
-        ctk.CTkButton(
-            quick_btn_frame,
-            text="❌ Deselect Knowledge",
-            command=lambda: self.select_all_tab2_items(False, False),
-            width=150,
-            height=30
-        ).grid(row=0, column=3, padx=5)
+        # Populate listboxes after data is loaded
+        self.after(1000, self.populate_tab2_listboxes)
         
         # Main action buttons
         button_frame = ctk.CTkFrame(main_container)
@@ -522,80 +401,6 @@ class StudentCareerApp(ctk.CTk):
         self.current_roadmap_data = None
         self.current_missing_items = None
     
-    def populate_tab2_checkboxes(self):
-        """Populate checkboxes cho Tab 2 với data từ data_loader"""
-        # Wait for data to be loaded
-        if not self.data_loader.skills_data or not self.data_loader.knowledge_data:
-            self.after(500, self.populate_tab2_checkboxes)
-            return
-        
-        # Get expanded skills và knowledge (bao gồm cả detailed items)
-        expanded_skills, expanded_knowledge = self.data_loader.get_expanded_skills_and_knowledge()
-        
-        # Debug: kiểm tra xem có data không
-        if not expanded_skills or not expanded_knowledge:
-            print(f"Warning: Empty expanded data - skills: {len(expanded_skills)}, knowledge: {len(expanded_knowledge)}")
-            self.after(500, self.populate_tab2_checkboxes)
-            return
-
-        print(f"Populating Tab 2: {len(expanded_skills)} skills, {len(expanded_knowledge)} knowledge")
-
-        # Populate skills
-        for display_name, canonical_name in sorted(expanded_skills, key=lambda x: x[0]):
-            var = ctk.BooleanVar()
-            checkbox = ctk.CTkCheckBox(
-                self.tab2_skills_scroll,
-                text=display_name,
-                variable=var,
-                font=ctk.CTkFont(size=11)
-            )
-            checkbox.pack(anchor="w", pady=2, padx=5)
-            self.tab2_skills_vars[display_name] = var
-            self.tab2_skills_checkboxes[display_name] = checkbox
-            self.tab2_skills_canonical_map[display_name] = canonical_name
-        
-        # Populate knowledge
-        for display_name, canonical_name in sorted(expanded_knowledge, key=lambda x: x[0]):
-            var = ctk.BooleanVar()
-            checkbox = ctk.CTkCheckBox(
-                self.tab2_knowledge_scroll,
-                text=display_name,
-                variable=var,
-                font=ctk.CTkFont(size=11)
-            )
-            checkbox.pack(anchor="w", pady=2, padx=5)
-            self.tab2_knowledge_vars[display_name] = var
-            self.tab2_knowledge_checkboxes[display_name] = checkbox
-            self.tab2_knowledge_canonical_map[display_name] = canonical_name
-    
-    def filter_tab2_skills_list(self):
-        """Filter skills list trong Tab 2 dựa trên search text"""
-        search_text = self.tab2_skills_search.get().lower()
-        
-        for skill, checkbox in self.tab2_skills_checkboxes.items():
-            if search_text in skill.lower():
-                checkbox.pack(anchor="w", pady=2, padx=5)
-            else:
-                checkbox.pack_forget()
-    
-    def filter_tab2_knowledge_list(self):
-        """Filter knowledge list trong Tab 2 dựa trên search text"""
-        search_text = self.tab2_knowledge_search.get().lower()
-        
-        for knowledge, checkbox in self.tab2_knowledge_checkboxes.items():
-            if search_text in knowledge.lower():
-                checkbox.pack(anchor="w", pady=2, padx=5)
-            else:
-                checkbox.pack_forget()
-    
-    def select_all_tab2_items(self, is_skills: bool, select: bool):
-        """Chọn/bỏ chọn tất cả items trong Tab 2"""
-        if is_skills:
-            for var in self.tab2_skills_vars.values():
-                var.set(select)
-        else:
-            for var in self.tab2_knowledge_vars.values():
-                var.set(select)
     
     def on_job_entry_change(self, event=None):
         """Xử lý autocomplete khi user gõ vào job entry"""
@@ -608,8 +413,7 @@ class StudentCareerApp(ctk.CTk):
         
         # Nếu text quá ngắn hoặc rỗng, ẩn dropdown
         if len(search_text) < 2:
-            self.job_suggestions_frame.pack_forget()
-            self.job_suggestions_frame.configure(height=0)
+            self.job_suggestions_frame.place_forget()
             return
         
         # Tìm matching jobs (bao gồm cả other_names)
@@ -642,8 +446,7 @@ class StudentCareerApp(ctk.CTk):
         
         # Nếu không có match, ẩn dropdown
         if not matching_jobs:
-            self.job_suggestions_frame.pack_forget()
-            self.job_suggestions_frame.configure(height=0)
+            self.job_suggestions_frame.place_forget()
             return
         
         # Hiển thị suggestions
@@ -662,10 +465,25 @@ class StudentCareerApp(ctk.CTk):
             btn.pack(pady=2, padx=5)
             self.job_suggestion_buttons.append(btn)
         
-        # Show dropdown với height phù hợp
+        # Show dropdown với height phù hợp - dùng place để đè lên trên
         dropdown_height = min(len(matching_jobs) * 35, 300)  # Max 300px
-        self.job_suggestions_frame.configure(height=dropdown_height)
-        self.job_suggestions_frame.pack(pady=2)
+        
+        # Configure kích thước trước
+        self.job_suggestions_frame.configure(width=500, height=dropdown_height)
+        
+        # Tính toán vị trí của dropdown (dưới entry box)
+        # Lấy width của label "Target Job Title:" và padding
+        label_width = self.tab2_job_label.winfo_width()
+        
+        entry_x = self.tab2_job_entry.winfo_x()
+        entry_y = self.tab2_job_entry.winfo_y() + self.tab2_job_entry.winfo_height()
+        
+        # Place dropdown đè lên trên các elements khác (chỉ truyền x, y)
+        self.job_suggestions_frame.place(
+            x=entry_x + label_width,  # Cộng thêm width của label và padding
+            y=entry_y + 15   # offset để xuống dưới entry
+        )
+        self.job_suggestions_frame.lift()  # Đưa lên trên cùng
     
     def select_job_suggestion(self, canonical_job_name: str):
         """Chọn một job từ suggestion dropdown"""
@@ -677,8 +495,7 @@ class StudentCareerApp(ctk.CTk):
     
     def hide_job_suggestions(self):
         """Ẩn job suggestions dropdown"""
-        self.job_suggestions_frame.pack_forget()
-        self.job_suggestions_frame.configure(height=0)
+        self.job_suggestions_frame.place_forget()
         
         # Clear suggestion buttons
         for btn in self.job_suggestion_buttons:
@@ -687,21 +504,18 @@ class StudentCareerApp(ctk.CTk):
     
     def find_suitable_jobs(self):
         """Xử lý tìm job phù hợp (Tab 1)"""
-        # Get selected items from checkboxes và map về canonical names
-        user_skills_display = [skill for skill, var in self.tab1_skills_vars.items() if var.get()]
-        user_knowledge_display = [knowledge for knowledge, var in self.tab1_knowledge_vars.items() if var.get()]
-        
-        if not user_skills_display and not user_knowledge_display:
-            messagebox.showwarning("Warning", "Please select at least one skill or knowledge!")
+        # Check if listboxes exist
+        if not self.tab1_skills_listbox or not self.tab1_knowledge_listbox:
+            messagebox.showwarning("Warning", "Please wait for data to load!")
             return
         
-        # Map về canonical names
-        user_skills = [self.tab1_skills_canonical_map[skill] for skill in user_skills_display]
-        user_knowledge = [self.tab1_knowledge_canonical_map[knowledge] for knowledge in user_knowledge_display]
+        # Get selected canonical names from SelectionListbox
+        user_skills = self.tab1_skills_listbox.get_selected_canonical()
+        user_knowledge = self.tab1_knowledge_listbox.get_selected_canonical()
         
-        # Remove duplicates (có thể có nhiều detailed items map về cùng 1 canonical)
-        user_skills = list(set(user_skills))
-        user_knowledge = list(set(user_knowledge))
+        if not user_skills and not user_knowledge:
+            messagebox.showwarning("Warning", "Please select at least one skill or knowledge!")
+            return
         
         print("User Skills Selected (canonical):", user_skills)
         print("User Knowledge Selected (canonical):", user_knowledge)
@@ -794,19 +608,15 @@ class StudentCareerApp(ctk.CTk):
         # Map job name về canonical name nếu cần
         job_name_canonical = self.data_loader.get_canonical_job_name(job_name)
         
-        # Get selected items from checkboxes và map về canonical names
-        user_skills_display = [skill for skill, var in self.tab2_skills_vars.items() if var.get()]
-        user_knowledge_display = [knowledge for knowledge, var in self.tab2_knowledge_vars.items() if var.get()]
+        # Get selected items từ listboxes (đã là canonical names)
+        user_skills = self.tab2_skills_listbox.get_selected_canonical()
+        user_knowledge = self.tab2_knowledge_listbox.get_selected_canonical()
         
         if not job_name:
             messagebox.showwarning("Warning", "Please enter a job title!")
             return
         
-        # Map về canonical names
-        user_skills = [self.tab2_skills_canonical_map[skill] for skill in user_skills_display]
-        user_knowledge = [self.tab2_knowledge_canonical_map[knowledge] for knowledge in user_knowledge_display]
-        
-        # Remove duplicates
+        # Remove duplicates (nếu có)
         user_skills = list(set(user_skills))
         user_knowledge = list(set(user_knowledge))
         
@@ -940,9 +750,8 @@ class StudentCareerApp(ctk.CTk):
             messagebox.showwarning("Warning", "Please enter a job title!")
             return
         
-        # Lấy user knowledge từ Tab 2 và map về canonical names
-        user_knowledge_display = [knowledge for knowledge, var in self.tab2_knowledge_vars.items() if var.get()]
-        user_knowledge = [self.tab2_knowledge_canonical_map[knowledge] for knowledge in user_knowledge_display]
+        # Lấy user knowledge từ listbox (đã là canonical names)
+        user_knowledge = self.tab2_knowledge_listbox.get_selected_canonical()
         user_knowledge = list(set(user_knowledge))  # Remove duplicates
         
         # Run in thread để không block UI

@@ -34,6 +34,8 @@ class RoadmapGenerator:
         # Chuyển learned_knowledge thành set
         learned_set = set(learned_knowledge) if learned_knowledge else set()
         
+        print(learned_knowledge)
+
         # Chỉ tạo roadmap cho knowledge
         knowledge_roadmap = None
         if missing_knowledge:
@@ -44,7 +46,7 @@ class RoadmapGenerator:
                 learned_items=learned_set
             )
         
-        print(f"Generated learning roadmap: {knowledge_roadmap}")
+        # print(f"Generated learning roadmap: {knowledge_roadmap}")
 
         return {
             "skills_roadmap": None,  # Không sử dụng skills nữa
