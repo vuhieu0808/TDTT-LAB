@@ -1,5 +1,8 @@
+[en](README-en.md) | vi
+
 # 🎓 Student Career Helper
 
+## Tổng quan
 Ứng dụng giúp sinh viên mới ra trường giải quyết vấn đề thất nghiệp bằng cách:
 
 - Tìm công việc phù hợp với kỹ năng hiện có
@@ -8,13 +11,13 @@
 
 ## ✨ Tính năng
 
-### Tab 1: Tìm Job Phù Hợp
+### Tìm Job Phù Hợp
 
 - Nhập skills và knowledge bạn đang có
 - Hệ thống sẽ tìm và xếp hạng các công việc phù hợp
 - Hiển thị điểm số, kỹ năng còn thiếu, và kỹ năng đã có
 
-### Tab 2: Tạo Roadmap Học Tập
+### Tạo Roadmap Học Tập
 
 - Nhập công việc mục tiêu
 - Nhập skills và knowledge hiện tại
@@ -25,59 +28,70 @@
   - Ước tính thời gian học
 - Đề xuất project thực hành sử dụng **Google Gemini AI**
 
-## 📋 Yêu cầu
+## Yêu cầu:
+- Python 3.8 hoặc mới hơn
+- Dart SDK 3.9 hoặc mới hơn
 
-- Python 3.8 trở lên
-- CustomTkinter
-- Google Gemini API (optional, để đề xuất project)
+## 🚀 Cài đặt & chạy
+### 0. Setup
+- Tại thư mục gốc, tạo file `.env` với API key (vd như trong [.env.example](.env.example))
+```
+GOOGLE_API_KEY=AIzaSy....
+```
 
-## 🚀 Cài đặt
+- Đảm bảo Python đã được cài đặt và đã kích hoạt môi trường ảo Python
 
-1. **Clone hoặc download project**
-
-2. **Cài đặt dependencies:**
-
-```bash
+- Cài đặt dependencies cho Python
+```
 pip install -r requirements.txt
 ```
 
-3. **Chuẩn bị dữ liệu:**
+### 0.5. Về dữ liệu có sẵn
+- Mặc định project dùng dữ liệu đã được biên soạn sẵn trong thư mục [assets](assets). Nếu muốn tái tạo dữ liệu, đi đến bước 1. Nếu vẫn dùng dữ liệu có sẵn, đi tới bước 3
 
-   - Đảm bảo có các file trong thư mục `src/`:
-     - `data.json` - Thông tin các công việc
-     - `skill.json` - Danh sách tất cả skills
-     - `knowledge.json` - Danh sách tất cả knowledge
-     - `knowledge.txt` - Thông tin chi tiết về độ khó, prerequisites của mỗi skill/knowledge
-
-4. **Lấy Google Gemini API Key (optional):**
-   - Truy cập: https://makersuite.google.com/app/apikey
-   - Tạo API key mới
-   - Copy API key
-
-## 💻 Chạy ứng dụng
-
-### Cách 1: Chạy trực tiếp
-
-```bash
-cd src
-python main_app.py
+### 1. Lấy dữ liệu từ ESCO
+- Đảm bảo Dart đã được cài đặt
+- Đi đến thư mục [fetch-esco](fetch-esco)
+- Cài đặt dependencies cho Dart
+```
+dart pub get
+```
+- Chạy code
+```
+dart run
 ```
 
-### Cách 2: Set environment variable cho API key
+Dữ liệu được ghi vào thử mục `data/`
+- `data/data.json`: danh sách job
+- `data/knowledge.json`: Danh sách knowledges độc nhất
+- `data/skill.json`: Danh sách skill độc nhất
 
-```bash
-# Windows PowerShell
-$env:GOOGLE_API_KEY = "your-api-key-here"
-python main_app.py
-
-# Windows CMD
-set GOOGLE_API_KEY=your-api-key-here
-python main_app.py
-
-# Linux/Mac
-export GOOGLE_API_KEY=your-api-key-here
-python main_app.py
+### 2. Chuẩn bị assets
+- Quay về thư mục gốc
+- Chạy code
 ```
+python ./make-assets/make-assets.py
+```
+Trên Linux có thể phải chạy bằng lệnh `python3`
+
+Bước này thực hiện: 
+- chép data được lấy từ ESCO vào thư mục `assets`
+- Tạo sinh thêm nội dung, sử dụng LLM, ghi vào file `assets/knowledge.txt`
+
+### 3. Run
+- Quay về thư mục gốc
+- Chạy code 
+```
+python ./src/main_app.py
+```
+Trên Linux có thể phải chạy bằng lệnh `python3`. Ứng dụng có thể khởi động chậm. Bình tĩnh!
+
+## Giấy phép bản quyền
+[MIT License](LICENSE)
+
+## Sử dụng A.I.
+- Đồ án này sử dụng Google Gemini (GenAI) để làm giàu dữ liệu jobs và tạo sinh gợi ý project. Tham khảo khảo thêm về Google GenAI API tại [đây](https://ai.google.dev/gemini-api/docs/libraries)
+- Gemini 2.5 Flash/Pro, GPT-5 and Claude Sonnet 4.5 LLM trong Github Copilot cho việc hỗ trợ coding
 
 ## 📖 Hướng dẫn sử dụng
 
@@ -129,22 +143,6 @@ python main_app.py
    - Hệ thống sẽ dùng Gemini AI để tạo project thực hành
    - Nếu không có API key, sẽ dùng project mẫu
 
-## 🏗️ Cấu trúc Project
-
-```
-src/
-├── main_app.py              # GUI chính với CustomTkinter
-├── data_loader.py           # Load và quản lý dữ liệu
-├── job_matcher.py           # Matching jobs với user profile
-├── graph_utils.py           # Topological sort và xử lý đồ thị
-├── roadmap_generator.py     # Tạo roadmap học tập
-├── ai_project_suggester.py  # Tích hợp Google Gemini AI
-├── requirements.txt         # Dependencies
-├── data.json               # Database công việc
-├── skill.json              # Database skills
-├── knowledge.json          # Database knowledge
-└── knowledge.txt               # Chi tiết về skills (level, prerequisites)
-```
 
 ## 🔧 Công nghệ sử dụng
 
@@ -205,34 +203,3 @@ database
 - Dữ liệu trong `data.json`, `skill.json`, `knowledge.json`, `knowledge.txt` phải được chuẩn bị sẵn
 - Google Gemini API có thể có giới hạn rate limit
 - Nếu không có API key, ứng dụng vẫn hoạt động với project mẫu
-
-## 🐛 Troubleshooting
-
-### Lỗi: "Import could not be resolved"
-
-```bash
-pip install customtkinter google-generativeai
-```
-
-### Lỗi: "Không tìm thấy file data.json"
-
-- Đảm bảo bạn chạy `python main_app.py` từ trong thư mục `src/`
-- Hoặc cập nhật `data_dir` trong `DataLoader`
-
-### Lỗi Gemini API
-
-- Kiểm tra API key có đúng không
-- Kiểm tra kết nối internet
-- Xem quota API tại Google AI Studio
-
-## 📄 License
-
-Educational project - Free to use and modify
-
-## 👨‍💻 Author
-
-Sinh viên TDTT - Midterm Project
-
----
-
-**Happy Learning! 🚀📚**
