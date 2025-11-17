@@ -18,8 +18,8 @@ class RoadmapGenerator:
         self.data_loader = data_loader
     
     def generate_learning_roadmap(self, missing_skills: List[str], 
-                                 missing_knowledge: List[str],
-                                 learned_knowledge: List[str] = None) -> Dict:
+                                    missing_knowledge: List[str],
+                                    learned_knowledge: List[str] = None) -> Dict:
         """
         Tạo roadmap học tập chỉ cho knowledge còn thiếu (bỏ skills)
         
