@@ -3,6 +3,7 @@ Module tích hợp Google Gemini API để đề xuất project thực hành
 """
 import os
 import json
+from google import genai
 from typing import List, Dict, Optional
 
 
@@ -19,6 +20,9 @@ class AIProjectSuggester:
         self.api_key = api_key or os.getenv("GOOGLE_API_KEY")
         self.client = None
         self.model_name = "gemini-2.5-flash"
+        self.SYSTEM_INSTRUCTION = '''
+            You are a project advisor AI. Your task is to analyze the provided IT job information and the student's skill set, and suggest relevant projects that can help the student bridge the gap between their current skills and those required for the job.
+        '''
         
         if self.api_key:
             self._initialize_client()
@@ -26,13 +30,7 @@ class AIProjectSuggester:
     def _initialize_client(self):
         """Khởi tạo Google Gemini client"""
         try:
-            import google.generativeai as genai
-            genai.configure(api_key=self.api_key)
-            self.client = genai
-            print("✅ Google Gemini đã được khởi tạo thành công!")
-        except ImportError as e:
-            print(f"❌ Lỗi: Thiếu thư viện google-generativeai. Chạy: pip install google-generativeai")
-            self.client = None
+            self.client = genai.Client(api_key=self.api_key)
         except Exception as e:
             print(f"❌ Lỗi khi khởi tạo Gemini: {e}")
             self.client = None
@@ -160,15 +158,17 @@ Output format:
             Response text từ Gemini
         """
         try:
-            model = self.client.GenerativeModel(self.model_name)
-            response = model.generate_content(
-                prompt,
-                generation_config={
-                    'temperature': 0.7,
-                    'max_output_tokens': 8192,
-                }
+            response = self.client.models.generate_content(
+                model=self.model_name, 
+                contents=prompt,
+                config=genai.types.GenerateContentConfig(
+                    system_instruction=self.SYSTEM_INSTRUCTION,
+                    temperature=0.7,
+                    thinking_config=genai.types.ThinkingConfig(thinking_budget=8192),
+                    max_output_tokens=8192
+                ),
             )
-            return response.text
+            return response.text or ""  # null coalescing
         except Exception as e:
             print(f"❌ Error calling Gemini API: {e}")
             return ""
