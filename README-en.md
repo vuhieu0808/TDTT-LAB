@@ -69,7 +69,7 @@ On Linux you might need to run with `python3`
 
 This operation will 
 - copy the fetched ESCO data and copy to `assets` folder
-- generate additional data from LLM, the write to `assets/knowledge.txt`
+- generate additional data from LLM, the write to `assets/knowledge2.json`
 
 ### 3. Run
 - Navigate to project base folder

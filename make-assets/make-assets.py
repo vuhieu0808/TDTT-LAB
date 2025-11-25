@@ -89,10 +89,10 @@ def call_llm(model: str, thinking_budget: int, temperature: float) -> bool:
         print(f"LLM call took {execution_time:.2f} seconds")
 
     try:
-        filename: str = f"knowledge.txt"
+        filename: str = f"knowledge2.json"
         with open(filename, 'w') as file:
             file.write(response.text)
-        print(f"Data written to assets/knowledge.txt")
+        print(f"Data written to assets/knowledge2.json")
     except IOError as e:
         print(f"File IO error occurred: {e}")
         exit(1)

@@ -76,7 +76,7 @@ Trên Linux có thể phải chạy bằng lệnh `python3`
 
 Bước này thực hiện: 
 - chép data được lấy từ ESCO vào thư mục `assets`
-- Tạo sinh thêm nội dung, sử dụng LLM, ghi vào file `assets/knowledge.txt`
+- Tạo sinh thêm nội dung, sử dụng LLM, ghi vào file `assets/knowledge2.json`
 
 ### 3. Run
 - Quay về thư mục gốc
