@@ -5,7 +5,7 @@ import os
 import json
 from google import genai
 from typing import List, Dict, Optional
-from .data_type import *
+from data_type import *
 
 
 class AIProjectSuggester:

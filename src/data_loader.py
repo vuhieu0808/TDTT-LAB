@@ -4,9 +4,34 @@ Module để load và quản lý dữ liệu từ các file JSON
 import json
 from typing import Dict, List, Any, TypeVar, Callable
 from thefuzz import fuzz
-from .data_type import *
+from data_type import *
 
 T = TypeVar("T")
+
+def _impl_search_dict_keys(query: str, dict: Dict[str, T], compare_func: Callable[[str, str], int], threshold: int) -> List[tuple[int, str]]:
+        query = query.lower()
+        vec: List[tuple[int, str]] = []
+        for key, _ in dict.items():
+            score = compare_func(key, query)
+            if score >= threshold:
+                vec.append((score, key))
+        return vec
+    
+def _impl_search_list(query: str, list: List[str], compare_func: Callable[[str, str], int], threshold: int) -> List[tuple[int, str]]:
+    query = query.lower()
+    vec: List[tuple[int, str]] = []
+    for key in list:
+        score = compare_func(key, query)
+        if score >= threshold:
+            vec.append((score, key))
+    return vec
+
+def search_list(query: str, list: List[str], limit: int) -> List[str]:
+    vec: List[tuple[int, str]] = _impl_search_list(query, list, fuzz.token_set_ratio, 65)
+    vec.sort(reverse=True, key=lambda x: x[0])
+    result: List[str] = [item[1] for item in vec]
+
+    return result[:limit]
 
 class DataLoader:
     """Class để load và quản lý dữ liệu từ các file JSON"""
@@ -25,7 +50,7 @@ class DataLoader:
         self.knowledge_data: Dict[str, Knowledge] = {}
         self.knowledge_detail_map: Dict[str, str] = {}    # map từ knowledge detailed item -> knowledge name
 
-        self.load_jobs_json("assets/job.json")
+        self.load_jobs_json("assets/data.json")
         self.load_knowledges_json("assets/knowledge2.json")
 
         # Cache expanded skills/knowledge để tránh tính toán lại
@@ -106,24 +131,6 @@ class DataLoader:
             Thông tin chi tiết về knowledge
         """
         return self.knowledge_data.get(knowledge_name.lower())
-
-    def _impl_search_dict_keys(self, query: str, dict: Dict[str, T], compare_func: Callable[[str, str], int], threshold: int) -> List[tuple[int, str]]:
-        query = query.lower()
-        vec: List[tuple[int, str]] = []
-        for key, _ in dict.items():
-            score = compare_func(key, query)
-            if score >= threshold:
-                vec.append((score, key))
-        return vec
-    
-    def _impl_search_list(self, query: str, list: List[str], compare_func: Callable[[str, str], int], threshold: int) -> List[tuple[int, str]]:
-        query = query.lower()
-        vec: List[tuple[int, str]] = []
-        for key in list:
-            score = compare_func(key, query)
-            if score >= threshold:
-                vec.append((score, key))
-        return vec
     
     def search_jobs(self, query: str, limit: int) -> List[str]:
         """
@@ -164,7 +171,7 @@ class DataLoader:
             Danh sách các skill phù hợp, theo string
         """
         vec : List[tuple[int, str]] = []
-        vec += self._impl_search_list(query, self.skills_data, fuzz.token_sort_ratio, 70)
+        vec += _impl_search_list(query, self.skills_data, fuzz.token_set_ratio, 65)
 
         vec.sort(reverse=True, key=lambda x: x[0])
         result: List[str] = [item[1] for item in vec]
@@ -182,8 +189,8 @@ class DataLoader:
             Danh sách các knowledge phù hợp, theo string
         """
         vec : List[tuple[int, str]] = []
-        vec += self._impl_search_dict_keys(query, self.knowledge_data, fuzz.token_set_ratio, 65)
-        vec += self._impl_search_dict_keys(query, self.knowledge_detail_map, fuzz.token_set_ratio, 65)
+        vec += _impl_search_dict_keys(query, self.knowledge_data, fuzz.token_set_ratio, 65)
+        vec += _impl_search_dict_keys(query, self.knowledge_detail_map, fuzz.token_set_ratio, 65)
 
         vec.sort(reverse=True, key=lambda x: x[0])
         result: List[str] = [item[1] for item in vec]
@@ -195,8 +202,8 @@ class DataLoader:
         Alternative parameter for fuzzysearch
         """
         vec : List[tuple[int, str]] = []
-        vec += self._impl_search_dict_keys(query, self.knowledge_data, fuzz.token_sort_ratio, 70)
-        vec += self._impl_search_dict_keys(query, self.knowledge_detail_map, fuzz.token_sort_ratio, 70)
+        vec += _impl_search_dict_keys(query, self.knowledge_data, fuzz.token_sort_ratio, 70)
+        vec += _impl_search_dict_keys(query, self.knowledge_detail_map, fuzz.token_sort_ratio, 70)
 
         vec.sort(reverse=True, key=lambda x: x[0])
         result: List[str] = [item[1] for item in vec]

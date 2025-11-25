@@ -2,8 +2,8 @@
 Module để matching job dựa trên skills và knowledge của user
 """
 from typing import List, Dict, Set
-from .data_loader import DataLoader
-from .data_type import *
+from data_loader import DataLoader
+from data_type import *
 
 
 class JobMatcher:

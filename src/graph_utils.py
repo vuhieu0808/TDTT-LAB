@@ -5,7 +5,7 @@ và topological sort cho roadmap
 from collections import defaultdict, deque
 from typing import List, Dict, Set, Tuple
 
-from .data_loader import DataLoader
+from data_loader import DataLoader
 
 
 class GraphUtils:
