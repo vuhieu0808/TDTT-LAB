@@ -3,12 +3,12 @@ Module tạo roadmap học tập dựa trên topological sort
 """
 from typing import List, Dict
 from graph_utils import create_roadmap
-
+from data_loader import DataLoader
 
 class RoadmapGenerator:
     """Class để tạo roadmap học tập"""
     
-    def __init__(self, data_loader):
+    def __init__(self, data_loader: DataLoader):
         """
         Khởi tạo RoadmapGenerator
         
@@ -19,7 +19,7 @@ class RoadmapGenerator:
     
     def generate_learning_roadmap(self, missing_skills: List[str], 
                                     missing_knowledge: List[str],
-                                    learned_knowledge: List[str] = None) -> Dict:
+                                    learned_knowledge: List[str] | None = None) -> Dict:
         """
         Tạo roadmap học tập chỉ cho knowledge còn thiếu (bỏ skills)
         
@@ -132,7 +132,9 @@ class RoadmapGenerator:
                 for stage in roadmap_data["knowledge_roadmap"]["roadmap"]:
                     for item in stage["items"]:
                         info = self.data_loader.get_knowledge_info(item)
-                        total_difficulty += info.get("level", 5)
+                        if not info:
+                            continue
+                        total_difficulty += info.level
             
             summary["estimated_difficulty"] = round(total_difficulty / total_items, 2)
         

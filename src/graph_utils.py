@@ -5,14 +5,16 @@ và topological sort cho roadmap
 from collections import defaultdict, deque
 from typing import List, Dict, Set, Tuple
 
+from .data_loader import DataLoader
+
 
 class GraphUtils:
     """Class xử lý đồ thị với Tarjan's Algorithm và topological sort"""
     
     def __init__(self):
-        self.graph = defaultdict(list)
-        self.in_degree = defaultdict(int)
-        self.nodes = set()
+        self.graph: Dict[str, List[str]] = defaultdict(list)
+        self.in_degree: Dict[str, int] = defaultdict(int)
+        self.nodes: Set[str] = set()
         
         # Cho Tarjan's Algorithm
         self.index_counter = 0
@@ -39,7 +41,7 @@ class GraphUtils:
         if from_node not in self.in_degree:
             self.in_degree[from_node] = 0
     
-    def build_graph(self, items: List[str], get_prerequisites_func, learned_items: Set[str] = None):
+    def build_graph(self, items: List[str], get_prerequisites_func, learned_items: Set[str] | None = None):
         """
         Xây dựng đồ thị từ danh sách items và function lấy prerequisites
         Tự động thêm tất cả prerequisites (đệ quy) vào đồ thị
@@ -307,7 +309,7 @@ class GraphUtils:
     def get_learning_path(self, target_items: List[str], 
                          get_prerequisites_func, 
                          get_level_func,
-                         learned_items: Set[str] = None) -> Dict:
+                         learned_items: Set[str] | None = None) -> Dict:
         """
         Tạo learning path cho các items cần học bằng Tarjan + Topological Sort
         
@@ -416,9 +418,9 @@ class GraphUtils:
 
 
 def create_roadmap(missing_items: List[str], 
-                   data_loader,
+                   data_loader: DataLoader,
                    item_type: str = "knowledge",
-                   learned_items: Set[str] = None) -> Dict:
+                   learned_items: Set[str] | None = None) -> Dict:
     """
     Hàm tiện ích để tạo roadmap
     
@@ -435,19 +437,19 @@ def create_roadmap(missing_items: List[str],
     
     # Define functions để lấy prerequisites và level
     def get_prerequisites(item: str) -> List[str]:
-        if item_type == "knowledge":
-            info = data_loader.get_knowledge_info(item)
+        info = data_loader.get_knowledge_info(item)
+        if not info:
+            return []
         else:
-            info = data_loader.get_skill_info(item)
-        return info.get("prerequisites", [])
+            return info.prerequisites
     
     def get_level(item: str) -> int:
-        if item_type == "knowledge":
-            info = data_loader.get_knowledge_info(item)
+        info = data_loader.get_knowledge_info(item)
+        if not info:
+            return 0
         else:
-            info = data_loader.get_skill_info(item)
-        return info.get("level", 5)
-    
+            return info.level
+
     # Tạo learning path (truyền learned_items)
     path_info = graph.get_learning_path(missing_items, get_prerequisites, get_level, learned_items)
     

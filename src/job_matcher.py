@@ -2,59 +2,52 @@
 Module để matching job dựa trên skills và knowledge của user
 """
 from typing import List, Dict, Set
+from .data_loader import DataLoader
+from .data_type import *
 
 
 class JobMatcher:
     """Class để match jobs với user skills và knowledge"""
-    
-    def __init__(self, data_loader):
+
+    def __init__(self, data_loader: DataLoader):
         """
         Khởi tạo JobMatcher
         
         Args:
             data_loader: Instance của DataLoader
         """
-        self.data_loader = data_loader
+        self.data_loader: DataLoader = data_loader
     
-    def calculate_match_score(self, job: Dict, user_skills: List[str], 
+    def calculate_match_score(self, job: Job, user_skills: List[str], 
                             user_knowledge: List[str]) -> Dict:
         """
         Tính điểm phù hợp giữa job và user
         
         Args:
-            job: Thông tin công việc
+            job: object Job
             user_skills: Danh sách skills của user
             user_knowledge: Danh sách knowledge của user
             
         Returns:
             Dictionary chứa điểm số và thông tin chi tiết
         """
-        # Chuyển về lowercase để so sánh
-        user_skills_lower = set(s.lower() for s in user_skills)
-        user_knowledge_lower = set(k.lower() for k in user_knowledge)
-        
-        # Lấy yêu cầu của job
-        required_skills = set(s.lower() for s in job.get("essential_skill", []))
-        optional_skills = set(s.lower() for s in job.get("optional_skill", []))
-        required_knowledge = set(k.lower() for k in job.get("essential_knowledge", []))
-        optional_knowledge = set(k.lower() for k in job.get("optional_knowledge", []))
         
         # Tính matched và missing
-        matched_required_skills = user_skills_lower & required_skills
-        matched_optional_skills = user_skills_lower & optional_skills
-        matched_required_knowledge = user_knowledge_lower & required_knowledge
-        matched_optional_knowledge = user_knowledge_lower & optional_knowledge
-        
-        missing_required_skills = required_skills - user_skills_lower
-        missing_optional_skills = optional_skills - user_skills_lower
-        missing_required_knowledge = required_knowledge - user_knowledge_lower
-        missing_optional_knowledge = optional_knowledge - user_knowledge_lower
-        
+        matched_required_skills = set(user_skills) & set(job.essential_skill)
+        matched_optional_skills = set(user_skills) & set(job.optional_skill)
+        matched_required_knowledge = set(user_knowledge) & set(job.essential_knowledge)
+        matched_optional_knowledge = set(user_knowledge) & set(job.optional_knowledge)
+
+        missing_required_skills = set(job.essential_skill) - set(user_skills)
+        missing_optional_skills = set(job.optional_skill) - set(user_skills)
+        missing_required_knowledge = set(job.essential_knowledge) - set(user_knowledge)
+        missing_optional_knowledge = set(job.optional_knowledge) - set(user_knowledge)
+
         # Tính điểm
         # Required: 70% trọng số, Optional: 30% trọng số
-        total_required = len(required_skills) + len(required_knowledge)
-        total_optional = len(optional_skills) + len(optional_knowledge)
-        
+        total_required = len(job.essential_skill) + len(job.essential_knowledge)
+        total_optional = len(job.optional_skill) + len(job.optional_knowledge)
+
         matched_required = len(matched_required_skills) + len(matched_required_knowledge)
         matched_optional = len(matched_optional_skills) + len(matched_optional_knowledge)
         
@@ -82,7 +75,7 @@ class JobMatcher:
             total_score = 0
         
         return {
-            "job_name": job["name"],
+            "job_name": job.name,
             "total_score": round(total_score, 2),
             "required_score": round(required_score, 2),
             "optional_score": round(optional_score, 2),
@@ -122,7 +115,7 @@ class JobMatcher:
         """
         results = []
         
-        for job in self.data_loader.jobs_data:
+        for _, job in self.data_loader.jobs_data.items():
             match_info = self.calculate_match_score(job, user_skills, user_knowledge)
             # Chỉ lấy jobs có ít nhất 1 match (score > 0)
             if match_info["total_score"] >= min_score:
@@ -158,8 +151,8 @@ class JobMatcher:
         match_info = self.calculate_match_score(job, user_skills, user_knowledge)
         
         # Thêm thông tin job
-        match_info["job_description"] = job.get("description", "")
-        match_info["job_url"] = job.get("url", "")
+        match_info["job_description"] = job.description
+        match_info["job_url"] = job.url
         match_info["found"] = True
         
         return match_info
