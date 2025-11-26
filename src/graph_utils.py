@@ -3,7 +3,7 @@ Module xử lý đồ thị, tìm SCC (Strongly Connected Components) bằng Tar
 và topological sort cho roadmap
 """
 from collections import defaultdict, deque
-from typing import List, Dict, Set, Tuple
+from typing import Any, List, Dict, Set, Tuple
 
 from data_loader import DataLoader
 
@@ -194,7 +194,7 @@ class GraphUtils:
     def topological_sort_dfs_style(self, sccs: List[List[str]], 
                                   condensation_graph: Dict,
                                   scc_in_degree: Dict,
-                                  node_levels: Dict[str, int]) -> List[Dict]:
+                                  node_levels: Dict[str, int]) -> List[Dict[str, Any]]:
         """
         Topological sort theo DFS style - đi hết một nhánh đến khi gặp node có in_degree > 0
         
@@ -309,7 +309,7 @@ class GraphUtils:
     def get_learning_path(self, target_items: List[str], 
                          get_prerequisites_func, 
                          get_level_func,
-                         learned_items: Set[str] | None = None) -> Dict:
+                         learned_items: Set[str] | None = None) -> Dict[str, Any]:
         """
         Tạo learning path cho các items cần học bằng Tarjan + Topological Sort
         
@@ -387,7 +387,7 @@ class GraphUtils:
             "total_items": len(self.nodes)  # Đếm tất cả nodes trong graph (chưa học)
         }
     
-    def get_parallel_learning_groups(self, learning_path: List[Dict]) -> List[Dict]:
+    def get_parallel_learning_groups(self, learning_path: List[Dict]) -> List[Dict[str, Any]]:
         """
         Chuyển đổi learning path thành format dễ hiểu hơn cho roadmap
         
@@ -397,7 +397,7 @@ class GraphUtils:
         Returns:
             List of dictionaries với thông tin từng stage
         """
-        result = []
+        result: List[Dict[str, Any]] = []
         stage_num = 1
         
         for path_item in learning_path:
@@ -416,49 +416,3 @@ class GraphUtils:
         
         return result
 
-
-def create_roadmap(missing_items: List[str], 
-                   data_loader: DataLoader,
-                   item_type: str = "knowledge",
-                   learned_items: Set[str] | None = None) -> Dict:
-    """
-    Hàm tiện ích để tạo roadmap
-    
-    Args:
-        missing_items: Danh sách các items cần học
-        data_loader: Instance của DataLoader
-        item_type: "knowledge" hoặc "skill"
-        learned_items: Set các items mà user đã học
-        
-    Returns:
-        Dictionary chứa roadmap và thông tin liên quan
-    """
-    graph = GraphUtils()
-    
-    # Define functions để lấy prerequisites và level
-    def get_prerequisites(item: str) -> List[str]:
-        info = data_loader.get_knowledge_info(item)
-        if not info:
-            return []
-        else:
-            return info.prerequisites
-    
-    def get_level(item: str) -> int:
-        info = data_loader.get_knowledge_info(item)
-        if not info:
-            return 0
-        else:
-            return info.level
-
-    # Tạo learning path (truyền learned_items)
-    path_info = graph.get_learning_path(missing_items, get_prerequisites, get_level, learned_items)
-    
-    # Chuyển đổi sang format dễ đọc
-    formatted_groups = graph.get_parallel_learning_groups(path_info["path"])
-    
-    return {
-        "roadmap": formatted_groups,
-        "has_cycles": path_info["has_cycles"],
-        "cycles": path_info["cycles"],
-        "total_items": path_info["total_items"]
-    }

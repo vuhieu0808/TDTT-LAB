@@ -1,8 +1,8 @@
 """
 Module tạo roadmap học tập dựa trên topological sort
 """
-from typing import List, Dict
-from graph_utils import create_roadmap
+from typing import Any, List, Dict, Set
+from graph_utils import GraphUtils
 from data_loader import DataLoader
 
 class RoadmapGenerator:
@@ -16,6 +16,50 @@ class RoadmapGenerator:
             data_loader: Instance của DataLoader
         """
         self.data_loader = data_loader
+
+    def _create_roadmap(self, missing_items: List[str], 
+                    data_loader: DataLoader,
+                    learned_items: Set[str] | None = None) -> Dict[str, Any]:
+        """
+        Hàm tiện ích để tạo roadmap
+        
+        Args:
+            missing_items: Danh sách các knowledge items cần học
+            data_loader: Instance của DataLoader
+            learned_items: Set các items mà user đã học
+            
+        Returns:
+            Dictionary chứa roadmap và thông tin liên quan
+        """
+        graph = GraphUtils()
+        
+        # Define functions để lấy prerequisites và level
+        def get_prerequisites(item: str) -> List[str]:
+            info = data_loader.get_knowledge_info(item)
+            if not info:
+                return []
+            else:
+                return info.prerequisites
+        
+        def get_level(item: str) -> int:
+            info = data_loader.get_knowledge_info(item)
+            if not info:
+                return 0
+            else:
+                return info.level
+
+        # Tạo learning path (truyền learned_items)
+        path_info = graph.get_learning_path(missing_items, get_prerequisites, get_level, learned_items)
+        
+        # Chuyển đổi sang format dễ đọc
+        formatted_groups = graph.get_parallel_learning_groups(path_info["path"])
+        
+        return {
+            "roadmap": formatted_groups,
+            "has_cycles": path_info["has_cycles"],
+            "cycles": path_info["cycles"],
+            "total_items": path_info["total_items"]
+        }
     
     def generate_learning_roadmap(self, missing_skills: List[str], 
                                     missing_knowledge: List[str],
@@ -39,17 +83,13 @@ class RoadmapGenerator:
         # Chỉ tạo roadmap cho knowledge
         knowledge_roadmap = None
         if missing_knowledge:
-            knowledge_roadmap = create_roadmap(
+            knowledge_roadmap = self._create_roadmap(
                 missing_knowledge,
                 self.data_loader,
-                item_type="knowledge",
                 learned_items=learned_set
             )
-        
-        # print(f"Generated learning roadmap: {knowledge_roadmap}")
 
         return {
-            "skills_roadmap": None,  # Không sử dụng skills nữa
             "knowledge_roadmap": knowledge_roadmap
         }
     
@@ -139,28 +179,7 @@ class RoadmapGenerator:
             summary["estimated_difficulty"] = round(total_difficulty / total_items, 2)
         
         return summary
-    
-    def get_next_items_to_learn(self, roadmap_data: Dict, 
-                               current_stage: int = 1) -> List[str]:
-        """
-        Lấy danh sách items cần học ở stage tiếp theo (chỉ knowledge)
-        
-        Args:
-            roadmap_data: Kết quả từ generate_learning_roadmap
-            current_stage: Stage hiện tại (1-indexed)
-            
-        Returns:
-            Danh sách items cần học
-        """
-        next_items = []
-        
-        if roadmap_data["knowledge_roadmap"]:
-            kr = roadmap_data["knowledge_roadmap"]["roadmap"]
-            if current_stage <= len(kr):
-                next_items.extend(kr[current_stage - 1]["items"])
-        
-        return next_items
-    
+
     def get_learning_time_estimate(self, roadmap_data: Dict, 
                                    hours_per_item: int = 20) -> Dict:
         """

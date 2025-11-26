@@ -18,8 +18,8 @@ class JobMatcher:
         """
         self.data_loader: DataLoader = data_loader
     
-    def calculate_match_score(self, job: Job, user_skills: List[str], 
-                            user_knowledge: List[str]) -> Dict:
+    def _calculate_matching(self, job: Job, user_skills: List[str], 
+                            user_knowledge: List[str]) -> Dict[str, Any]:
         """
         Tính điểm phù hợp giữa job và user
         
@@ -100,7 +100,7 @@ class JobMatcher:
     def find_suitable_jobs(self, user_skills: List[str], 
                           user_knowledge: List[str],
                           min_score: float = 5.0,  # Giảm threshold xuống rất thấp
-                          top_n: int = 15) -> List[Dict]:  # Tăng số lượng kết quả
+                          top_n: int = 15) -> List[Dict[str, Any]]:  # Tăng số lượng kết quả
         """
         Tìm các công việc phù hợp với user
         
@@ -116,7 +116,7 @@ class JobMatcher:
         results = []
         
         for _, job in self.data_loader.jobs_data.items():
-            match_info = self.calculate_match_score(job, user_skills, user_knowledge)
+            match_info = self._calculate_matching(job, user_skills, user_knowledge)
             # Chỉ lấy jobs có ít nhất 1 match (score > 0)
             if match_info["total_score"] >= min_score:
                 results.append(match_info)
@@ -128,7 +128,7 @@ class JobMatcher:
     
     def get_missing_requirements(self, job_name: str, 
                                 user_skills: List[str],
-                                user_knowledge: List[str]) -> Dict:
+                                user_knowledge: List[str]) -> Dict[str, Any]:
         """
         Lấy danh sách các requirements còn thiếu cho một job cụ thể
         
@@ -148,69 +148,6 @@ class JobMatcher:
                 "found": False
             }
         
-        match_info = self.calculate_match_score(job, user_skills, user_knowledge)
-        
-        # Thêm thông tin job
-        match_info["job_description"] = job.description
-        match_info["job_url"] = job.url
-        match_info["found"] = True
+        match_info = self._calculate_matching(job, user_skills, user_knowledge)
         
         return match_info
-    
-    def get_skill_gap_summary(self, match_info: Dict) -> str:
-        """
-        Tạo summary về skill gap
-        
-        Args:
-            match_info: Kết quả từ calculate_match_score hoặc get_missing_requirements
-            
-        Returns:
-            String mô tả skill gap
-        """
-        missing = match_info["missing"]
-        
-        total_missing = (len(missing["required_skills"]) + 
-                        len(missing["required_knowledge"]) +
-                        len(missing["optional_skills"]) + 
-                        len(missing["optional_knowledge"]))
-        
-        if total_missing == 0:
-            return "Bạn đã đáp ứng đầy đủ yêu cầu cho công việc này! 🎉"
-        
-        summary = []
-        
-        if missing["required_skills"]:
-            summary.append(f"Thiếu {len(missing['required_skills'])} kỹ năng bắt buộc")
-        
-        if missing["required_knowledge"]:
-            summary.append(f"Thiếu {len(missing['required_knowledge'])} kiến thức bắt buộc")
-        
-        if missing["optional_skills"]:
-            summary.append(f"Thiếu {len(missing['optional_skills'])} kỹ năng tùy chọn")
-        
-        if missing["optional_knowledge"]:
-            summary.append(f"Thiếu {len(missing['optional_knowledge'])} kiến thức tùy chọn")
-        
-        return "Cần bổ sung: " + ", ".join(summary)
-    
-    def prioritize_missing_items(self, missing: Dict) -> List[str]:
-        """
-        Sắp xếp độ ưu tiên các items cần học (required trước, optional sau)
-        
-        Args:
-            missing: Dictionary chứa missing items
-            
-        Returns:
-            Danh sách items cần học theo thứ tự ưu tiên
-        """
-        prioritized = []
-        
-        # Required items đầu tiên
-        prioritized.extend(missing["required_skills"])
-        prioritized.extend(missing["required_knowledge"])
-        
-        # Optional items sau
-        prioritized.extend(missing["optional_skills"])
-        prioritized.extend(missing["optional_knowledge"])
-        
-        return prioritized
