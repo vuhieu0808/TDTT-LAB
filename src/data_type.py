@@ -14,6 +14,18 @@ class Job:
     def __repr__(self) -> str:
         return f"Job(name={self.name})"
     
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "name": self.name,
+            "description": self.description,
+            "url": self.url,
+            "other_name": self.other_name,
+            "essential_skill": self.essential_skill,
+            "optional_skill": self.optional_skill,
+            "essential_knowledge": self.essential_knowledge,
+            "optional_knowledge": self.optional_knowledge
+        }
+    
 class Knowledge:
     def __init__(self, jsonData: Dict[str, Any]):
         self.name: str = jsonData.get("skill", "")
@@ -23,3 +35,11 @@ class Knowledge:
     
     def __repr__(self) -> str:
         return f"Knowledge(skill={self.name}, level={self.level})"
+    
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "skill": self.name,
+            "level": self.level,
+            "detailed": self.detailed,
+            "prerequisites": self.prerequisites
+        }

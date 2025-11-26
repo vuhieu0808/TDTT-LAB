@@ -171,7 +171,7 @@ class DataLoader:
             Danh sách các skill phù hợp, theo string
         """
         vec : List[tuple[int, str]] = []
-        vec += _impl_search_list(query, self.skills_data, fuzz.token_set_ratio, 65)
+        vec += _impl_search_list(query, self.skills_data, fuzz.partial_ratio, 65)
 
         vec.sort(reverse=True, key=lambda x: x[0])
         result: List[str] = [item[1] for item in vec]
